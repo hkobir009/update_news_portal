@@ -57,5 +57,9 @@ class User extends Authenticatable
         // else not then create a role
     }
 
+    public function posts()
+    {
+        return $this->hasMany('App\post');
+    }
 
 }
