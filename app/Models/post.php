@@ -11,17 +11,17 @@ class post extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Models\User');
     }
 
     public function categories()
     {
-        return $this->belongsToMany('App\category')->withTimestamps();
+        return $this->belongsToMany('App\Models\category')->withTimestamps();
     }
 
     public function tags()
     {
-        return $this->belongsToMany('App\tag')->withTimestamps();
+        return $this->belongsToMany('App\Models\tag')->withTimestamps();
     }
 
 
