@@ -57,7 +57,7 @@ class BreakingNewsController extends Controller
            $info = new breaking_news();
            $info->name=$request->name;
            $info->save();
-           return redirect()->back()->with('msg','insert successfully');
+           return redirect()->back()->with('msg','Breaking News Added successfully');
 
     }
 
@@ -105,6 +105,6 @@ class BreakingNewsController extends Controller
     {
         $id = breaking_news::findOrFail($id);
         $id->delete();
-        return redirect()->back()->with('msg','delete success');
+        return redirect()->back()->with('msg','Breaking News delete success');
     }
 }

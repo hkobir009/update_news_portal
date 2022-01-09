@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\BreakingNewsController;
-use App\Http\Controllers\MenuController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\deshboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,13 +20,13 @@ use Illuminate\Support\Facades\Route;
                    //  Admin Routes
 
 
-    //Route::get('/deshboard',[deshboardController::class,'index'])->name('deshboard');
+    Route::get('/deshboard',[deshboardController::class,'index'])->name('deshboard');
 
 
    //Route::get('/deshboard_home',[deshboardController::class,'deshboard'])->name('deshboard_home');
-     Route::get('/', function () {
-         return view('welcome');
-     });
+    //  Route::get('/', function () {
+    //      return view('welcome');
+    //  });
 
     //                      Breaking news Routes
 
@@ -37,13 +37,13 @@ use Illuminate\Support\Facades\Route;
 
     //                      category Routes
 
-    // Route::get('/',[MenuController::class,'menu']);
-    // Route::get('/deshboard',[MenuController::class,'deshboardIndex'])->name('deshboard');
-    // Route::get('/create',[MenuController::class,'create'])->name('create');
-    // Route::post('/create',[MenuController::class,'store']);
-    // Route::get('edit/{id}',[MenuController::class,'edit'])->name('edit');
-    // Route::post('update/{id}',[MenuController::class,'update'])->name('update');
-    // Route::get('delete/{id}',[MenuController::class,'delete'])->name('delete');
+    // Route::get('/',[CategoryController::class,'category']);
+    Route::get('/category',[CategoryController::class,'deshboardIndex'])->name('category');
+    Route::get('/create_category',[CategoryController::class,'create'])->name('create_category');
+    Route::post('/create_category',[CategoryController::class,'store']);
+    Route::get('edit/{id}',[CategoryController::class,'edit'])->name('edit');
+    Route::post('update/{id}',[CategoryController::class,'update'])->name('update');
+    Route::get('delete/{id}',[CategoryController::class,'delete'])->name('delete');
     
     
 

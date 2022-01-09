@@ -1,11 +1,12 @@
 @extends('admin.layouts.app')
 @section('content')
+                         <!-- ADD Category -->
 <div class="content position-fixed p-4">
     <div class="container">
        <div class="row d-flex justify-content-center p-4">
           <div class="dashbard-content-header d-flex align-items-center justify-content-between">
              <div class="title my-5">
-                <h1 class="text-capitalize p-0 fw-bold">Breaking-news-list</h1>
+                <h1 class="text-capitalize p-0 fw-bold">category list</h1>
              </div>
              <div class="dashboard-content-right d-flex">
                 <div class="search-bar d-flex align-items-center calander position-relative">
@@ -14,9 +15,9 @@
                 </div>
                 <div class="m-2"></div>
                 <div class="reports bg-white rounded d-flex align-items-center">
-                   <a href="{{route('create_breaking_newses')}}" class="text-decoration-none d-flex align-items-center p-1 px-md-4 py-md-1 mx-2">
+                   <a href="{{route('create_category')}}" class="text-decoration-none d-flex align-items-center p-1 px-md-4 py-md-1 mx-2">
                       <i class="fas fa-plus fa-2x fw-normal"></i>
-                      <h4 class="m-0 fw-bold mx-3 text-capitalize">Add Breaking news</h4>
+                      <h4 class="m-0 fw-bold mx-3 text-capitalize">Add new category</h4>
                    </a>
                 </div>
              </div><!--dashbard-content-right---->
@@ -35,17 +36,28 @@
              <div class="recent-orders dashboard-content">
                 <table class="table text-center">
                    <tr class="align-middle">
-                      <th class="">ID</th>
-                      <th class="text-capitalize">Name</th>
-                      <th class="text-capitalize">Action</th>
+                      <th>ID</th>
+                      <th>Parant id</th>
+                      <th>Name</th>
+                      <th>Target_url</th>
+                      <th>Slug</th>
+                      <th>Action</th>
                    </tr>
-                   @foreach ($breskingdatas as $breskingdata)
+                   @foreach ($datas as $data)
                    <tr class="align-middle">
-                      <td class="last-order-item">{{$breskingdata->id}}</td>
-                      <td><h4 class="m-0 fw-bold">{{$breskingdata->name}}</h4></td>
+                      <td class="last-order-item">{{$data->id}}</td>
+                      <td><h4 class="m-0 fw-bold">{{$data->parent_id}}</h4></td>
+                      <td><h4 class="m-0 fw-bold">{{$data->name}}</h4></td>
+                      <td><h4 class="m-0 fw-bold">{{$data->target_url}}</h4></td>
+                      <td><h4 class="m-0 fw-bold">{{$data->slug}}</h4></td>
                       <td>
                          <div class="two-icon d-flex justify-content-center">
-                            <a href="{{Route('delete',[$breskingdata->id])}}">
+                            <a href="{{Route('edit',[$data->id])}}">
+                                <div class="delete mx-2 bg-primary p-3 rounded text-white fw-bold d-flex align-items-center">
+                                    <i class="fas fa-edit"></i>
+                                 </div>
+                            </a>
+                            <a href="{{Route('delete',[$data->id])}}">
                                 <div class="delete mx-2 bg-danger p-3 rounded text-white fw-bold d-flex align-items-center">
                                     <i class="fas fa-trash-alt"></i>
                                  </div>
@@ -64,3 +76,4 @@
   </div>
 
 @endsection
+

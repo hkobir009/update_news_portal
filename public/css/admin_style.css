@@ -9,9 +9,6 @@ html{
     scrollbar-width: thin;
     font-family:"DM sans" sans-serif;
 }
-.custom-size{
-    font-size: 70%;
-}
 ::-webkit-scrollbar{
     width: .9rem !important;
 }
@@ -98,7 +95,6 @@ header .search-here:focus{
 }
 .header-right{
     flex: 4;
-    margin-right: 10rem;
 }
 .dashbard-content-header h1{
     color: var(--default-font-color);
@@ -399,7 +395,7 @@ input[type="checkbox"]{
 .user-table th{
     color: var(--default-font-light);
     font-size: var(--font-forteen);
-    font-weight: 400;
+    font-weight: 900;
 }
 .user-table .fa-ellipsis-h{
     font-size: var(--font-nineteen);
@@ -434,19 +430,12 @@ input[type="checkbox"]{
 .user-more-days a:hover i{
     color: var(--font-color) !important;
 }
-.two-icon{
-    right: 5%;
-    transform: translatey(-50%);
-    -webkit-transform: translatey(-50%);
-    -moz-transform: translatey(-50%);
-    -ms-transform: translatey(-50%);
-    -o-transform: translatey(-50%);
-}
-.table tr:hover .two-icon{
-    display: block !important;
-}
 .two-icon i{
     font-size: var(--font-sixteen) !important;
+}
+.two-icon .check,
+.two-icon .message,
+.two-icon .delete{
     cursor: pointer;
 }
 .custom-pagination li::before{
