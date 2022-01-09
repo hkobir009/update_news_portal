@@ -42,7 +42,7 @@
     				<div id="collapsetwo" class="accordion-collapse collapse  ms-4" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
 							<div class="dashboard-menu">
-								<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+								<a href="{{route('create_post')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
 									<i class="fa-solid fa-plus mx-0 pe-4"></i>
 									<span class="pe-5 text-capitalize">Add post</span>
 								</a>
@@ -50,9 +50,9 @@
 						</div>
 						<div class="accordion-body">
 							<div class="dashboard-menu">
-								<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+								<a href="{{route('post')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
 									<i class="fa-solid fa-list mx-0 pe-4"></i>
-									<span class="pe-5 text-capitalize">posts list</span>
+									<span class="pe-5 text-capitalize">view post</span>
 								</a>
 							</div>
 						</div>

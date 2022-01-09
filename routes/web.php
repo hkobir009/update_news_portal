@@ -3,6 +3,8 @@
 use App\Http\Controllers\BreakingNewsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\deshboardController;
+use App\Http\Controllers\PostController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,6 +46,11 @@ use Illuminate\Support\Facades\Route;
     Route::get('edit/{id}',[CategoryController::class,'edit'])->name('edit');
     Route::post('update/{id}',[CategoryController::class,'update'])->name('update');
     Route::get('delete/{id}',[CategoryController::class,'delete'])->name('delete');
+
+
+
+    Route::get('/post',[PostController::class,'postIndex'])->name('post');
+    Route::get('/create_post',[PostController::class,'create'])->name('create_post');
     
     
 
