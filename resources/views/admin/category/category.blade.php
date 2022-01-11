@@ -6,7 +6,10 @@
        <div class="row d-flex justify-content-center p-4">
           <div class="dashbard-content-header d-flex align-items-center justify-content-between">
              <div class="title my-5">
-                <h1 class="text-capitalize p-0 fw-bold">category list</h1>
+                <h1 class="text-capitalize p-0 fw-bold">
+                   category list
+                   <span class="badge bg-primary">{{$datas->count()}}</span>
+                  </h1>
              </div>
              <div class="dashboard-content-right d-flex">
                 <div class="search-bar d-flex align-items-center calander position-relative">
@@ -39,8 +42,8 @@
                       <th>ID</th>
                       <th>Parant id</th>
                       <th>Name</th>
+                      <th>post count</th>
                       <th>Target_url</th>
-                      <th>Slug</th>
                       <th>Action</th>
                    </tr>
                    @foreach ($datas as $data)
@@ -48,8 +51,8 @@
                       <td class="last-order-item">{{$data->id}}</td>
                       <td><h4 class="m-0 fw-bold">{{$data->parent_id}}</h4></td>
                       <td><h4 class="m-0 fw-bold">{{$data->name}}</h4></td>
+                      <td><h4 class="m-0 fw-bold">{{$data->posts->count()}}</h4></td>
                       <td><h4 class="m-0 fw-bold">{{$data->target_url}}</h4></td>
-                      <td><h4 class="m-0 fw-bold">{{$data->slug}}</h4></td>
                       <td>
                          <div class="two-icon d-flex justify-content-center">
                             <a href="{{Route('edit',[$data->id])}}">
@@ -57,7 +60,7 @@
                                     <i class="fas fa-edit"></i>
                                  </div>
                             </a>
-                            <a href="{{Route('delete',[$data->id])}}">
+                            <a href="{{Route('category_delete',[$data->id])}}">
                                 <div class="delete mx-2 bg-danger p-3 rounded text-white fw-bold d-flex align-items-center">
                                     <i class="fas fa-trash-alt"></i>
                                  </div>

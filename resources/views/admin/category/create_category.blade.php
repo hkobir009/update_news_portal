@@ -46,10 +46,6 @@
                                  <label for="" class="text-capitalize mb-2">Target url</label>
                                  <input class="form-control py-2" name="target_url" type="text" placeholder="Target url">
                              </div>
-                               <div class="slug mt-4">
-                                 <label for="" class="text-capitalize mb-2">slug</label>
-                                 <input class="desable form-control py-2" name="slug" type="text">
-                             </div>
                            </div><!--col-lg-3 col-sm-6 col-12-->
                        </div><!--row-->
                        <input type="submit" value="submit" class="form-control mt-5 btn-outline-info">

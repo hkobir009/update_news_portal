@@ -18,35 +18,55 @@
                <!--dashbard-content-header-->
             </div><!--row-->
          </div><!--container-->
+         @if(Session::has('msg'))
+         <div class="alert alert-primary" >
+           <h4> {{Session::get('msg')}}</h4>
+          </div>
+         @endif
          <div class="breaking-news-form" style="margin-bottom: 50px;">
             <div class="container">
                <div class="forms mb-5 pb-5">
-                  <form action="">
-                    <div class="user-name">
+                  <form action="" mathod="post">
+                     @csrf
+                     <div class="select-any w-100 mt-5">
+                        <label for="" class="text-capitalize mb-2">Add user</label>
+                        <select name="user_id" id="user_id" class="w-100 py-3 border">
+                        @foreach ($postdatas as $postdata)
+                           <option value="{{$postdata->user_id}}">{{$postdata->user_id}}</option>
+                        @endforeach
+                        </select>  
+                      </div>
+                    <div class="user-name mt-5">
                        <label for="" class="text-capitalize mb-2">post title</label>
-                       <input class="form-control py-2" type="text" placeholder="post title">
+                       <input class="form-control py-2" name="title" type="text" placeholder="post title">
                    </div>
-                   <div class="select-any w-100 mt-5">
-                     <label for="" class="text-capitalize mb-2">Add categorys</label>
-                     <select name="" id="" class="w-100 py-3 border">
-                         <option value="">One items</option>
+                   <div class="select-any mt-5">
+                     <label for="" class="text-capitalize mb-2">Select Cetagory</label>
+                     <select class="selectpicker border w-100" multiple>
+                     @foreach ($parantNames as $parantName)
+                        <option value="{{$parantName->id}}" style="font-size: 1.9rem;">{{$parantName->name}}</option>
+                     @endforeach
                      </select>
-                   </div>
+                  </div>
+                   {{-- <div class="select-any w-100 mt-5">
+                     <label for="categories" class="text-capitalize mb-2">select category</label>
+                     <select name="categories" style="font-size: 1.9rem;" id="categories" class="w-100 py-3 border">
+                     @foreach ($parantNames as $parantName)
+                        <option value="{{$parantName->id}}" style="font-size: 1.9rem;">{{$parantName->name}}</option>
+                     @endforeach
+                     </select>
+                   </div> --}}
                    <div class="body mt-5">
                      <label for="" class="text-capitalize mb-2">body</label>
-                     <textarea class="w-100" name="post-body" placeholder="Post body"></textarea>
+                     <textarea class="w-100" rows="4" id="body" name="body" placeholder="Post Description"></textarea>
                   </div>
                   <div class="slag mt-5">
                      <label for="" class="text-capitalize mb-2">slag</label>
-                     <input class="form-control py-2" type="text">
+                     <input class="form-control py-2" name="slug" type="text">
                   </div>
                   <div class="image mt-5">
                      <label for="" class="text-capitalize mb-2">Image</label>
                      <input class="form-control py-2" type="file" name="image" placeholder="image">
-                  </div>
-                  <div class="tag-name mt-5">
-                     <label for="" class="text-capitalize mb-2">Tag name</label>
-                     <input class="form-control py-2" type="text" name="image" placeholder="Tag name">
                   </div>
                       <input type="submit" value="submit" class="form-control mt-5 btn-outline-info">
                   </form>

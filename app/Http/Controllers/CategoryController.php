@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\category;
+use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
@@ -25,11 +26,13 @@ class CategoryController extends Controller
     }
 
     public function store(Request $request){
+
+        $slug = Str::slug($request->name);
         $menu = new category();
         $menu->name = $request->name;
         $menu->parent_id = $request->parent_id ;
         $menu->target_url = $request->target_url;
-        $menu->slug = $request->slug;
+        $menu->slug = $slug;
         $menu->save();
         return redirect()->back()->with('msg','Data Insert Successfully');
     }

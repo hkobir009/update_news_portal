@@ -45,7 +45,7 @@
                       <td><h4 class="m-0 fw-bold">{{$breskingdata->name}}</h4></td>
                       <td>
                          <div class="two-icon d-flex justify-content-center">
-                            <a href="{{Route('delete',[$breskingdata->id])}}">
+                            <a href="{{Route('breaking_news_delete',[$breskingdata->id])}}">
                                 <div class="delete mx-2 bg-danger p-3 rounded text-white fw-bold d-flex align-items-center">
                                     <i class="fas fa-trash-alt"></i>
                                  </div>

@@ -8,20 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class post extends Model
 {
     use HasFactory;
-
     public function user()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo(User::class);
     }
 
     public function categories()
     {
-        return $this->belongsToMany('App\Models\category')->withTimestamps();
+        return $this->belongsToMany(category::class)->withTimestamps();
     }
 
     public function tags()
     {
-        return $this->belongsToMany('App\Models\tag')->withTimestamps();
+        return $this->belongsToMany(tag::class)->withTimestamps();
     }
 
 

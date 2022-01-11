@@ -1,0 +1,15 @@
+      <!-- braking news section -->
+      <div class="breaking-news">
+        <div class="container">
+            <div class="border-top border-bottom custom-border d-flex align-items-center">
+                <span class="latest text-white text-uppercase text-center d-inline-block">ব্রেকিং নিউজ</span>
+                <marquee behavior="" direction="">
+                    <ul class="m-0 d-flex">
+                        @foreach ($breskingdatas as $breskingdata)
+                        <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fas fa-angle-double-right"></i>{{$breskingdata->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </marquee>
+            </div>
+        </div>
+    </div> 

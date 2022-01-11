@@ -464,9 +464,11 @@ input[type="checkbox"]{
 }
 .forms .select-any option,
 .forms .select-any select{
-    font-size: var(--font-sixteen);
+    font-size: var(--font-eighteen) !important;
     cursor: pointer;
-
+}
+.forms .dropdown-toggle:focus{
+outline: 0 !important;
 }
 .forms textarea{
     font-size: var(--font-eighteen);
@@ -489,7 +491,9 @@ input[type="checkbox"]{
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
 }
-
+.filter-option{
+    font-size: var(--font-nineteen) !important;
+}
 /* ---------------------------------------------- responsive---------------------------------------------------- */
 @media (max-width: 1000px){
     .profile-info{
