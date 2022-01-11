@@ -11,7 +11,7 @@
         @foreach ($categoryinfos as $categoryinfo)
 
         @if($categoryinfo->childs->isEmpty())    
-
+                                       {{-- category forgain key null velue  --}}
         <li class="nav-item"><a class="me-2 nav-link text-white p-3" href="{{$categoryinfo->target_url}}">{{$categoryinfo->name}}</a></li>
         
         @else
@@ -19,6 +19,7 @@
         <li class="nav-item dropdown position-relative">
           <a class="me-2 nav-link text-white p-3 dropdown-toggle" href="#">{{ $categoryinfo->name }}</a>
           <ul class="dropdown-menu-custom p-0 position-absolute shadow d-none">
+                               {{-- category child velue here   --}}
             @foreach ($categoryinfo->childs as $child)
 
             <li class="dropdown-item py-3"><a href="{{ $child->target_url }}">{{ $child->name }}</a></li>
