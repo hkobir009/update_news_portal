@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\breaking_news;
+use App\Models\category;
 use EasyBanglaDate\Types\BnDateTime;
 use EasyBanglaDate\Types\DateTime as EnDateTime;
 use DateTimeZone;
@@ -12,11 +13,17 @@ class fontController extends Controller
 {
 
     public function index()
-    {   
+    {   //                live date and time
         $bongabda = new BnDateTime('now', new DateTimeZone('Asia/Dhaka'));
-        $dateandtime = $bongabda->getDateTime()->format('l , j F Y b h:i:s'); 
+        $dateandtime = $bongabda->getDateTime()->format('l , j F Y , b h:i'); 
 
+        //                Category all info
+        $categoryinfos = category::where('parent_id', null)->get();
+
+        //                breaking news all info
         $breskingdatas = breaking_news::all();
-        return view('frontend.home.index',compact('breskingdatas','dateandtime'));
+        return view('frontend.home.index',compact('breskingdatas','dateandtime','categoryinfos'));
+
+
     }
 }

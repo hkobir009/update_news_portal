@@ -46,7 +46,6 @@ class CategoryController extends Controller
         $menu = category::findOrFail($id);
         $menu->name=$request->name;
         $menu->target_url=$request->target_url;
-        $menu->slug=$request->slug;
         $menu->save();
         return redirect()->route('category')->with('msg','Category Update Successfully');
     }
