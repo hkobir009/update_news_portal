@@ -3,24 +3,16 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="top-left onehundrad d-none d-lg-block">
+
+            {{-- @foreach ($postDatas as $postData)
             <div class="news py-3 border-bottom">
               <a href="#" class="d-flex">
-                <img src="{{asset('frontend/img/06-20211212010907.webp')}}" alt="dr Murad" class="newsimg me-3">
-                <h3 class="lh-base fw-medium text-black m-0" href="#">ভিসা মেলেনি, টিকিট হাতে দুবাই বিমানবন্দরে ডা. মুরাদ</h3>
+                <img src="{{$postData->image}}"  class="newsimg me-3">
+                <h3 class="lh-base fw-medium text-black m-0" href="#">{{$postData->title}}</h3>
               </a>
             </div><!--news end-->
-            <div class="news py-3 border-bottom">
-              <a href="#" class="d-flex">
-                <img src="{{asset('frontend/img/corona.webp')}}" alt="dr Murad" class="newsimg me-3">
-                <h3 class="lh-base fw-medium text-black m-0" href="#">১৭ ইঞ্চি মনিটর দিয়ে ওয়েব ডিজাইন ও ডেভেলপমেন্ট এর কাজ করা যাবে?</h3>
-              </a>
-            </div><!--news end-->
-            <div class="news py-3 border-bottom">
-              <a href="#" class="d-flex">
-                <img src="{{asset('frontend/img/hasina.webp')}}" alt="dr Murad" class="newsimg me-3">
-                <h3 class="lh-base fw-medium text-black m-0" href="#">৪র্থ শিল্পবিপ্লবের ভিত্তি হিসেবে ৩ বিষয়ে প্রধানমন্ত্রীর গুরুত্ব</h3>
-              </a>
-            </div><!--news end-->
+            @endforeach --}}
+
             <!------------------------ ads place -------------------------------------- -->
             <div class="advertisment w-100 bg-danger text-white my-3">
                 <h1 class=" text-center">Ads here 1</h1></div>
@@ -108,6 +100,7 @@
               <h1>Ads here 4</h1>
           </div>
         </div>
+        
       </div>
     </div><!--container-->
   </section>

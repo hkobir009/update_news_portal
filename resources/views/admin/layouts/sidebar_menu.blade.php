@@ -2,7 +2,7 @@
 	<div class="sidebar position-fixed">
 		<div class="sidebar-content overflow-scroll h-100 mb-5 pb-5">
 			<div class="dashboard-menu py-3">
-				<a href="{{route('deshboard')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center" >
+				<a href="{{route('dashboard')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center" >
 					<i class="fas fa-desktop pe-3"></i>
 					<span class="pe-5 text-capitalize">Dashboard</span>
 				</a>
@@ -50,7 +50,7 @@
 						</div>
 						<div class="accordion-body">
 							<div class="dashboard-menu">
-								<a href="{{route('post')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+								<a href="{{route('blog_post')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
 									<i class="fa-solid fa-list mx-0 pe-4"></i>
 									<span class="pe-5 text-capitalize">view post</span>
 								</a>
@@ -78,6 +78,30 @@
 								<a href="{{route('category')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
 									<i class="fa-solid fa-list mx-0 pe-4"></i>
 									<span class="pe-5 text-capitalize">menu list</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dashboard-menu accordion-item py-3">
+					<a class="py-3 accordion-button rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center" href="#" data-bs-toggle="collapse" data-bs-target="#collapsefour">
+						<i class="fas fa-tags mx-0 pe-3"></i>
+						<span class="pe-5 text-capitalize">tag manage</span>
+					</a>
+    				<div id="collapsefour" class="accordion-collapse collapse  ms-4" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+						<div class="accordion-body">
+							<div class="dashboard-menu">
+								<a href="{{route('create_tag')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+									<i class="fa-solid fa-plus mx-0 pe-4"></i>
+									<span class="pe-5 text-capitalize">Add tag</span>
+								</a>
+							</div>
+						</div>
+						<div class="accordion-body">
+							<div class="dashboard-menu">
+								<a href="{{route('tag')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+									<i class="fa-solid fa-list mx-0 pe-4"></i>
+									<span class="pe-5 text-capitalize">tag list</span>
 								</a>
 							</div>
 						</div>

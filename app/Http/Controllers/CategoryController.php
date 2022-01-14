@@ -8,12 +8,6 @@ use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
-    public function category(){
-        $getdata = category::where('parent_id', null)->get();
-        return view('welcome',compact('getdata'));
-
-    }
-
     public function deshboardIndex(){
         $datas = category::get();
         return view('admin.category.category',compact('datas'));

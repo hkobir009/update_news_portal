@@ -32,7 +32,7 @@
 					</div>
 					<div class="profile-info">
 						<span class="text-danger fw-bold">Admin</span>
-						<h4 class="m-0 fw-bold">Abu bin ishtiyak <i class="fas fa-chevron-down fw-bold"></i></h4>
+						<h4 class="m-0 fw-bold">{{ Auth::user()->name }}<i class="fas fa-chevron-down fw-bold"></i></h4>
 					</div>
 				</div>
 				<div class="contact-details box-details position-absolute shadow rounded" style="display: none;">
@@ -42,8 +42,8 @@
 								<img class="img-fluid rounded-circle" src="img/profile.jpg" alt="profile">
 							</div>
 							<div class="name-mail d-flex flex-column">
-								<h3 class="mb-1 text-capitalize fw-bold">Abu bin ishtiyak </h3>
-								<span class="text-decoration-none fw-bold">example@gmail.com</span>
+								<h3 class="mb-1 text-capitalize fw-bold">{{ Auth::user()->name }}</h3>
+								<span class="text-decoration-none fw-bold">{{ Auth::user()->email }}</span>
 							</div>
 						</div>
 						<div class="contact-settings bg-white">
@@ -69,10 +69,19 @@
 							</div>
 							<div class="account-sign-out px-5 py-4">
 								<div class="user py-3">
-									<a href="#" class="d-flex align-items-center text-decoration-none">
-										<i class="far fa-user me-3"></i>
-										<h4 class="text-capitalize fw-bold mt-1 ms-3">sign out</h4>
-									</a>
+
+									<!-- Authentication -->
+									<form method="POST" action="{{ route('logout') }}">
+										@csrf
+										<x-responsive-nav-link :href="route('logout')"
+												onclick="event.preventDefault();
+															this.closest('form').submit();">
+														<div class="d-flex align-items-center text-decoration-none">
+															<i class="far fa-user me-3"></i>
+													       <h4 class="text-capitalize fw-bold mt-1 ms-3">{{ __('Log Out') }}</h4>
+												       </div>	
+										</x-responsive-nav-link>
+									</form>
 								</div>
 							</div>
 						</div>	

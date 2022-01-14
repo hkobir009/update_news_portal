@@ -62,7 +62,7 @@
                                         <i class="fas fa-edit"></i>
                                      </div>
                                 </a>
-                                <a href="{{Route('delete',[$postdata->id])}}">
+                                <a href="{{Route('post_delete',[$postdata->id])}}">
                                     <div class="delete mx-2 bg-danger p-3 rounded text-white fw-bold d-flex align-items-center">
                                         <i class="fas fa-trash-alt"></i>
                                      </div>

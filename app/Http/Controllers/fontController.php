@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 use App\Models\breaking_news;
 use App\Models\category;
+use App\Models\post;
 use EasyBanglaDate\Types\BnDateTime;
 use EasyBanglaDate\Types\DateTime as EnDateTime;
 use DateTimeZone;
@@ -18,11 +19,14 @@ class fontController extends Controller
         $dateandtime = $bongabda->getDateTime()->format('l , j F Y , b h:i'); 
 
         //                Category all info
-        $categoryinfos = category::where('parent_id', null)->get();
+        $categoryinfos = category::where('parent_id', null)->orderBy('id','DESC')->get();
+
+        //                breaking news all info
+        $postDatas = post::all();
 
         //                breaking news all info
         $breskingdatas = breaking_news::all();
-        return view('frontend.home.index',compact('breskingdatas','dateandtime','categoryinfos'));
+        return view('frontend.home.index',compact('breskingdatas','dateandtime','categoryinfos','postDatas'));
 
 
     }

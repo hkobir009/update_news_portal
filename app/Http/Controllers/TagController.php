@@ -2,86 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\breaking_news;
 use Illuminate\Http\Request;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
-use App\models\user;
-
-class BreakingNewsController extends Controller
+use App\Models\tag;
+use Illuminate\Support\Str;
+class TagController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $breskingdatas = breaking_news::all();
-        return view('admin.breakingNews.breaking_news',compact('breskingdatas'));
+    public function tagIndex(){
+        $tagDatas = tag::get();
+        return view('admin.tag.tag',compact('tagDatas'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {    
-        // Role::create(['name' => 'Super Admin']);
-        // Role::create(['name' => 'Admin']);
-        // Role::create(['name' => 'User']);
-        //$role = User::createRole('Super Admin');
-        //$role->givePermissionTo('post.create');
-
-        //$logedinuser= request()->user();
-        
-
-        return view('admin.breakingNews.create_breaking_news');
+    public function create(Request $request){
+        return view('admin.tag.create_tag');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        // breaking_news::create([
-        //     'name'=>$request->name,
-        // ]);
-        // return redirect()->back()->with('msg','insert successfully');
-        
-           $info = new breaking_news();
-           $info->name=$request->name;
-           $info->save();
-           return redirect()->back()->with('msg','Breaking News Added successfully');
-
+    public function store(Request $request){
+        $slug = Str::slug($request->name);
+        $menu = new tag();
+        $menu->name = $request->name;
+        $menu->slug = $slug;
+        $menu->save();
+        return redirect()->back()->with('msg','tag Insert Successfully');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\breaking_news  $breaking_news
-     * @return \Illuminate\Http\Response
-     */
-    public function show(breaking_news $breaking_news)
-    {
-        //
+    public function edit($id){
+        $tagid = tag::findOrFail($id);
+        return view('admin.tag.update_tag',compact('tagid'));
     }
 
+    public function update(Request $request, $id){
+        $menu = tag::findOrFail($id);
+        $menu->name=$request->name;
+        $menu->save();
+        return redirect()->route('tag')->with('msg','tag Update Successfully');
+    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\breaking_news  $breaking_news
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $breaking_newsid = breaking_news::findOrFail($id);
-        $breaking_newsid->delete();
-        return redirect()->back()->with('msg','delete success');
+    public function delete(Request $request, $id){
+        $id= tag::findOrFail($id);
+        $id->delete();
+        return redirect()->back()->with('msg','tag Delete successfully');
     }
 }
