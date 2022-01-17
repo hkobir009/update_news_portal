@@ -33,14 +33,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('breaking_newses',[BreakingNewsController::class,'index'])->name('breaking_newses');
     Route::get('create_breaking_newses',[BreakingNewsController::class,'create'])->name('create_breaking_newses');
-    Route::post('create_breaking_newses',[BreakingNewsController::class,'store']);
+    Route::post('create_breaking_newses',[BreakingNewsController::class,'store'])->name('breaking_news_category_store');
     Route::get('breaking_news_delete/{id}',[BreakingNewsController::class,'delete'])->name('breaking_news_delete');
 
             //                      category Routes
 
     Route::get('/category',[CategoryController::class,'deshboardIndex'])->name('category');
     Route::get('/create_category',[CategoryController::class,'create'])->name('create_category');
-    Route::post('/create_category',[CategoryController::class,'store']);
+    Route::post('/create_category',[CategoryController::class,'store'])->name('category_store');
     Route::get('edit/{id}',[CategoryController::class,'edit'])->name('edit');
     Route::post('update/{id}',[CategoryController::class,'update'])->name('update');
     Route::get('category_delete/{id}',[CategoryController::class,'delete'])->name('category_delete');

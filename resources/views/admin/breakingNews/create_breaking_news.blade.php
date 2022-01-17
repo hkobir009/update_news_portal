@@ -26,7 +26,7 @@
                     <h3>{{Session::get('msg')}}</h3>
                   </div>
                 @endif
-                   <form action="" method="post">
+                   <form action="{{route('breaking_news_category_store')}}" method="post">
                     @csrf
                        <div class="row">
                            <div class="col">

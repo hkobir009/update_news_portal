@@ -7,28 +7,32 @@ use Illuminate\Http\Request;
 use App\Models\category;
 use App\Models\post;
 use App\Models\tag;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\File; 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
-use Intervention\Image\ImageManager;
-
 class PostController extends Controller
 {
     public function postIndex(Request $request){
-        $postdatas = post::with('user')->get();
+       $postdatas = post::with('categories')->orderBy('id','desc')->get();
+       $postdatas = category::with('posts')->orderBy('id','desc')->get();
+        return $postdatas;
+
         return view('admin.post.post',compact('postdatas'));
     }
 
     public function create(Request $request){
-        $postdatas = post::with('user')->get();
-        $parantNames = category::get();
-        $tagdatas = tag::get();
+        $postdatas = post::with('user')->orderBy('id','desc')->get();
+        $parantNames = category::orderBy('id','desc')->get();
+        $tagdatas = tag::orderBy('id','desc')->get();
         return view('admin.post.create_post',compact('parantNames','postdatas','tagdatas'));
     }
 
     public function store(Request $request){
-        $slug = Str::slug($request->title);
+        $slug = $request->title;
+        function make_slug($slug) {
+            return preg_replace('/\s+/u', '-', trim($slug));
+        }
+        $slug = $request->title;
+        $slug = make_slug($slug);
 
         $post = new post();
         $post->user_id = Auth::id();
@@ -46,7 +50,7 @@ class PostController extends Controller
         }else{
            $fileName = "default.png";
         }
-        
+    
         $post->image =$fileName;
         $post->save();
         $post->categories()->attach($request->categories);

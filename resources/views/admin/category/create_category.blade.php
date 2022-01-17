@@ -26,7 +26,7 @@
          <div class="breaking-news-form">
             <div class="container">
                <div class="forms">
-                   <form action="" method="POST">
+                   <form action="{{route('category_store')}}" method="POST">
                      @csrf
                        <div class="row">
                            <div class="col">

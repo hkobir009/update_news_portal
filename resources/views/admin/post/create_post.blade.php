@@ -52,7 +52,7 @@
                     </div>
                      <div class="body mt-5">
                         <label for="" class="text-capitalize mb-2">body</label>
-                        <textarea class="w-100" rows="4" id="body" name="body" placeholder="Post Description" required></textarea>
+                        <textarea class="w-100" rows="20" name="body" placeholder="Post Description" required></textarea>
                      </div>
                      <div class="image mt-5">
                      <label for="" class="text-capitalize mb-2">Image</label>

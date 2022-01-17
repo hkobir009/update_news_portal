@@ -17,7 +17,12 @@ class TagController extends Controller
     }
 
     public function store(Request $request){
-        $slug = Str::slug($request->name);
+        $slug = $request->name;
+        function make_slug($slug) {
+            return preg_replace('/\s+/u', '-', trim($slug));
+        }
+        $slug = $request->name;
+        $slug = make_slug($slug);
         $menu = new tag();
         $menu->name = $request->name;
         $menu->slug = $slug;

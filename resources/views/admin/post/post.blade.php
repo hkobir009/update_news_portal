@@ -44,6 +44,7 @@
                            <th class="">ID</th>
                            <th class="text-capitalize">User name</th>
                            <th class="text-capitalize">title</th>
+                           {{-- <th class="text-capitalize">category</th> --}}
                            <th class="text-capitalize">total view</th>
                            <th class="text-capitalize">creat date</th>
                            <th class="text-capitalize">Action</th>

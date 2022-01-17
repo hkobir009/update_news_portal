@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="bg-danger mt-3" style="height: 100px;"><h1 class="text-center text-white">Ads here</h1></div>
+  <a href="#"><div class="d-flex justify-content-center"><img src="	https://tpc.googlesyndication.com/simgad/12866590260390773461" alt=""></div></a>
   <header>
     <div class="header-top d-flex justify-content-between py-3 align-items-center">
       <div class="header-logo">

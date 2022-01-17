@@ -46,36 +46,42 @@
         <div class="row">
           <div class="col-md-6">
             <div class="saradesh-second-col mt-sm-3 m-md-0">
+
               <div class="recent-news border-bottom">
                 <a class="d-flex justify-content-start align-items-md-start pb-3" href="#">
                   <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh snd.webp')}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
                 </a>
               </div>
+
               <div class="recent-news border-bottom">
                 <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
                   <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd1.webp')}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
                 </a>
               </div>
+
               <div class=" recent-news border-bottom">
                 <a class=" d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
                   <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd.webp')}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
                 </a>
               </div>
+
               <div class="recent-news border-bottom">
                 <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
                   <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd7.webp')}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
                 </a>
               </div>
+
               <div class="recent-news">
                 <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
                   <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd5.webp')}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
                 </a>
               </div>
+              
             </div>
           </div><!--inside col 6-->
           <div class="col-md-6">

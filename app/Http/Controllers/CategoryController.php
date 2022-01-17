@@ -19,9 +19,15 @@ class CategoryController extends Controller
         return view('admin.category.create_category',compact('parantNames'));
     }
 
-    public function store(Request $request){
+    
 
-        $slug = Str::slug($request->name);
+    public function store(Request $request){
+        $slug = $request->name;
+        function make_slug($slug) {
+            return preg_replace('/\s+/u', '-', trim($slug));
+        }
+        $slug = $request->name;
+        $slug = make_slug($slug);
         $menu = new category();
         $menu->name = $request->name;
         $menu->parent_id = $request->parent_id ;
