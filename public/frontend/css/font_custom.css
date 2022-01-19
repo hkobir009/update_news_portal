@@ -21,6 +21,7 @@ html {
   --time-font: 1.4rem;
   --font-thirty-eight-for-page-title: 3.8rem;
   --jatiyo-btn: #ececec;
+  --jatiyo-page-title: 4rem;
 }
 /* ====================================================== Reusable Css ================================== */
 /* .sumon {
@@ -79,6 +80,9 @@ ul {
 .advertisment {
   height: 25rem !important;
 }
+.post-advertisement small {
+  font-size: 1.2rem;
+}
 /* --------------------------------------------------- navbar-------------------------------------------------------------------- */
 nav {
   background-color: var(--title-bg);
@@ -96,16 +100,16 @@ nav li a:hover {
   font-size: 1.6rem !important;
 }
 
-.dropdown-menu-custom a:hover{
+.dropdown-menu-custom a:hover {
   background-color: initial !important;
   color: black !important;
 }
-.dropdown-menu-custom{
+.dropdown-menu-custom {
   left: 0;
   top: 100%;
   background-color: white;
 }
-.dropdown:hover .dropdown-menu-custom{
+.dropdown:hover .dropdown-menu-custom {
   display: block !important;
 }
 .second-search {
@@ -280,6 +284,21 @@ nav li a:hover {
 .jatiyo-section .only-news a {
   font-size: var(--post-title-font-size);
 }
+.jatiyo-page-left .section-title {
+  border-top-width: 2px;
+}
+.jatiyo-page-left .section-title h4 {
+  font-size: var(--font-ninteen);
+}
+.read-more-btn {
+  background: var(--title-bg);
+  color: var(--jatiyo-btn);
+  font-size: var(--link-font);
+}
+.read-more-btn:hover {
+  background: #052c80;
+  color: var(--jatiyo-btn);
+}
 .saradesh-news p {
   font-size: 2.2rem;
 }
@@ -355,98 +374,160 @@ nav li a:hover {
   height: 20rem;
 }
 /* ------------------------------------------------------leatest page start ------------------------------------------------ */
-.leatest-title h1{
+.leatest-title h1 {
   font-size: 3rem;
 }
-.social-share li:first-child{
+.social-share li:first-child {
   font-size: 1.4rem;
 }
-.social-share li:not(:first-child){
+.social-share li:not(:first-child) {
   width: 3.5rem;
   height: 3.5rem;
   background-color: #1da1f2;
   font-size: 1.8rem;
-
 }
-.social-share li:last-child{
+.social-share li:last-child {
   background-color: #075e54;
 }
-.leatest-top .tab-news a{
+.leatest-top .tab-news a {
   font-size: var(--link-font);
   background-color: #e5ebed;
   color: #222 !important;
 }
-.tab-news .active{
+.tab-news .active {
   border-bottom: 4px solid var(--title-bg) !important;
 }
-.tab-news a:focus{
+.tab-news a:focus {
   box-shadow: none !important;
 }
-.leatest-section .advertisment{
+.leatest-section .advertisment {
   width: 30rem !important;
   height: 25rem !important;
   right: 0;
+  top: -15px;
 }
-.leatest-image-box{
+.leatest-image-box {
   width: 20rem;
   height: 13.4rem;
 }
-.leatest-image-box img{
+.leatest-image-box img {
   width: 100%;
   object-fit: cover;
 }
-.leatest-every-news a h1{
+.leatest-every-news a h1 {
   font-size: var(--leatest-heading);
 }
-.leatest-news-time{
+.leatest-news-time {
   font-size: var(--time-font);
-  color:rgba(0, 0, 0, 0.5)
+  color: rgba(0, 0, 0, 0.5);
 }
 .leatest-every-news .news-explain {
   font-size: var(--link-font);
 }
-.leatest-news-main .active{
+.leatest-news-main .active {
   background-color: transparent !important;
 }
-.leatest-news-main p{
+.leatest-news-main p {
   color: black;
 }
 /* ----------------------------------------------------- jatio-page-start ---------------------------------------------------- */
 /* .jatiyo-page-top{
 
 } */
-.jatiyo-page-top .title-page{
+.jatiyo-page-top .title-page {
   font-size: var(--font-thirty-eight-for-page-title);
 }
-.jatiyo-page-top .jatiyo-page-top-buttons{
+.jatiyo-page-title {
+  font-size: var(--jatiyo-page-title);
+}
+.jatiyo-page-top .jatiyo-page-top-buttons {
   border-color: var(--font-color) !important;
 }
-.jatiyo-page-top .jatiyo-page-btn{
+.jatiyo-page-top .jatiyo-page-btn {
   background-color: var(--jatiyo-btn);
   font-size: var(--post-title-font-size);
 }
-/* ----------------------------------------------------- Resposive css-------------------------------------------------------- */
+/* ----------------------------------------------------- post page ---------------------------------------------- */
+.post-page .post-title {
+  font-size: var(--font-thirty-eight-for-page-title) !important;
+}
+.post-info-logo {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+.post-info-logo img {
+  width: 100%;
+  height: 100%;
+}
+.post-inf-details {
+  font-size: var(--link-font);
+}
+.post-page .page-counter {
+  font-size: var(--font-ninteen);
+}
+.post-page-social-icon {
+  background: #eeeeee !important;
+  font-size: var(--time-font);
+}
+.big-news-details {
+  font-size: var(--font-ninteen);
+}
+.this-overflow {
+  height: 106vh !important;
+  overflow-y: scroll;
+}
+.this-overflow::-webkit-scrollbar {
+  width: 0;
+}
+.comment-sort .sort {
+  font-size: var(--post-title-font-size);
+  font-weight: bold;
+}
+.facebook-plugins {
+  font-size: 1.2rem;
+  color: #06065f;
+}
+.more-advertisment img {
+  width: 100%;
+  border: 1px solid black;
+  height: 100%;
+}
+.more-big-ads {
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-column-gap: 15px;
+}
+.post-ads {
+  height: 140px;
+}
+.more-big-ads .big-ads {
+  height: 270px;
+}
+.ads-link img {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* ----------------------------------------------------- Resposive css 991-------------------------------------------------------- */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   html {
     font-size: 58%;
   }
   nav a {
     border-bottom: none !important;
   }
-  .collapse{
+  .collapse {
     background: var(--title-bg) !important;
   }
-  .collapse li a{
+  .collapse li a {
     color: white !important;
   }
-  .dropdown-menu-custom{
+  .dropdown-menu-custom {
     left: 15%;
     top: 0;
     width: 50%;
   }
-  
-  .dropdown-menu-custom li a{
+  .dropdown-menu-custom li a {
     color: black !important;
   }
   .last-section-img img {
@@ -519,9 +600,24 @@ nav li a:hover {
   }
   .remove-border-end {
     border: none !important;
+    align-items: center !important;
+  }
+  .jatiyo-page-two-little {
+    flex-direction: row !important;
+    padding-bottom: 1rem;
+  }
+  .jatiyo-page-two-little .top-little-news {
+    border: none !important;
+  }
+  .jatiyo-page-left {
+    margin-top: 0 !important;
+  }
+  .this-overflow {
+    overflow: initial !important;
+    height: initial !important;
   }
 } /* media */
-/* ----------------------------------------------------- Resposive css------------------------------------------------------------------ */
+/* ----------------------------------------------------- Resposive css 767------------------------------------------------------------------ */
 @media screen and (max-width: 767px) {
   html {
     font-size: 48%;
@@ -545,8 +641,10 @@ nav li a:hover {
   .binodon-content {
     flex-direction: column !important;
   }
-
- 
+  /* 
+  .post-page-advertisment {
+    position: initial !important;
+  } */
 } /* media */
 
 /* ----------------------------------------------------- Resposive css------------------------------------------------------------------ */
@@ -559,11 +657,20 @@ nav li a:hover {
   .sikkha-content {
     flex-direction: column !important;
   }
-  .leatest-image-box{
+  .leatest-image-box {
     width: 11rem;
     height: 7rem;
   }
-  .leatest-every-news a h1{
+  .leatest-every-news a h1 {
     font-size: var(--post-title-font-size);
+  }
+  .jatiyo-page-two-little {
+    flex-direction: column !important;
+  }
+  .jatiyo-page-two-little img {
+    width: 100% !important;
+  }
+  .post-page .post-title {
+    font-size: 2.5rem !important;
   }
 } /* media */

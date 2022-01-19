@@ -7,7 +7,7 @@
       </div>
       <div class="row">
         
-        @foreach ($frist_sec_3_item as $item)
+        @foreach ($exclusive_sec_1_item as $item)
         <div class="col-lg-3 col-sm-6">
           <div class="saradesh-news-detail saradesh-news m-md-0 mt-3 me-3">
             <a href="#">

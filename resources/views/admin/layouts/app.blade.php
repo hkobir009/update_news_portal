@@ -36,7 +36,7 @@
     <script type="text/javascript" src="{{asset('js/bootstrap-select.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="https://cdn.tiny.cloud/1/6fyqkbb1vo9y8l9kmprir1sj7xlopoe2zf7posbgshhaagww/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>tinymce.init({selector:'textarea'});</script>
+    {{-- <script>tinymce.init({selector:'textarea'});</script> --}}
     <!-- Custom js -->
     <script type="text/javascript" src="{{asset('js/admin_custom.js')}}"></script>
     

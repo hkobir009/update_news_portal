@@ -13,10 +13,9 @@ class PostController extends Controller
 {
     public function postIndex(Request $request){
        $postdatas = post::with('categories')->orderBy('id','desc')->get();
-       $postdatas = category::with('posts')->orderBy('id','desc')->get();
-        return $postdatas;
+       $post_category = category::with('posts')->orderBy('id','desc')->get();
 
-        return view('admin.post.post',compact('postdatas'));
+        return view('admin.post.post',compact('postdatas','post_category'));
     }
 
     public function create(Request $request){

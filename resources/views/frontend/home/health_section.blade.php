@@ -9,25 +9,27 @@
           </div><!--section title-->
           <div class="health-news">
             <div class="sikkha-content d-flex flex-column">
+
+              @foreach ($helth_sec_1_item as $item)
               <div class="saradesh-news-detail border-bottom saradesh-news mt-3 me-3 m-lg-0">
                 <a href="#">
-                  <img class="img-fluid w-100" src="{{asset('frontend/img/health.webp')}}" alt="country">
-                  <p class="py-2 fw-medium lh-sm">করোনা আক্রান্ত ৭৮% গর্ভবতী অপরিণত শিশুর জন্ম দিয়েছেন</p>
+                  <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                  <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                 </a>
               </div><!--saradesh-news-detail-->
+              @endforeach
+
               <div class="sikkha-little d-flex flex-column">
+
+                @foreach ($helth_sec_2_item as $item)
                 <div class="recent-news more-news border-bottom">
                   <a class="d-flex align-items-md-start mt-3 pb-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/edu.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">দেশে জটিল রোগের চিকিৎসায় নতুন আশার আলো স্টেমসেল থেরাপি</p>
+                  <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
+                  <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>
                </div>
-                <div class="recent-news more-news">
-                  <a class="d-flex align-items-md-start mt-3 pb-3" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/edu1.webp')}}" width="100" height="75" alt="">
-                    <p class="m-0 fw-medium">১১ দেশে জটিল রোগের চিকিৎসায় নতুন আশার আলো স্টেমসেল থেরাপি</p>
-                  </a>
-                </div>
+               @endforeach
+               
               </div>
             </div><!--sikkha content-->
           </div>
@@ -47,75 +49,29 @@
           <div class="col-md-6">
             <div class="saradesh-second-col mt-sm-3 m-md-0">
 
+              @foreach ($probas_sec_1_item as $item)
               <div class="recent-news border-bottom">
                 <a class="d-flex justify-content-start align-items-md-start pb-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh snd.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
+                  <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
+                  <p class="m-0 fw-medium">{{$item->title}}</p>
                 </a>
               </div>
+             @endforeach
 
-              <div class="recent-news border-bottom">
-                <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd1.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
-
-              <div class=" recent-news border-bottom">
-                <a class=" d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
-
-              <div class="recent-news border-bottom">
-                <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd7.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
-
-              <div class="recent-news">
-                <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd5.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
-              
             </div>
           </div><!--inside col 6-->
           <div class="col-md-6">
             <div class="saradesh-second-col">
+
+            @foreach ($probas_sec_2_item as $item)
               <div class=" recent-news border-bottom">
                 <a class=" d-flex justify-content-start align-items-md-start pb-3  " href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd8.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
+                  <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
+                  <p class="m-0 fw-medium">{{$item->title}}</p>
                 </a>
               </div>
-              <div class="recent-news border-bottom">
-                <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd7.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
-              <div class=" recent-news border-bottom">
-                <a class=" d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd6.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
-              <div class="recent-news border-bottom">
-                <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd5.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
-              <div class="recent-news">
-                <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                  <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd1.webp')}}" width="100" height="75" alt="">
-                  <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                </a>
-              </div>
+             @endforeach
+
             </div><!--saradesh second col-->
           </div><!--inside col 6-->
         </div><!--inside row-->
@@ -127,25 +83,26 @@
         </div><!--section title-->
   
         <div class="sikkha-content d-flex flex-column">
+          @foreach ($law_sec_1_item as $item)
           <div class="saradesh-news-detail border-bottom saradesh-news mt-3 me-3 m-lg-0">
             <a href="#">
-              <img class="img-fluid w-100" src="{{asset('frontend/img/health-right.webp')}}" alt="country">
-              <p class="py-2 fw-medium lh-sm">করোনা আক্রান্ত ৭৮% গর্ভবতী অপরিণত শিশুর জন্ম দিয়েছেন</p>
+              <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+              <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
             </a>
           </div><!--saradesh-news-detail-->
+          @endforeach
+
           <div class="sikkha-little d-flex flex-column">
+
+            @foreach ($law_sec_2_item as $item)
             <div class="recent-news more-news border-bottom">
               <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-              <img class="img-fluid me-3" src="{{asset('frontend/img/edu.webp')}}" width="100" height="75" alt="">
-              <p class="m-0 fw-medium">গ্যাটকো দুর্নীতি মামলায় অভিযোগ গঠনের শুনানি ২৩ জানুয়ারি</p>
+              <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
+              <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>
            </div>
-            <div class="recent-news more-news border-bottom">
-              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
-                <img class="img-fluid me-3" src="{{asset('frontend/img/edu1.webp')}}" width="100" height="75" alt="">
-                <p class="m-0 fw-medium">১১ দেশে জটিল রোগের চিকিৎসায় নতুন আশার আলো স্টেমসেল থেরাপি</p>
-              </a>
-            </div>
+             @endforeach
+           
           </div>
         </div><!--sikkha content-->
       </div><!--col-md-3-->

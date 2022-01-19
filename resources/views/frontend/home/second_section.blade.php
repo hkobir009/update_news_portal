@@ -295,7 +295,11 @@
             </div>
         </div>
          <!------------------------ ads place -------------------------------------- -->
-        <div class="advertisment w-100 bg-danger text-white my-3" ><h1 class="text-center">Ads here 8 </h1></div>
+         <div class="advertisment w-100 bg-danger my-3">
+          <a class="ads-link" target="_blank" href="https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjst0DMPecqPFm9u2w6geaL1sPLoNH_b6hvVMp1n_S1Uy116Qkn68QJSVuKQyTH9u41H1FDQqceivrJNXEB-38tKib8wGTMJa8I8Zewcn6dTfxCEJaKwQHDAZ-bAZyuLedhQ5LYeXhHqWBFN_KRH_6NZ709lRtg9jtkZLUzsbQQsqtRS0eWK1rz0GnYw8yNBvVZb41WVzrBApjXcy7eBecCE2pFTRY_GzxZnwp6jYjOfkTsnXCzKE6Hm91YrJdmdv8OgK_VRb4FZnpLThGbMQPuAbDz0bMiYBotGoUqc65VP6booQoHSXyJ9FUOxNYcZrWZuh&sai=AMfl-YRMWa6cwFEf3k8YGi-zAwgtKK2zEedBX2t26TW0jO12zG8L6sQExLw6nSappOqmLMBBWzoee4Xu3MkIDQrXsGMEr0zd25r8bbC9Dsc-IwRo7g_dvmo47jhkub_iK01SACtB&sig=Cg0ArKJSzDtr4z4FWC8-&fbs_aeid=[gw_fbsaeid]&adurl=https://usbmch.com/welcome/&nm=7&nx=33&ny=-114&mb=2&clkt=83">
+            <img src="https://tpc.googlesyndication.com/simgad/16764916647907720142" alt="">
+          </a>
+        </div>
       </div><!--main row-->
     </div>
   </section>

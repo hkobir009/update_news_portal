@@ -11,86 +11,44 @@
           <div class="row mt-3">
             <div class="col-md-4">
               <div class="saradesh-news bg-white more-news d-flex flex-column justify-content-between h-100">
+                
+                @foreach ($holeWorld_sec_1_item as $item)
                 <div class="saradesh-news-detail mb-sm-4 mb-lg-0">
                   <a href="#">
-                    <img class="img-fluid my-sm-4 my-md-0 w-100" src="{{asset('frontend/img/saradesh.webp')}}" alt="country">
-                    <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
+                    <img class="img-fluid my-sm-4 my-md-0 w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                    <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                   </a>
                 </div><!--saradesh-news-detail-->
-                <div class="saradesh-news-detail mb-sm-4 mb-lg-0">
-                  <a href="#">
-                    <img class="img-fluid my-sm-4 my-md-0 w-100" src="{{asset('frontend/img/saradesh.webp')}}" alt="country">
-                    <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-                  </a>
-                </div><!--saradesh-news-detail-->
+                @endforeach
+
               </div>
             </div><!--inside col md 4--->
             <div class="col-md-4">
               <div class="saradesh-second-col mt-sm-3 mt-md-0">
+
+                @foreach ($holeWorld_sec_2_item as $item)
                 <div class="recent-news border-bottom pb-3">
                   <a class="d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh snd.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
+                    <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}"alt="">
+                    <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>
                 </div>
-                <div class="recent-news border-bottom py-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd1.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ</p>
-                  </a>
-                </div>
-                <div class=" recent-news border-bottom py-3">
-                  <a class=" d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ</p>
-                  </a>
-                </div>
-                <div class="recent-news border-bottom py-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd7.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ</p>
-                  </a>
-                </div>
-                <div class="recent-news py-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd5.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                  </a>
-                </div>
+                @endforeach
+  
               </div>
             </div><!--inside col 4-->
             <div class="col-md-4 remove-border-end border-end">
               <div class="saradesh-second-col">
+
+                @foreach ($holeWorld_sec_3_item as $item)
                 <div class=" recent-news border-bottom pb-3">
                   <a class=" d-flex justify-content-start align-items-md-start  " href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd8.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
+                    <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}"alt="">
+                    <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>
                 </div>
-                <div class="recent-news border-bottom py-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd7.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                  </a>
-                </div>
-                <div class=" recent-news border-bottom py-3">
-                  <a class=" d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd6.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                  </a>
-                </div>
-                <div class="recent-news border-bottom py-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd5.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                  </a>
-                </div>
-                <div class="recent-news py-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="#">
-                    <img class="img-fluid me-3" src="{{asset('frontend/img/saradesh scnd1.webp')}}"alt="">
-                    <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                  </a>
-                </div>
+                @endforeach
+
               </div>
             </div><!--inside col 4-->
           </div><!--inside row-->
@@ -126,7 +84,11 @@
             </form>
           </div>
           <!------------------------ ads place -------------------------------------- -->
-          <div class="ads w-100 bg-danger text-white mt-4 mb-3 mb-md-0" style="height: 25rem;"><h1>Ads here 10.</h1></div>
+          <div class="advertisment w-100 bg-danger my-3">
+            <a class="ads-link" target="_blank" href="https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjst0DMPecqPFm9u2w6geaL1sPLoNH_b6hvVMp1n_S1Uy116Qkn68QJSVuKQyTH9u41H1FDQqceivrJNXEB-38tKib8wGTMJa8I8Zewcn6dTfxCEJaKwQHDAZ-bAZyuLedhQ5LYeXhHqWBFN_KRH_6NZ709lRtg9jtkZLUzsbQQsqtRS0eWK1rz0GnYw8yNBvVZb41WVzrBApjXcy7eBecCE2pFTRY_GzxZnwp6jYjOfkTsnXCzKE6Hm91YrJdmdv8OgK_VRb4FZnpLThGbMQPuAbDz0bMiYBotGoUqc65VP6booQoHSXyJ9FUOxNYcZrWZuh&sai=AMfl-YRMWa6cwFEf3k8YGi-zAwgtKK2zEedBX2t26TW0jO12zG8L6sQExLw6nSappOqmLMBBWzoee4Xu3MkIDQrXsGMEr0zd25r8bbC9Dsc-IwRo7g_dvmo47jhkub_iK01SACtB&sig=Cg0ArKJSzDtr4z4FWC8-&fbs_aeid=[gw_fbsaeid]&adurl=https://usbmch.com/welcome/&nm=7&nx=33&ny=-114&mb=2&clkt=83">
+              <img src="https://tpc.googlesyndication.com/simgad/16764916647907720142" alt="">
+            </a>
+          </div>
         </div><!--outside col-md-3-->
       </div><!--row---->
     </div><!--container---->
