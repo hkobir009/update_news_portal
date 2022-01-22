@@ -6,12 +6,12 @@
         <div class="row d-flex justify-content-center p-4">
             <div class="dashbard-content-header d-flex align-items-center justify-content-between">
                 <div class="title my-5">
-                    <h1 class="text-capitalize p-0 fw-bold">Add new post</h1>
+                    <h1 class="text-capitalize p-0 fw-bold">Add new ads</h1>
                 </div>
                 <div class="reports d-flex align-items-center bg-white p-1 px-md-4 py-md-1 mx-2 rounded">
-                    <a href="{{route('blog_post')}}" class="d-flex align-items-center p-3 text-decoration-none">
+                    <a href="{{route('ads')}}" class="d-flex align-items-center p-3 text-decoration-none">
                         <i class="fas fa-plus fa-2x fw-normal"></i>
-                        <h4 class="m-0 fw-bold mx-3 text-capitalize">View All Post</h4>
+                        <h4 class="m-0 fw-bold mx-3 text-capitalize">View All Ads</h4>
                     </a>
                 </div>
             </div>
@@ -28,36 +28,48 @@
     <div class="breaking-news-form" style="margin-bottom: 50px;">
         <div class="container">
             <div class="forms mb-5 pb-5">
-                <form action="{{route('store_post')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('store_ads')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">post title</label>
-                        <input class="form-control py-2" name="title" type="text" placeholder="post title" required>
+                        <label for="" class="text-capitalize mb-2">first section left image url</label>
+                        <input class="form-control py-2" name="first_left" type="text" placeholder="First left img url" required>
                     </div>
-                    <div class="select-any mt-5">
-                        <label for="" class="text-capitalize mb-2">Select Cetagory</label>
-                        <select type="text" class="selectpicker border w-100" name="categories[]" multiple required>
-                            @foreach ($parantNames as $parantName)
-                            <option value="{{$parantName->id}}" style="font-size: 1.9rem;">{{$parantName->name}}</option>
-                            @endforeach
-                        </select>
+                    <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">first section left image target url</label>
+                        <input class="form-control py-2" name="first_left_target" type="text" placeholder="First left img target url" required>
                     </div>
-                    <div class="select-any mt-5">
-                        <label for="" class="text-capitalize mb-2">Select tag</label>
-                        <select type="text" class="selectpicker border w-100" name="tags[]" multiple required>
-                            @foreach ($tagdatas as $tagdata)
-                            <option value="{{$tagdata->id}}" style="font-size: 1.9rem;">{{$tagdata->name}}</option>
-                            @endforeach
-                        </select>
+                    <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">first section right image url</label>
+                        <input class="form-control py-2" name="first_right" type="text" placeholder="First right img url" required>
                     </div>
-                     <div class="body mt-5">
-                        <label for="" class="text-capitalize mb-2">body</label>
-                        <textarea class="w-100" rows="4" id="body" name="body" placeholder="Post Description" required></textarea>
-                     </div>
-                     <div class="image mt-5">
-                     <label for="" class="text-capitalize mb-2">Image</label>
+                    <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">first section right image target url</label>
+                        <input class="form-control py-2" name="first_right_target" type="text" placeholder="First right img target url" required>
+                    </div>
+                    <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">secound section image url</label>
+                        <input class="form-control py-2" name="secound_img" type="text" placeholder="Secound img url" required>
+                    </div>
+                    <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">secound section image target url</label>
+                        <input class="form-control py-2" name="secound_img_target" type="text" placeholder="Secound img target url" required>
+                    </div>
+                    <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">Hole world section image url</label>
+                        <input class="form-control py-2" name="hole_world_img" type="text" placeholder="Hole world img url" required>
+                    </div>
+                    <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">hole world section image target url</label>
+                        <input class="form-control py-2" name="hole_world_img_target" type="text" placeholder="Hole world img target url" required>
+                    </div>
+                     {{-- <div class="image mt-5">
+                     <label for="" class="text-capitalize mb-2">Our advertisement Image</label>
                      <input class="form-control py-2" type="file" name="image" placeholder="image">
-                     </div>
+                     </div> --}}
+                     <div class="user-name mt-5">
+                        <label for="" class="text-capitalize mb-2">Our advertisement target url</label>
+                        <input class="form-control py-2" name="our_advertisement_target_url" type="text" placeholder="Our advertisement target url" required>
+                    </div>
                    <input type="submit" value="submit" class="form-control mt-5 btn-outline-info">
             </form>
         </div>

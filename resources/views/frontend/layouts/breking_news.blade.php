@@ -6,7 +6,7 @@
                 <marquee behavior="" direction="">
                     <ul class="m-0 d-flex">
                         @foreach ($breskingdatas as $breskingdata)
-                        <li class="mx-3"><a class="text-decoration-none" href="#"><i class="fas fa-angle-double-right"></i>{{$breskingdata->name}}</a></li>
+                        <li class="mx-3"><a class="text-decoration-none" href="#">{{$breskingdata->name}}</a></li><br>
                         @endforeach
                     </ul>
                 </marquee>

@@ -10,15 +10,19 @@
     <meta name="description" content="">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- all css here -->
-    <link rel="stylesheet" href="{{ asset('frontend/css/SolaimanLipi.css') }}">
+     <link rel="stylesheet" href="{{ asset('frontend/css/SolaimanLipi.css') }}">
     <!-- font-awesome css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/all.css') }}">
     <!-- font-awesome css -->
     <!-- bootstrap v5.0.2 css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/font_custom.css') }}">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=61ec78ca6346030019493b64&product=inline-share-buttons" async="async">
+    </script>
+   
 </head>
-<body >
+<body>
+
 @include('frontend.layouts.header')
 @include('frontend.layouts.navigation')
 @include('frontend.layouts.breking_news')
@@ -39,6 +43,7 @@
   <script src="{{ asset('frontend/js/all.js') }}"></script>
     <!-- custom js -->
     <script src="{{ asset('frontend/js/custom.js') }}"></script>
+    
 
 </body>
 </html>

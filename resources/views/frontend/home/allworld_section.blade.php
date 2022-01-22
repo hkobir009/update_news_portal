@@ -27,7 +27,7 @@
               <div class="saradesh-second-col mt-sm-3 mt-md-0">
 
                 @foreach ($holeWorld_sec_2_item as $item)
-                <div class="recent-news border-bottom pb-3">
+                <div class="recent-news border-bottom mt-3 pb-3">
                   <a class="d-flex justify-content-start align-items-md-start" href="#">
                     <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}"alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
@@ -41,7 +41,7 @@
               <div class="saradesh-second-col">
 
                 @foreach ($holeWorld_sec_3_item as $item)
-                <div class=" recent-news border-bottom pb-3">
+                <div class=" recent-news border-bottom mt-3 pb-3">
                   <a class=" d-flex justify-content-start align-items-md-start  " href="#">
                     <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}"alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
@@ -83,12 +83,14 @@
               </div>
             </form>
           </div>
-          <!------------------------ ads place -------------------------------------- -->
-          <div class="advertisment w-100 bg-danger my-3">
-            <a class="ads-link" target="_blank" href="https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjst0DMPecqPFm9u2w6geaL1sPLoNH_b6hvVMp1n_S1Uy116Qkn68QJSVuKQyTH9u41H1FDQqceivrJNXEB-38tKib8wGTMJa8I8Zewcn6dTfxCEJaKwQHDAZ-bAZyuLedhQ5LYeXhHqWBFN_KRH_6NZ709lRtg9jtkZLUzsbQQsqtRS0eWK1rz0GnYw8yNBvVZb41WVzrBApjXcy7eBecCE2pFTRY_GzxZnwp6jYjOfkTsnXCzKE6Hm91YrJdmdv8OgK_VRb4FZnpLThGbMQPuAbDz0bMiYBotGoUqc65VP6booQoHSXyJ9FUOxNYcZrWZuh&sai=AMfl-YRMWa6cwFEf3k8YGi-zAwgtKK2zEedBX2t26TW0jO12zG8L6sQExLw6nSappOqmLMBBWzoee4Xu3MkIDQrXsGMEr0zd25r8bbC9Dsc-IwRo7g_dvmo47jhkub_iK01SACtB&sig=Cg0ArKJSzDtr4z4FWC8-&fbs_aeid=[gw_fbsaeid]&adurl=https://usbmch.com/welcome/&nm=7&nx=33&ny=-114&mb=2&clkt=83">
-              <img src="https://tpc.googlesyndication.com/simgad/16764916647907720142" alt="">
-            </a>
-          </div>
+         <!------------------------ ads place -------------------------------------- -->
+         @foreach ($adsData as $adsDatas)
+         <div class="advertisment w-100 my-3">
+          <a class="ads-link" target="_blank" href="{{$adsDatas->hole_world_img_target_url}}">
+            <img src="{{$adsDatas->hole_world_img_url}}" alt="">
+          </a>
+        </div>
+        @endforeach
         </div><!--outside col-md-3-->
       </div><!--row---->
     </div><!--container---->

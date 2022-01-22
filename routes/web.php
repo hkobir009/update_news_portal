@@ -1,8 +1,11 @@
 <?php
+
+use App\Http\Controllers\AdsController;
 use App\Http\Controllers\fontController;
 use App\Http\Controllers\BreakingNewsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\deshboardController;
+use App\Http\Controllers\FontCategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +25,22 @@ use Illuminate\Support\Facades\Route;
    Route::get('/',[fontController::class,'index'])->name('home');
 
 
-                   //  Admin Routes
+                   //  Category Routes
+   Route::get('/jobs',[FontCategoryController::class,'jobs'])->name('jobs');
+   Route::get('/health',[FontCategoryController::class,'health'])->name('health');
+   Route::get('/sports',[FontCategoryController::class,'sports'])->name('sports');
+   Route::get('/national',[FontCategoryController::class,'national'])->name('national');
+   Route::get('/economy',[FontCategoryController::class,'economy'])->name('economy');
+   Route::get('/politics',[FontCategoryController::class,'politics'])->name('politics');
+   Route::get('/holeWorld',[FontCategoryController::class,'holeWorld'])->name('holeWorld');
+   Route::get('/education',[FontCategoryController::class,'education'])->name('education');
+   Route::get('/entertainment',[FontCategoryController::class,'entertainment'])->name('entertainment');
+   Route::get('/international',[FontCategoryController::class,'international'])->name('international');
+
+                  //  posts Routes
+   Route::get('/posts',[FontCategoryController::class,'posts'])->name('posts');
+
+                //  Admin Routes
 
 Route::group(['middleware' => 'auth'], function () {
                     
@@ -64,6 +82,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('post_delete/{id}',[PostController::class,'delete'])->name('post_delete');
             
     
+    Route::get('ads',[AdsController::class,'adsIndex'])->name('ads');
+    Route::get('create_ads',[AdsController::class,'create'])->name('create_ads');
+    Route::post('create_ads',[AdsController::class,'store'])->name('store_ads');
+    Route::get('ads_edit/{id}',[AdsController::class,'edit'])->name('ads_edit');
+    Route::post('ads_update/{id}',[AdsController::class,'update'])->name('ads_update');
+    Route::get('ads_delete/{id}',[AdsController::class,'delete'])->name('ads_delete');
+
 });
 
 

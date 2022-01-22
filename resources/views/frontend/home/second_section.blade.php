@@ -4,112 +4,21 @@
       <div class="row">
        <div class="col-lg-9 m-0 p-0">
         <div class="row">
+
+          @foreach ($secound_sec_item_1 as $item)
           <div class="col-md-4 col-sm-12">
             <div class="news-col mx-2 m-lg-0">
               <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/news img-1.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, unde.</p>
+                <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
               </a>
             </div><!--news col-->
           </div><!--2nd col 4-->
-          <div class="col-md-4 col-sm-12">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/newsimg4.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-          <div class="col-md-4 col-sm-12">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/news img2.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
+          @endforeach
+
         </div><!--2nd row-->
-        <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
-        <div class="row">
-          <div class="col-md-4 col-sm-12">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/newsimg4.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-          <div class="col-md-4 col-sm-12">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/news img3.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে 13 লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-          <div class="col-md-4 col-sm-12">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/news img-1.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে 13 লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-        </div><!--2nd row-->
-       <!-- ------------------------------------------------------------------------------------------------------------------------------------------- -->
-        <div class="row">
-          <div class="col-md-4">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/news img2.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-          <div class="col-md-4">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/img2.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-          <div class="col-md-4">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/img1.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-        </div><!--inside row-->
-       <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
-        <div class="row">
-          <div class="col-md-4">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/img1.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-          <div class="col-md-4">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/news img3.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-          <div class="col-md-4">
-            <div class="news-col mx-2 m-lg-0">
-              <a href="#">
-                <img class="img-fluid w-100" src="{{asset('frontend/img/news img-1.webp')}}" alt="country">
-                <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-              </a>
-            </div><!--news col-->
-          </div><!--2nd col 4-->
-        </div><!--2nd row-->
+
+
        </div><!--main column-9-->
        <div class="col-lg-3"><!--main col-md-3-->
         <div class="last-recent position-relative">
@@ -120,88 +29,16 @@
               </div><!--recent top-->
               <div class="tab-content">
                 <div class="tab-pane fade show active recent-post-details bg-white p-2" style="margin-top: 4.8rem" id="Sorboses">
+                  
+                  @foreach ($letest_datas as $item)
                   <div class="recent-news border-bottom">
                     <a class=" d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs2.webp')}}" alt="">
-                      <p class="m-0">লাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথা?</p>
+                      <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" alt="">
+                      <p class="m-0">{{$item->title}}</p>
                     </a>
                   </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/img1.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs4.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের  হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs5.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs6.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/img1.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ উঠল কেন?</p>
-                    </a>
-                  </div>
-                  
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs6.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ  উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/img1.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
+                  @endforeach
+
                 </div><!--recent post details-->
                 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
                 <div class="tab-pane fade show recent-post-details bg-white p-2" style="margin-top: 4.8rem" id="Sorbadhik">
@@ -213,80 +50,7 @@
                     </a>
                   </div>
                   
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class=" recent-news border-bottom mt-3">
-                    <a class=" d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs2.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার কারণ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs4.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের  হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs5.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs6.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/img1.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ উঠল কেন?</p>
-                    </a>
-                  </div>
-                  
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs6.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ  উঠল কেন?</p>
-                    </a>
-                  </div>
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/img1.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
-                  
-                  <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/imgs7.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ হঠাৎ যুক্তরাষ্ট্রের মাথাব্যথার বাংলাদেশ হঠাৎ হয়ে উঠল কেন?</p>
-                    </a>
-                  </div>
+
                 </div><!--recent post details-->
               </div><!--tab-content 1-->
               <div class="recent-bottom d-flex justify-content-between position-absolute w-100">
@@ -295,11 +59,13 @@
             </div>
         </div>
          <!------------------------ ads place -------------------------------------- -->
-         <div class="advertisment w-100 bg-danger my-3">
-          <a class="ads-link" target="_blank" href="https://googleads.g.doubleclick.net/pcs/click?xai=AKAOjst0DMPecqPFm9u2w6geaL1sPLoNH_b6hvVMp1n_S1Uy116Qkn68QJSVuKQyTH9u41H1FDQqceivrJNXEB-38tKib8wGTMJa8I8Zewcn6dTfxCEJaKwQHDAZ-bAZyuLedhQ5LYeXhHqWBFN_KRH_6NZ709lRtg9jtkZLUzsbQQsqtRS0eWK1rz0GnYw8yNBvVZb41WVzrBApjXcy7eBecCE2pFTRY_GzxZnwp6jYjOfkTsnXCzKE6Hm91YrJdmdv8OgK_VRb4FZnpLThGbMQPuAbDz0bMiYBotGoUqc65VP6booQoHSXyJ9FUOxNYcZrWZuh&sai=AMfl-YRMWa6cwFEf3k8YGi-zAwgtKK2zEedBX2t26TW0jO12zG8L6sQExLw6nSappOqmLMBBWzoee4Xu3MkIDQrXsGMEr0zd25r8bbC9Dsc-IwRo7g_dvmo47jhkub_iK01SACtB&sig=Cg0ArKJSzDtr4z4FWC8-&fbs_aeid=[gw_fbsaeid]&adurl=https://usbmch.com/welcome/&nm=7&nx=33&ny=-114&mb=2&clkt=83">
-            <img src="https://tpc.googlesyndication.com/simgad/16764916647907720142" alt="">
+         @foreach ($adsData as $adsDatas)
+         <div class="advertisment w-100 my-3">
+          <a class="ads-link" target="_blank" href="{{$adsDatas->secound_right_img_target_url}}">
+            <img src="{{$adsDatas->secound_right_img_url}}" alt="">
           </a>
         </div>
+        @endforeach
       </div><!--main row-->
     </div>
   </section>

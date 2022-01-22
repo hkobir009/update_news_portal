@@ -50,7 +50,7 @@
             <div class="saradesh-second-col mt-sm-3 m-md-0">
 
               @foreach ($probas_sec_1_item as $item)
-              <div class="recent-news border-bottom">
+              <div class="recent-news border-bottom mt-3">
                 <a class="d-flex justify-content-start align-items-md-start pb-3" href="#">
                   <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">{{$item->title}}</p>
@@ -64,7 +64,7 @@
             <div class="saradesh-second-col">
 
             @foreach ($probas_sec_2_item as $item)
-              <div class=" recent-news border-bottom">
+              <div class=" recent-news border-bottom mt-3">
                 <a class=" d-flex justify-content-start align-items-md-start pb-3  " href="#">
                   <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">{{$item->title}}</p>

@@ -1,37 +1,23 @@
+@section('content')
 <?php
 
-namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+namespace App\Http\Controllers;
+
 use App\Models\Ads;
 use App\Models\breaking_news;
 use App\Models\category;
 use App\Models\post;
 use EasyBanglaDate\Types\BnDateTime;
+use EasyBanglaDate\Types\DateTime as EnDateTime;
 use DateTimeZone;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\View;
 
-class AppServiceProvider extends ServiceProvider
-{
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //View::share('key', 'value');
+    public function __construct()
+    {   
+        //                live date and time
         $bongabda = new BnDateTime('now', new DateTimeZone('Asia/Dhaka'));
         $dateandtime = $bongabda->getDateTime()->format('l , j F Y , b h:i'); 
         //                breaking news all info
@@ -76,9 +62,6 @@ class AppServiceProvider extends ServiceProvider
         //for health section 2 
         $collection = collect($category_wize_post);
         $helth_sec_2_item = $collection->splice(1,2);
-        //for health section 3 
-        $collection = collect($category_wize_post);
-        $helth_sec_3_item = $collection->splice(3,15);
 
                 //for probas section
 
@@ -134,24 +117,26 @@ class AppServiceProvider extends ServiceProvider
             //for Entertainment section 1
         $collection = collect($category_wize_post);
         $entertainment_sec_1_item = $collection->splice(0,1);
-        //for Entertainment section 2
+
+            //for Entertainment section 2
         $collection = collect($category_wize_post);
         $entertainment_sec_2_item = $collection->splice(1,2);
-        //for Entertainment section 3
+
+            //for Entertainment section 3
         $collection = collect($category_wize_post);
         $entertainment_sec_3_item = $collection->splice(3,1);
-        //for Entertainment section 4
+
+            //for Entertainment section 4
         $collection = collect($category_wize_post);
         $entertainment_sec_4_item = $collection->splice(4,4);
-        //for Entertainment section 5
+
+            //for Entertainment section 5
         $collection = collect($category_wize_post);
         $entertainment_sec_5_item = $collection->splice(8,1);
-        //for Entertainment section 6
+
+            //for Entertainment section 6
         $collection = collect($category_wize_post);
         $entertainment_sec_6_item = $collection->splice(9,4);
-        //for Entertainment section 7
-        $collection = collect($category_wize_post);
-        $entertainment_sec_7_item = $collection->splice(3,15);
 
             //for lifestyle section
 
@@ -212,10 +197,8 @@ class AppServiceProvider extends ServiceProvider
         //for jobs section 2 
         $collection = collect($category_wize_post);
         $jobs_sec_2_item = $collection->splice(1,2);
-        //for jobs section 3
-        $collection = collect($category_wize_post);
-        $jobs_sec_3_item = $collection->splice(3,15);
-        
+
+
                     //for holeWorld section
 
         $category_wize_post = DB::table('posts')
@@ -233,15 +216,6 @@ class AppServiceProvider extends ServiceProvider
         //for holeWorld section 3 
         $collection = collect($category_wize_post);
         $holeWorld_sec_3_item = $collection->splice(7,5);
-        //for holeWorld section 4
-        $collection = collect($category_wize_post);
-        $holeWorld_sec_4_item = $collection->splice(0,1);
-        //for holeWorld section 5 
-        $collection = collect($category_wize_post);
-        $holeWorld_sec_5_item = $collection->splice(1,2);
-        //for holeWorld section 6 
-        $collection = collect($category_wize_post);
-        $holeWorld_sec_6_item = $collection->splice(3,15);
 
         //for national section
 
@@ -257,15 +231,6 @@ class AppServiceProvider extends ServiceProvider
         //for national section 2 
         $collection = collect($category_wize_post);
         $national_sec_2_item = $collection->splice(4,5);
-        //for national section 2 
-        $collection = collect($category_wize_post);
-        $national_sec_3_item = $collection->splice(0,1);
-        //for national section 2 
-        $collection = collect($category_wize_post);
-        $national_sec_4_item = $collection->splice(1,2);
-        //for national section 2 
-        $collection = collect($category_wize_post);
-        $national_sec_5_item = $collection->splice(3,15);
 
         //for politics section
 
@@ -278,15 +243,6 @@ class AppServiceProvider extends ServiceProvider
         //for politics section 1
         $collection = collect($category_wize_post);
         $politics_sec_1_item = $collection->splice(0,5);
-        //for politics section 2
-        $collection = collect($category_wize_post);
-        $politics_sec_2_item = $collection->splice(0,1);
-        //for politics section 3
-        $collection = collect($category_wize_post);
-        $politics_sec_3_item = $collection->splice(1,2);
-        //for politics section 4
-        $collection = collect($category_wize_post);
-        $politics_sec_4_item = $collection->splice(3,15);
       
         //for international section
 
@@ -302,15 +258,6 @@ class AppServiceProvider extends ServiceProvider
         //for international section 2 
         $collection = collect($category_wize_post);
         $international_sec_2_item = $collection->splice(2,4);
-        //for international section 3
-        $collection = collect($category_wize_post);
-        $international_sec_3_item = $collection->splice(0,1);
-        //for international section 4 
-        $collection = collect($category_wize_post);
-        $international_sec_4_item = $collection->splice(1,2);
-        //for international section 5 
-        $collection = collect($category_wize_post);
-        $international_sec_5_item = $collection->splice(3,15);
 
                 //for economy section
 
@@ -326,15 +273,6 @@ class AppServiceProvider extends ServiceProvider
         //for economy section 2 
         $collection = collect($category_wize_post);
         $economy_sec_2_item = $collection->splice(2,4);
-        //for economy section 3
-        $collection = collect($category_wize_post);
-        $economy_sec_3_item = $collection->splice(0,1);
-        //for economy section 4 
-        $collection = collect($category_wize_post);
-        $economy_sec_4_item = $collection->splice(1,2);
-        //for economy section 5 
-        $collection = collect($category_wize_post);
-        $economy_sec_5_item = $collection->splice(3,15);
 
         //for sports section
 
@@ -350,15 +288,6 @@ class AppServiceProvider extends ServiceProvider
         //for sports section 2 
         $collection = collect($category_wize_post);
         $sports_sec_2_item = $collection->splice(4,6);
-        //for sports section 3
-        $collection = collect($category_wize_post);
-        $sports_sec_3_item = $collection->splice(0,1);
-        //for sports section 4 
-        $collection = collect($category_wize_post);
-        $sports_sec_4_item = $collection->splice(1,2);
-        //for sports section 5 
-        $collection = collect($category_wize_post);
-        $sports_sec_5_item = $collection->splice(3,15);
 
         //for education section
 
@@ -374,76 +303,21 @@ class AppServiceProvider extends ServiceProvider
         //for education section 2 
         $collection = collect($category_wize_post);
         $education_sec_2_item = $collection->splice(1,2);
-                //for education section 3 
-        $collection = collect($category_wize_post);
-        $education_sec_3_item = $collection->splice(3,15);
 
-        View::share('adsData',$adsData); 
-        View::share('secound_sec_item_1',$secound_sec_item_1); 
-        View::share('breskingdatas',$breskingdatas);
-        View::share('jobs_sec_1_item',$jobs_sec_1_item); 
-        View::share('jobs_sec_2_item',$jobs_sec_2_item); 
-        View::share('holeWorld_sec_1_item',$holeWorld_sec_1_item); 
-        View::share('holeWorld_sec_2_item',$holeWorld_sec_2_item); 
-        View::share('holeWorld_sec_3_item',$holeWorld_sec_3_item); 
-        View::share('national_sec_1_item',$national_sec_1_item); 
-        View::share('national_sec_2_item',$national_sec_2_item); 
-        View::share('politics_sec_1_item',$politics_sec_1_item); 
-        View::share('international_sec_2_item',$international_sec_2_item); 
-        View::share('economy_sec_1_item',$economy_sec_1_item); 
-        View::share('economy_sec_2_item',$economy_sec_2_item); 
-        View::share('international_sec_1_item',$international_sec_1_item); 
-        View::share('sports_sec_1_item',$sports_sec_1_item); 
-        View::share('sports_sec_2_item',$sports_sec_2_item); 
-        View::share('education_sec_1_item',$education_sec_1_item); 
-        View::share('entertainment_sec_5_item',$entertainment_sec_5_item); 
-        View::share('entertainment_sec_6_item',$entertainment_sec_6_item); 
-        View::share('life_style_sec_1_item',$life_style_sec_1_item); 
-        View::share('life_style_sec_2_item',$life_style_sec_2_item); 
-        View::share('information_sec_2_item',$information_sec_2_item); 
-        View::share('religion_sec_1_item',$religion_sec_1_item); 
-        View::share('religion_sec_2_item',$religion_sec_2_item); 
-        View::share('frist_sec_2_item',$frist_sec_2_item); 
-        View::share('frist_sec_1_item',$frist_sec_1_item); 
-        View::share('helth_sec_1_item',$helth_sec_1_item); 
-        View::share('helth_sec_2_item',$helth_sec_2_item); 
-        View::share('probas_sec_1_item',$probas_sec_1_item); 
-        View::share('probas_sec_2_item',$probas_sec_2_item); 
-        View::share('law_sec_1_item',$law_sec_1_item); 
-        View::share('law_sec_2_item',$law_sec_2_item); 
-        View::share('exclusive_sec_1_item',$exclusive_sec_1_item); 
-        View::share('entertainment_sec_1_item',$entertainment_sec_1_item); 
-        View::share('entertainment_sec_2_item',$entertainment_sec_2_item); 
-        View::share('entertainment_sec_3_item',$entertainment_sec_3_item); 
-        View::share('entertainment_sec_4_item',$entertainment_sec_4_item); 
-        View::share('letest_datas',$letest_datas); 
-        View::share('dateandtime',$dateandtime); 
-        View::share('categoryinfos',$categoryinfos); 
-        View::share('frist_sec_3_item',$frist_sec_3_item); 
-        View::share('education_sec_2_item',$education_sec_2_item); 
-        View::share('information_sec_1_item',$information_sec_1_item);
-        View::share('national_sec_3_item',$national_sec_3_item);
-        View::share('national_sec_4_item',$national_sec_4_item);
-        View::share('national_sec_5_item',$national_sec_5_item);
-        View::share('education_sec_3_item',$education_sec_3_item);
-        View::share('sports_sec_3_item',$sports_sec_3_item);
-        View::share('sports_sec_4_item',$sports_sec_4_item);
-        View::share('sports_sec_5_item',$sports_sec_5_item);
-        View::share('economy_sec_3_item',$economy_sec_3_item);
-        View::share('economy_sec_4_item',$economy_sec_4_item);
-        View::share('economy_sec_5_item',$economy_sec_5_item);
-        View::share('international_sec_3_item',$international_sec_3_item);
-        View::share('international_sec_4_item',$international_sec_4_item);
-        View::share('international_sec_5_item',$international_sec_5_item);
-        View::share('politics_sec_2_item',$politics_sec_2_item);
-        View::share('politics_sec_3_item',$politics_sec_3_item);
-        View::share('politics_sec_4_item',$politics_sec_4_item);
-        View::share('holeWorld_sec_4_item',$holeWorld_sec_4_item);
-        View::share('holeWorld_sec_5_item',$holeWorld_sec_5_item);
-        View::share('holeWorld_sec_6_item',$holeWorld_sec_6_item);
-        View::share('jobs_sec_3_item',$jobs_sec_3_item);
-        View::share('entertainment_sec_7_item',$entertainment_sec_7_item);
-        View::share('helth_sec_3_item',$helth_sec_3_item);
+        return view('frontend.layouts.app',compact('adsData','secound_sec_item_1','breskingdatas',
+        'letest_datas','dateandtime','categoryinfos','frist_sec_3_item','frist_sec_1_item','frist_sec_2_item',
+        'helth_sec_1_item','helth_sec_2_item','probas_sec_1_item','probas_sec_2_item',
+    'law_sec_1_item','law_sec_2_item','exclusive_sec_1_item','entertainment_sec_1_item',
+'entertainment_sec_2_item','entertainment_sec_3_item','entertainment_sec_4_item',
+'entertainment_sec_5_item','entertainment_sec_6_item','life_style_sec_1_item','life_style_sec_2_item',
+'information_sec_1_item','information_sec_2_item','religion_sec_1_item','religion_sec_2_item',
+'jobs_sec_1_item','jobs_sec_2_item','holeWorld_sec_1_item','holeWorld_sec_2_item',
+'holeWorld_sec_3_item','national_sec_1_item','national_sec_2_item','politics_sec_1_item',
+'international_sec_1_item','international_sec_2_item','economy_sec_1_item','economy_sec_2_item',
+'sports_sec_1_item','sports_sec_2_item','education_sec_1_item','education_sec_2_item'));
 
     }
-}
+
+
+
+@endsection

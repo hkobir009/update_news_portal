@@ -108,17 +108,42 @@
 					</div>
 				</div>
 			</div>
-			<!-- accordian ends here -->
-			<div class="dashboard-menu py-3">
-				<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
-					<i class="fa-solid fa-earth-europe pe-3"></i>
-					<span class="pe-5 text-capitalize"> Breaking news </span>
+			<!-- Ads start here -->
+			<div class="dashboard-menu accordion-item py-3">
+				<a class="py-3 accordion-button rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center" href="#" data-bs-toggle="collapse" data-bs-target="#ads">
+					<i class="fa-solid fa-bullhorn mx-0 pe-4"></i>
+					<span class="pe-5 text-capitalize">ads manage</span>
 				</a>
+				<div id="ads" class="accordion-collapse collapse  ms-4" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					<div class="accordion-body">
+						<div class="dashboard-menu">
+							<a href="{{route('create_ads')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+								<i class="fa-solid fa-plus mx-0 pe-4"></i>
+								<span class="pe-5 text-capitalize">Create ads</span>
+							</a>
+						</div>
+					</div>
+					<div class="accordion-body">
+						<div class="dashboard-menu">
+							<a href="{{route('ads')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+								<i class="fa-solid fa-list mx-0 pe-4"></i>
+								<span class="pe-5 text-capitalize">view ads</span>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
+			<!-- Ads start here -->
 			<div class="dashboard-menu py-3">
 				<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
 					<i class="fas fa-user pe-3"></i>
 					<span class="pe-5 text-capitalize">user informetion</span>
+				</a>
+			</div>
+			<div class="dashboard-menu py-3">
+				<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+					<i class="fa-solid fa-earth-europe pe-3"></i>
+					<span class="pe-5 text-capitalize"> Breaking news </span>
 				</a>
 			</div>
 			<div class="dashboard-menu py-3">

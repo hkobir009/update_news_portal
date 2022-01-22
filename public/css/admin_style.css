@@ -1,29 +1,29 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: "roboto", sans-serif;
     box-sizing: border-box;
-}
-html{
+  }
+  html {
     font-size: 53%;
     scrollbar-width: thin;
-    font-family:"DM sans" sans-serif;
-}
-::-webkit-scrollbar{
-    width: .9rem !important;
-}
-::-webkit-scrollbar-track{
+    font-family: "DM sans" sans-serif;
+  }
+  ::-webkit-scrollbar {
+    width: 0.9rem !important;
+  }
+  ::-webkit-scrollbar-track {
     background: rgb(193, 193, 199);
-}
-::-webkit-scrollbar-thumb{
+  }
+  ::-webkit-scrollbar-thumb {
     background-color: var(--bg-color);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-}
-:root{
+  }
+  :root {
     --bg-color: #f5f6fa;
     --title-font: #364a63;
     --font-eighteen: 1.8rem;
@@ -37,328 +37,329 @@ html{
     --default-font-color: #364a63;
     --default-font-light: #6b6b6b;
     --font-tweenty-two: 2.2rem;
-}
-.fw-medium{
+  }
+  .fw-medium {
     font-weight: 500 !important;
-}
-/* ---------------------------------------------------scrollbar design end ----------------------------*/
-.all-peoples{
+  }
+  /* ---------------------------------------------------scrollbar design end ----------------------------*/
+  .all-peoples {
     overflow-y: scroll !important;
-}
-.all-peoples a{
+  }
+  .all-peoples a {
     color: var(--title-font) !important;
-}
-.all-peoples time{
+  }
+  .all-peoples time {
     font-size: var(--font-twelve);
-}
-.active-status{
+  }
+  .active-status {
     height: 1.3rem;
     width: 1.3rem;
     background-color: green;
     bottom: 12%;
     left: 15%;
-}
-.active-status-time{
+  }
+  .active-status-time {
     width: 50px;
     top: 0;
     right: 0;
     font-size: var(--font-twelve);
     background-color: white;
-}
-.all-peoples a:hover .active-status-time{
-    background-color:var(--bg-color) !important;
-}
-.active-status-time i{
+  }
+  .all-peoples a:hover .active-status-time {
+    background-color: var(--bg-color) !important;
+  }
+  .active-status-time i {
     font-size: var(--font-forteen) !important;
     color: #a3a3a3;
-}
-
-header{
+  }
+  
+  header {
     z-index: 10000;
-}
-header .search,
-header .search input{
+  }
+  header .search,
+  header .search input {
     font-size: var(--font-forteen);
-}
-header .search-here:focus{
+  }
+  header .search-here:focus {
     box-shadow: none !important;
-}
-.header-right i{
+  }
+  .header-right i {
     font-size: var(--font-eighteen);
-}
-.dashboard-menu a,
-.dashboard-menu i{
+  }
+  .dashboard-menu a,
+  .dashboard-menu i {
     font-size: var(--font-nineteen) !important;
-}
-.header-left{
+  }
+  .header-left {
     flex: 8;
-}
-.header-right{
+  }
+  .header-right {
     flex: 4;
-}
-.dashbard-content-header h1{
+  }
+  .dashbard-content-header h1 {
     color: var(--default-font-color);
     font-size: var(--font-thirty);
-}
-.header-right .message-box,
-.header-right .notification{
+  }
+  .header-right .message-box,
+  .header-right .notification {
     height: 4rem;
     width: 4rem;
     cursor: pointer;
-}
-.bg-for-nav-icon{
+  }
+  .bg-for-nav-icon {
     background: var(--bg-color);
-}
-.header-right .message-box:hover,
-.header-right .notification:hover{
+  }
+  .header-right .message-box:hover,
+  .header-right .notification:hover {
     background: var(--bg-color);
-}
-.box-details{
+  }
+  .box-details {
     top: 130%;
     right: 0;
     height: 400px;
     width: 350px;
-}
-.box-details span,
-.box-details a{
+  }
+  .box-details span,
+  .box-details a {
     color: #4c0082c5;
     font-size: var(--font-forteen);
-}
-.box-top {
+  }
+  .box-top {
     z-index: 99;
-}
-.box-top h3{
+  }
+  .box-top h3 {
     font-size: var(--font-forteen);
-}
-.header-left h3{
+  }
+  .header-left h3 {
     font-size: var(--font-tweenty-two);
     color: var(--title-font);
-}
-/* ------------------------------------------------------- message box----------------------------------------------- */
-.contact img{
+  }
+  /* ------------------------------------------------------- message box----------------------------------------------- */
+  .contact img {
     width: 3.5rem !important;
     height: 3.5rem !important;
-}
-.peoples-message h3{
+  }
+  .peoples-message h3 {
     font-size: var(--font-fifteen);
-}
-.peoples-message p{
+  }
+  .peoples-message p {
     font-size: var(--font-forteen);
-}
-.peoples-message .chat-img{
+  }
+  .peoples-message .chat-img {
     max-width: 5rem;
     width: 5rem;
     height: 5rem;
     background: var(--bg-color);
     object-fit: cover;
-}
-.peoples-message:hover{
+  }
+  .peoples-message:hover {
     background: var(--bg-color);
-}
-.fa-bars{
+  }
+  .fa-bars {
     cursor: pointer;
     font-size: 2.5rem;
-}
-.fa-bell, .fa-envelope{
+  }
+  .fa-bell,
+  .fa-envelope {
     font-size: 2rem !important;
-}
-.contact-box{
+  }
+  .contact-box {
     cursor: pointer;
-}
-.profile-info i{
+  }
+  .profile-info i {
     font-size: 1rem !important;
-}
-.profile-info h4{
+  }
+  .profile-info h4 {
     font-size: 1.4rem;
-}
-.toggle-profile img{
+  }
+  .toggle-profile img {
     width: 5rem;
     height: 5rem;
-}
-.contact-box .profile{
+  }
+  .contact-box .profile {
     width: 3.5rem;
     height: 3.5rem;
-}
-.contact-details{
+  }
+  .contact-details {
     height: initial !important;
     overflow-y: initial;
-}
-.contact-details .toggle-profile{
-    border-color:#8b8b8b !important;
+  }
+  .contact-details .toggle-profile {
+    border-color: #8b8b8b !important;
     background: var(--bg-color) !important;
-}
-.toggle-profile span{
+  }
+  .toggle-profile span {
     color: #888;
     font-size: var(--font-twelve);
-}
-.contact-box-start .box-details{
+  }
+  .contact-box-start .box-details {
     width: 25rem;
-}
-.contact-settings a i,
-.contact-settings a h4{
+  }
+  .contact-settings a i,
+  .contact-settings a h4 {
     color: rgb(107, 107, 107);
     font-size: var(--font-forteen) !important;
-}
-.contact-settings a:hover h4,
-.contact-settings a:hover i{
+  }
+  .contact-settings a:hover h4,
+  .contact-settings a:hover i {
     color: var(--font-color);
-}
-/* ------------------------------------------------ sidebar ----------------------------------------------------- */
-.sidebar-content a span{
+  }
+  /* ------------------------------------------------ sidebar ----------------------------------------------------- */
+  .sidebar-content a span {
     line-height: 0;
-}
-.sidebar{
+  }
+  .sidebar {
     background: #000;
     left: 0;
     width: 200px;
     height: 100vh;
-    transition: .4s;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
     z-index: 99;
-}
-.sidebar .accordion-item,
-.sidebar .accordion-button{
+  }
+  .sidebar .accordion-item,
+  .sidebar .accordion-button {
     background: none !important;
-}
-.sidebar a:hover,
-.sidebar a:hover .sidebar .accordion-item{
+  }
+  .sidebar a:hover,
+  .sidebar a:hover .sidebar .accordion-item {
     background: #dcdcec !important;
-    color: var(--font-color) !important; 
-}
-.sidebar .show a:hover{
+    color: var(--font-color) !important;
+  }
+  .sidebar .show a:hover {
     background: none !important;
-}
-.sidebar:hover{
+  }
+  .sidebar:hover {
     left: 0 !important;
-}
-.sidebar:hover .sidebar-content a span{
+  }
+  .sidebar:hover .sidebar-content a span {
     display: block !important;
-}
-#check:checked~ .sidebar{
+  }
+  #check:checked ~ .sidebar {
     left: -130px;
-}
-#check:checked ~ .sidebar .sidebar-content{
+  }
+  #check:checked ~ .sidebar .sidebar-content {
     margin-left: 130px;
-}
-.sidebar:hover .sidebar-content{
+  }
+  .sidebar:hover .sidebar-content {
     margin-left: initial !important;
-}
-#check:checked ~ .sidebar a span{
+  }
+  #check:checked ~ .sidebar a span {
     display: none;
-}
-#check:checked ~ .content{
+  }
+  #check:checked ~ .content {
     left: 55px;
-}
-/* ------------------------------------------------- content-design starts from here-------------------------- */
-.content{
+  }
+  /* ------------------------------------------------- content-design starts from here-------------------------- */
+  .content {
     right: 0;
     left: 200px;
-    transition: .5s;
+    transition: 0.5s;
     height: 100vh !important;
     background: var(--bg-color);
     z-index: -1;
     overflow-y: auto;
-}
-.dashboard-content strong{
+  }
+  .dashboard-content strong {
     font-size: var(--font-forteen);
-    color:var(--default-font-color);
-}
-.curved-line i{
+    color: var(--default-font-color);
+  }
+  .curved-line i {
     font-size: var(--font-thirty) !important;
-}
-.dashboard-content i{
+  }
+  .dashboard-content i {
     font-size: var(--font-twelve);
-}
-.dashboard-content h2,
-.dashboard-content h3{
-    color: var(--title-font)
-}
-.dashboard-content-right h4{
+  }
+  .dashboard-content h2,
+  .dashboard-content h3 {
+    color: var(--title-font);
+  }
+  .dashboard-content-right h4 {
     color: var(--default-font-light);
-}
-.content-info h2{
+  }
+  .content-info h2 {
     font-size: var(--font-thirty);
-}
-.calander {
+  }
+  .calander {
     cursor: pointer;
-}
-.calander i{
+  }
+  .calander i {
     color: var(--default-font-light);
     font-size: var(--font-forteen);
-}
-.more-days{
+  }
+  .more-days {
     left: 0;
     z-index: 1;
-}
-.more-days a h4,
-.user-more-days a h4{
+  }
+  .more-days a h4,
+  .user-more-days a h4 {
     font-size: var(--font-twelve) !important;
     color: var(--default-font-color);
     font-family: Arial, Helvetica, sans-serif;
-}
-.more-days a:hover,
-.user-more-days a:hover{
+  }
+  .more-days a:hover,
+  .user-more-days a:hover {
     background-color: var(--bg-color);
-}
-.reports{
+  }
+  .reports {
     background: #854fff !important;
     cursor: pointer;
-}
-.reports h4,
-.reports i{
+  }
+  .reports h4,
+  .reports i {
     color: white !important;
-}
-/* ---------------------------------------------- recent orders ---------------------------------------------------------- */
-.recent-orders .profile{
+  }
+  /* ---------------------------------------------- recent orders ---------------------------------------------------------- */
+  .recent-orders .profile {
     width: 2.5rem;
     height: 2.5rem;
-}
-.recent-orders h4,
-.recent-orders td{
-    color:#4e4e53;
+  }
+  .recent-orders h4,
+  .recent-orders td {
+    color: #4e4e53;
     font-size: var(--font-forteen);
-}
-.recent-orders ul li{
+  }
+  .recent-orders ul li {
     color: green;
     font-size: var(--font-twelve);
-}
-.recent-orders ul li::before{
+  }
+  .recent-orders ul li::before {
     content: "\2022";
-    margin-right: .7rem;    
+    margin-right: 0.7rem;
     font-weight: bold;
     color: green;
     font-size: 2.5rem;
-}
-.recent-orders th{
+  }
+  .recent-orders th {
     font-size: var(--font-twelve);
     color: var(--default-font-color);
-}
-.cancel-li{
+  }
+  .cancel-li {
     color: red !important;
-}
-.cancel-li::before{
+  }
+  .cancel-li::before {
     color: red !important;
-}
-.due-li{
+  }
+  .due-li {
     color: #f4bd0e !important;
-}
-.due-li::before{
+  }
+  .due-li::before {
     color: #f4bd0e !important;
-}
-.recent-orders .serial-no{
+  }
+  .recent-orders .serial-no {
     color: var(--font-color);
     font-size: var(--font-forteen);
-}
-/* ------------------------------------------------- user page------------------------------------------------------------ */
-.title em{
+  }
+  /* ------------------------------------------------- user page------------------------------------------------------------ */
+  .title em {
     font-size: var(--font-twelve);
     color: var(--default-font-light);
-}
-.search-bar i{
-    right:1rem;
+  }
+  .search-bar i {
+    right: 1rem;
     pointer-events: none;
     transform: translatey(-50%);
     -webkit-transform: translatey(-50%);
@@ -366,122 +367,136 @@ header .search-here:focus{
     -ms-transform: translatey(-50%);
     -o-transform: translatey(-50%);
     color: var(--default-font-light);
-}
-
-.search-bar input{
+  }
+  
+  .search-bar input {
     font-size: var(--font-forteen);
-}
-input::placeholder{
+  }
+  input::placeholder {
     color: var(--default-font-light) !important;
-}
-.search-bar input:focus{
+  }
+  .search-bar input:focus {
     box-shadow: none !important;
     border: 1px solid var(--default-font-light) !important;
-
-}
-input[type="checkbox"]{
+  }
+  input[type="checkbox"] {
     height: 2rem;
     width: 2rem;
     cursor: pointer;
-}
-.user-table .profile{
+  }
+  .user-table .profile {
     width: 4rem !important;
     height: 4rem !important;
     cursor: pointer;
-}
-.table-user-profile{
+  }
+  .table-user-profile {
     cursor: pointer;
-}
-.user-table th{
+  }
+  .user-table th {
     color: var(--default-font-light);
     font-size: var(--font-forteen);
     font-weight: 900;
-}
-.user-table .fa-ellipsis-h{
+  }
+  .user-table .fa-ellipsis-h {
     font-size: var(--font-nineteen);
     cursor: pointer;
-}
-.table tr:not(:first-child):hover{
+  }
+  .table tr:not(:first-child):hover {
     box-shadow: 0 2px 15px -4px rgb(190, 190, 190) !important;
-}
-.ordered-item,
-.phone-item,
-.country-item,
-.last-order-item,
-.status-item{
+  }
+  .ordered-item,
+  .phone-item,
+  .country-item,
+  .last-order-item,
+  .status-item {
     color: var(--default-font-light) !important;
     font-size: var(--font-forteen) !important;
     font-weight: 400 !important;
-}
-.user-more-days{
+  }
+  .user-more-days {
     right: 50%;
     width: 15rem;
     z-index: 1;
-}
-.user-more-days a h4{
+  }
+  .user-more-days a h4 {
     font-size: var(--font-twelve) !important;
-}
-
-.user-more-days a i{
+  }
+  
+  .user-more-days a i {
     font-size: var(--font-forteen) !important;
     color: var(--default-font-color);
-}
-.user-more-days a:hover h4,
-.user-more-days a:hover i{
+  }
+  .user-more-days a:hover h4,
+  .user-more-days a:hover i {
     color: var(--font-color) !important;
-}
-.two-icon i{
+  }
+  .two-icon i {
     font-size: var(--font-sixteen) !important;
-}
-.two-icon .check,
-.two-icon .message,
-.two-icon .delete{
+  }
+  .two-icon .check,
+  .two-icon .message,
+  .two-icon .delete {
     cursor: pointer;
-}
-.custom-pagination li::before{
+  }
+  .custom-pagination li::before {
     display: none;
-}
-.pagination a{
+  }
+  .pagination a {
     color: var(--title-font);
-}
-.pagination a:hover{
+  }
+  .pagination a:hover {
     color: var(--font-color);
-}
-/* -----------------------------------------------components -----------------------------------*/
-.gradient-div{
+  }
+  /* -----------------------------------------------components -----------------------------------*/
+  .gradient-div {
     background: linear-gradient(to left, black, red);
     color: white;
-}
-.gradient-div h2,
-.gradient-div h3{
+  }
+  .gradient-div h2,
+  .gradient-div h3 {
     font-size: var(--font-eighteen);
-}
-.forms label{
+  }
+  .forms label {
     font-size: var(--font-eighteen);
-}
-.forms input{
+  }
+  .forms input {
     font-size: var(--font-eighteen);
-}
-.forms .select-any option,
-.forms .select-any select{
+  }
+  .forms .select-any option,
+  .forms .select-any select {
     font-size: var(--font-eighteen) !important;
     cursor: pointer;
-}
-.forms .dropdown-toggle:focus{
-outline: 0 !important;
-}
-.forms textarea{
+  }
+  .forms .dropdown-toggle:focus {
+    outline: 0 !important;
+  }
+  .forms textarea {
     font-size: var(--font-eighteen);
-}
-/* ---------------------------------------------- redesign bootstrap------------------------------------------------------ */
-.accordion-button:not(.collapsed)::after {
+  }
+  /* ------------------------------------------- image-url and target url page------------------------------------------------------------------- */
+  .image-url-separet-content:hover {
+    box-shadow: 0 2px 15px -4px rgb(190 190 190) !important;
+  }
+  .left-side-url {
+    flex: 2;
+  }
+  .right-side-url {
+    flex: 4;
+  }
+  .image-url-two-icon {
+    right: 0;
+    top: 50%;
+    transform: translatey(-50%);
+  }
+  /* ---------------------------------------------- redesign bootstrap------------------------------------------------------ */
+  .accordion-button:not(.collapsed)::after {
     transform: rotate(0);
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     -ms-transform: rotate(0);
     -o-transform: rotate(0);
-}
-.accordion-button::after {
+  }
+  .accordion-button::after {
     transform: rotate(-90deg);
     width: 1.5rem;
     height: 1.5rem;
@@ -490,163 +505,91 @@ outline: 0 !important;
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
-}
-.filter-option{
+  }
+  .filter-option {
     font-size: var(--font-nineteen) !important;
-}
-/* ---------------------------------------------- responsive---------------------------------------------------- */
-@media (max-width: 1000px){
-    .profile-info{
-        display: none !important;
+  }
+  /* ---------------------------------------------- responsive---------------------------------------------------- */
+  @media (max-width: 1000px) {
+    .profile-info {
+      display: none !important;
     }
-}
-/* ------------------------------------------------ under 768px -------------------------------------------- */
-@media (max-width: 768px){
-    html{
-        font-size: 45% !important;
+  }
+  /* ------------------------------------------------ under 768px -------------------------------------------- */
+  @media (max-width: 768px) {
+    html {
+      font-size: 45% !important;
     }
     /* user */
-    .header-left{
-        flex: initial !important;
+    .header-left {
+      flex: initial !important;
     }
-    .header-right{
-        flex: initial !important;
+    .header-right {
+      flex: initial !important;
     }
-    .sidebar{
-        left: -100%;
+    .sidebar {
+      left: -100%;
     }
-    #check:checked~ .sidebar{
-        left: 0;
+    #check:checked ~ .sidebar {
+      left: 0;
     }
-    #check:checked ~ .sidebar a span{
-        display: initial;
+    #check:checked ~ .sidebar a span {
+      display: initial;
     }
-    .content{
-        position: initial !important;
+    .content {
+      position: initial !important;
     }
-    #check:checked ~ .content{
-        position: static !important;
+    #check:checked ~ .content {
+      position: static !important;
     }
-    #check:checked ~ .sidebar .sidebar-content{
-        margin-left: initial;
-        font-size: initial;
+    #check:checked ~ .sidebar .sidebar-content {
+      margin-left: initial;
+      font-size: initial;
     }
-    .dashbard-content-header h1{
-        font-size: 2.5rem !important;
+    .dashbard-content-header h1 {
+      font-size: 2.5rem !important;
     }
-    .dashbard-content-header h1{
-        font-size: var(--font-sixteen) !important;
+    .dashbard-content-header h1 {
+      font-size: var(--font-sixteen) !important;
     }
-    .title em{
-        font-size: 1rem !important;
+    .title em {
+      font-size: 1rem !important;
     }
-}
-/* ---------------------------------------------- under 576px screen size ------------------------------------------------------ */
-@media (max-width: 576px){
-    .country-table, .last-order-table, .country-item, .last-order-item{
-        display: none !important;
+  }
+  /* ---------------------------------------------- under 576px screen size ------------------------------------------------------ */
+  @media (max-width: 576px) {
+    .country-table,
+    .last-order-table,
+    .country-item,
+    .last-order-item {
+      display: none !important;
     }
-}
-/* ---------------------------------------------- under 400px------------------------------------------------------------------ */
-@media (max-width: 400px){
-    .dashboard-content-right h4{
-        font-size: 1rem;
+  }
+  /* ---------------------------------------------- under 400px------------------------------------------------------------------ */
+  @media (max-width: 400px) {
+    .dashboard-content-right h4 {
+      font-size: 1rem;
     }
     .dashbard-content-header h1,
     .header-left h3,
-    .fa-bars{
-        font-size: var(--font-twelve) !important;
+    .fa-bars {
+      font-size: var(--font-twelve) !important;
     }
-    .table td{
-        font-size: 1rem !important;
+    .table td {
+      font-size: 1rem !important;
     }
-    .dashboard-menu a, .dashboard-menu i{
-        font-size: 1.5rem !important;
+    .dashboard-menu a,
+    .dashboard-menu i {
+      font-size: 1.5rem !important;
     }
-    .sidebar{
-        width: 150px !important;
+    .sidebar {
+      width: 150px !important;
     }
-    .title em{
-        font-size: .8rem !important;
+    .title em {
+      font-size: 0.8rem !important;
     }
-    .pagination a{
-        padding: .4rem !important;
+    .pagination a {
+      padding: 0.4rem !important;
     }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+  

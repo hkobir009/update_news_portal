@@ -33,9 +33,10 @@
               <div class="only-news mt-4 m-md-0 h-100 d-flex flex-column justify-content-between">
                 
                 @foreach ($sports_sec_2_item as $item)
-                <div class="px-3 border-bottom">
+                <div class="px-3">
                   <a class="lh-sm fw-medium" href="#">{{$item->title}}</a>
                 </div>
+                <hr>
                 @endforeach
 
               </div>

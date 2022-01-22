@@ -16,15 +16,15 @@ class CreateAdsTable extends Migration
         Schema::create('ads', function (Blueprint $table) {
             $table->id();
             $table->string('first_left_img_url')->nullable();
-            $table->string('first_left_img_target_url')->nullable();
+            $table->string('first_left_img_target_url',1000)->nullable();
             $table->string('first_right_img_url')->nullable();
-            $table->string('first_right_img_target_url')->nullable();
+            $table->string('first_right_img_target_url',1000)->nullable();
             $table->string('secound_right_img_url')->nullable();
-            $table->string('secound_right_img_target_url')->nullable();
+            $table->string('secound_right_img_target_url',1000)->nullable();
             $table->string('hole_world_img_url')->nullable();
-            $table->string('hole_world_img_target_url')->nullable();
-            $table->string('our_advertisement')->nullable();
-            $table->string('our_advertisement_target_url')->nullable();
+            $table->string('hole_world_img_target_url',1000)->nullable();
+            $table->string('our_advertisement_img')->nullable();
+            $table->string('our_advertisement_target_url',1000)->nullable();
             $table->timestamps();
         });
     }

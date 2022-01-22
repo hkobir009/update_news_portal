@@ -27,9 +27,10 @@
                 <div class="only-news d-flex flex-column justify-content-between h-100">
 
                   @foreach ($national_sec_2_item as $item)
-                  <div class="px-3 py-1 border-bottom">
+                  <div class="px-3">
                     <a class="lh-sm fw-medium" href="#">{{$item->title}}</a>
                   </div>
+                  <hr>
                   @endforeach
 
                 </div>
