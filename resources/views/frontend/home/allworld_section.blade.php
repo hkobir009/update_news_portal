@@ -5,8 +5,8 @@
         <div class="col-lg-9">
           <!-- --------------------------------------------- section-title reusable html --------------------------------------------------- -->
           <div class="section-title d-flex justify-content-between align-items-center py-2">
-            <a href="#"><h1 class="m-0">সারাদেশ</h1></a>
-            <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('holeWorld')}}"><h1 class="m-0">সারাদেশ</h1></a>
+            <a class="more-read p-3" href="{{route('holeWorld')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div>
           <div class="row mt-3">
             <div class="col-md-4">

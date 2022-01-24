@@ -33,7 +33,7 @@
 
 
 
-
+@include('frontend.layouts.footer')
     <!-- jquery js -->
     <script src="{{ asset('frontend/js/jquery.slim.min.js') }}"></script>
     <!-- Bootstrape js -->

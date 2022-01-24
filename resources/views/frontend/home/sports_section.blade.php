@@ -5,13 +5,13 @@
         <div class="col-lg-9">
           <!-- --------------------------------------------- section-title reusable html ------------------------------------------------- -->
           <div class="section-title d-flex justify-content-between align-items-center py-2">
-            <a href="#"><h1 class="m-0">খেলা</h1></a>
+            <a href="{{route('sports')}}"><h1 class="m-0">খেলা</h1></a>
             <ul class="m-0 p-0 d-flex">
-              <li class="mx-4"><a class="" href="#">ক্রিকেট</a></li>
-              <li class="mx-4"><a class="" href="#">ফুটবল</a></li>
-              <li class="mx-4"><a class="active" href="#">সকল</a></li>
+              <li class="mx-4"><a class="" href="{{route('cricket')}}">ক্রিকেট</a></li>
+              <li class="mx-4"><a class="" href="{{route('football')}}">ফুটবল</a></li>
+              <li class="mx-4"><a class="active" href="{{route('sports')}}">সকল</a></li>
             </ul>
-            <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+            <a class="more-read p-3" href="{{route('sports')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div>
           <div class="row mt-3">
             <div class="col-md-8">
@@ -46,8 +46,8 @@
         <div class="col-lg-3">
           <div class="sikkha">
               <div class="section-title d-flex justify-content-between align-items-center py-2">
-                <a href="#"><h1 class="m-0">শিক্ষা</h1></a>
-                <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{route('education')}}"><h1 class="m-0">শিক্ষা</h1></a>
+                <a class="more-read p-3" href="{{route('education')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
               </div>
               <div class="sikkha-content d-flex flex-column">
 

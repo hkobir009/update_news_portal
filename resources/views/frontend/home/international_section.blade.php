@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="section-title d-flex justify-content-between align-items-center py-2">
-            <a href="#"><h1 class="m-0">আন্তর্জাতিক</h1></a>
-            <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('international')}}"><h1 class="m-0">আন্তর্জাতিক</h1></a>
+            <a class="more-read p-3" href="{{route('international')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div><!--section title-->
           <div class="row">
             <div class="col-md-6">
@@ -41,14 +41,14 @@
           </div><!--inside row--></div><!--outside col-md-5-->
         <div class="col-lg-6">
           <div class="section-title d-flex justify-content-between align-items-center py-2">
-            <a href="#"><h1 class="m-0">অর্থনীতি</h1></a>
+            <a href="{{route('economy')}}"><h1 class="m-0">অর্থনীতি</h1></a>
             <ul class="m-0 p-0 d-flex">
-              <li class="mx-4"><a class="text-black" href="#">ব্যাংক</a></li>
-              <li class="mx-4"><a class=" text-black" href="#">বীমা</a></li>
-              <li class="mx-4"><a class=" text-black" href="#">শেয়ার বাজার</a></li>
-              <li class="mx-4"><a class=" text-black active" href="#">সকল</a></li>
+              <li class="mx-4"><a class="text-black" href="{{route('bank')}}">ব্যাংক</a></li>
+              <li class="mx-4"><a class=" text-black" href="{{route('insurance')}}">বীমা</a></li>
+              <li class="mx-4"><a class=" text-black" href="{{route('stockMarket')}}">শেয়ার বাজার</a></li>
+              <li class="mx-4"><a class=" text-black active" href="{{route('economy')}}">সকল</a></li>
             </ul>
-            <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+            <a class="more-read p-3" href="{{route('economy')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div><!-- section title-->
           <div class="row more-news bg-white">
               <div class="col-md-6">

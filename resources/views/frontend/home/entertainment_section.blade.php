@@ -1,15 +1,15 @@
 <section class="binodon-section saradesh-news">
     <div class="container">
       <div class="section-title d-flex justify-content-between align-items-center py-2">
-        <a href="#"><h1 class="m-0">বিনোদন</h1></a>
+        <a href="{{route('entertainment')}}"><h1 class="m-0">বিনোদন</h1></a>
         <ul class="m-0 p-0 d-flex">
-          <li class="mx-4"><a class="text-black" href="#"></a></li>
-          <li class="mx-4"><a class=" text-black" href="#">বলিউড</a></li>
-          <li class="mx-4"><a class=" text-black" href="#">হলিউড</a></li>
-          <li class="mx-4"><a class=" text-black" href="#">ঢালিউড</a></li>
-          <li class="mx-4"><a class=" text-black active" href="#">সকল</a></li>
+          <li class="mx-4"><a class="text-black" href="{{route('tollywood')}}">টলিউড</a></li>
+          <li class="mx-4"><a class=" text-black" href="{{route('bollywood')}}">বলিউড</a></li>
+          <li class="mx-4"><a class=" text-black" href="{{route('hollywood')}}">হলিউড</a></li>
+          <li class="mx-4"><a class=" text-black" href="{{route('dhaliwood')}}">ঢালিউড</a></li>
+          <li class="mx-4"><a class=" text-black active" href="{{route('entertainment')}}">সকল</a></li>
         </ul>
-        <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+        <a class="more-read p-3" href="{{route('entertainment')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
       </div>
       <div class="row mt-3">
         <div class="col-lg-3">

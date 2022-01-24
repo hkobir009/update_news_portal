@@ -21,5 +21,13 @@ class fontController extends Controller
         return view('frontend.home.index');
     }
 
+    public function posts($category ,$id)
+    {
+
+        $post = post::with('categories')->where('id',$id)->firstOrFail();
+        
+
+        return view('frontend.posts',compact('post'));
     
+    }
 }

@@ -4,8 +4,8 @@
         <div class="col-lg-9">
           <!-- --------------------------------------------- section-title reusable html ------------------------------------------------------------ -->
           <div class="section-title d-flex justify-content-between align-items-center py-2">
-            <a href="#"><h1 class="m-0">জাতীয়</h1></a>
-            <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('national')}}"><h1 class="m-0">জাতীয়</h1></a>
+            <a class="more-read p-3" href="{{route('national')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div>
           <div class="row mt-3">
             <div class="col-md-8">
@@ -41,8 +41,8 @@
         <div class="col-lg-3">
             <div class=" rajniti onehundrad">
               <div class="section-title d-flex justify-content-between align-items-center py-2">
-                <a href="#"><h1 class="m-0">রাজনীতি</h1></a>
-                <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="{{route('politics')}}"><h1 class="m-0">রাজনীতি</h1></a>
+                <a class="more-read p-3" href="{{route('politics')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
               </div>
               <div class="some-rajniti recent-post-details bg-white more-news d-flex justify-content-between flex-column h-100">
                 

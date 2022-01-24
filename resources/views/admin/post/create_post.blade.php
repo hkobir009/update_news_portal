@@ -28,7 +28,7 @@
     <div class="breaking-news-form" style="margin-bottom: 50px;">
         <div class="container">
             <div class="forms mb-5 pb-5">
-                <form action="{{route('store_post')}}" method="post" enctype="multipart/form-data">
+                <form id="forbody" action="{{route('store_post')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="user-name mt-5">
                         <label for="" class="text-capitalize mb-2">post title</label>
@@ -52,13 +52,13 @@
                     </div>
                      <div class="body mt-5">
                         <label for="" class="text-capitalize mb-2">body</label>
-                        <textarea class="w-100" rows="4" id="body" name="body" placeholder="Post Description" required></textarea>
+                        <textarea class="w-100" rows="20" id="body" name="body" placeholder="Post Description" required></textarea>
                      </div>
                      <div class="image mt-5">
                      <label for="" class="text-capitalize mb-2">Image</label>
                      <input class="form-control py-2" type="file" name="image" placeholder="image">
                      </div>
-                   <input type="submit" value="submit" class="form-control mt-5 btn-outline-info">
+                   <input type="submit" value="submit" onclick="bodyfrom()" class="form-control mt-5 btn-outline-info">
             </form>
         </div>
         <!--forms-->

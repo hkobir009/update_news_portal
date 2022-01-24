@@ -10,6 +10,5 @@ class deshboardController extends Controller
     {
         return view('admin.layouts.deshboard');
     }
-
    
 }

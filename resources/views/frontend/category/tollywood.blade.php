@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-lg-9">
             <a href="#" class="py-1 pt-3 d-block">
-              <h1 class="jatiyo-page-title border-bottom">স্বাস্থ্য</h1>
+              <h1 class="jatiyo-page-title border-bottom">টালিউড</h1>
             </a>
             {{-- <div class="jatiyo-page-top-buttons d-flex border-bottom border-3 pb-4 my-2">
               <button class="jatiyo-page-btn btn px-2 me-2 py-2 fw-medium">করোনাভাইরাস</button>
@@ -18,7 +18,7 @@
               <div class="big-news-top">
                 <div class="top-middle mb-3 mb-lg-0">
 
-                  @foreach ($helth_sec_1_item as $item)
+                  @foreach ($tollywood_sec_1_item as $item)
                   <div class="news-item">
                     <a href="#">
                       <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}">
@@ -35,7 +35,7 @@
             <div class="col-lg-4">
               <div class="jatiyo-page-two-little  d-flex flex-column justify-content-between">
                 
-                @foreach ($helth_sec_2_item as $item)
+                @foreach ($tollywood_sec_2_item as $item)
                 <div class="top-little-news p-0 py-3 py-sm-0 pe-sm-2 border-bottom">
                   <img class="img-fluid" src="{{asset('post/'.$item->image)}}" alt="">
                   <a class="mt-3 d-block" href="#">{{$item->title}}</a>
@@ -49,7 +49,7 @@
           <!--inner-row-->
           <div class="row mt-3">
 
-            @foreach ($helth_sec_3_item as $item)
+            @foreach ($tollywood_sec_3_item as $item)
             <div class="col-md-4 col-sm-12">
               <div class="news-col mx-2 m-lg-0">
                 <a href="#">

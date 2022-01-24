@@ -6,7 +6,7 @@
 
           @foreach ($frist_sec_3_item as $item)
             <div class="news py-3 border-bottom">
-              <a href="#" class="d-flex">
+              <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
                 <img src="{{asset('post/'.$item->image)}}"  class="newsimg me-3">
                 <h3 class="lh-base fw-medium text-black m-0" href="#">{{$item->title}}</h3>
               </a>
@@ -41,8 +41,7 @@
 
           </div>
            <div class="top-left little-news-inside-big onehundrad d-flex my-2 mb-lg-0">
-            
-            
+             
             @foreach ($frist_sec_2_item as $item)
               <div class="news py-2">
                 <a href="#" class="d-flex border-end border-3 pe-2">
@@ -93,8 +92,8 @@
         <div class="top-right">
           <!-- ================================================ reusblae html ======================================================= -->
           <div class="section-title d-flex justify-content-between align-items-center px-3 py-4">
-            <a href="#"><h1 class="m-0">মতামত</h1></a>
-            <a href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('fromFacebookPage')}}"><h2 class="m-0">ফেসবুক পাতা থেকে</h2></a>
+            <a href="{{route('fromFacebookPage')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div>
           <div class="mini-testimonial p-3 d-flex border-bottom">
             <img class="rounded-circle me-3" src="img/man.jpg" alt="ড. কুদরত-ই-হুদা" width="90" height="90">

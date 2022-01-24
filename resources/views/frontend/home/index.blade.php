@@ -10,7 +10,7 @@
 @include('frontend.home.entertainment_section')
 @include('frontend.home.international_section')
 @include('frontend.home.health_section')
-@include('frontend.home.exclusive_section')
+@include('frontend.home.columns_section')
 @include('frontend.home.lifestyle_section')
 
 

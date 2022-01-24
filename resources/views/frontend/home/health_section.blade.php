@@ -4,8 +4,8 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="section-title d-flex justify-content-between align-items-center py-2">
-            <a href="#"><h1 class="m-0">স্বাস্থ্য</h1></a>
-            <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+            <a href="{{route('health')}}"><h1 class="m-0">স্বাস্থ্য</h1></a>
+            <a class="more-read p-3" href="{{route('health')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div><!--section title-->
           <div class="health-news">
             <div class="sikkha-content d-flex flex-column">
@@ -36,14 +36,14 @@
       </div><!--col-md-3-->
       <div class="col-lg-6">
         <div class="section-title d-flex justify-content-between align-items-center py-2">
-          <a href="#"><h1 class="m-0">প্রভাস</h1></a>
+          <a href="{{route('expatriate')}}"><h1 class="m-0">প্রভাস</h1></a>
           <ul class="m-0 p-0 d-flex">
-            <li class="mx-4"><a class="text-black" href="#">যুক্তরাষ্ট্র</a></li>
-            <li class="mx-4"><a class=" text-black" href="#">কানাডা</a></li>
-            <li class="mx-4"><a class=" text-black" href="#">যুক্তরাজ্য</a></li>
-            <li class="mx-4"><a class=" text-black active" href="#">সকল</a></li>
+            <li class="mx-4"><a class="text-black" href="{{route('expatriate')}}">যুক্তরাষ্ট্র</a></li>
+            <li class="mx-4"><a class=" text-black" href="{{route('expatriate')}}">কানাডা</a></li>
+            <li class="mx-4"><a class=" text-black" href="{{route('expatriate')}}">যুক্তরাজ্য</a></li>
+            <li class="mx-4"><a class=" text-black active" href="{{route('expatriate')}}">সকল</a></li>
           </ul>
-          <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+          <a class="more-read p-3" href="{{route('expatriate')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
         </div>
         <div class="row">
           <div class="col-md-6">
@@ -78,8 +78,8 @@
       </div><!--col-md-6-->
       <div class="col-lg-3">
         <div class="section-title d-flex justify-content-between align-items-center py-2">
-          <a href="#"><h1 class="m-0">আইন আদালত</h1></a>
-          <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{route('courtoflaw')}}"><h1 class="m-0">আইন আদালত</h1></a>
+          <a class="more-read p-3" href="{{route('courtoflaw')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
         </div><!--section title-->
   
         <div class="sikkha-content d-flex flex-column">

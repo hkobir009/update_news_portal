@@ -2,8 +2,8 @@
 <section class="exclusive-section binodon-section saradesh-news">
     <div class="container">
       <div class="section-title d-flex justify-content-between align-items-center py-2">
-        <a href="#"><h1 class="m-0">এক্সক্লুসিভ</h1></a>
-        <a class="more-read p-3" href="#">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
+        <a href="{{route('columns')}}"><h1 class="m-0">কলাম</h1></a>
+        <a class="more-read p-3" href="{{route('columns')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
       </div>
       <div class="row">
         

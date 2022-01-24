@@ -1,4 +1,3 @@
-
 *,
 body {
   margin: 0;
@@ -86,7 +85,7 @@ ul {
 }
 /* --------------------------------------------------- navbar-------------------------------------------------------------------- */
 nav {
-  background-color: var(--title-bg);
+  background-color: red;
 }
 nav a {
   color: #fff;
@@ -461,6 +460,7 @@ nav li a:hover {
 }
 /* ----------------------------------------------------- jatio-page-start ---------------------------------------------------- */
 /* .jatiyo-page-top{
+
 } */
 .jatiyo-page-top .title-page {
   font-size: var(--font-thirty-eight-for-page-title);
@@ -476,6 +476,10 @@ nav li a:hover {
   font-size: var(--post-title-font-size);
 }
 /* ----------------------------------------------------- post page ---------------------------------------------- */
+.post-right {
+  position: sticky;
+  top: 60px;
+}
 .post-page .post-title {
   font-size: var(--font-thirty-eight-for-page-title) !important;
 }
@@ -500,13 +504,6 @@ nav li a:hover {
 }
 .big-news-details {
   font-size: var(--font-ninteen);
-}
-.this-overflow {
-  height: 132vh !important;
-  overflow-y: scroll;
-}
-.this-overflow::-webkit-scrollbar {
-  width: 0;
 }
 .comment-sort .sort {
   font-size: var(--post-title-font-size);
@@ -540,16 +537,23 @@ nav li a:hover {
   transform: translatey(-50%);
   font-size: var(--font-ninteen);
   right: 2px;
+  border-radius: 0 20px 20px 0;
 }
-
 footer input {
   font-size: var(--font-ninteen) !important;
+  padding-right: 15rem !important;
+  border-radius: 20px !important;
 }
 footer .footerlogo {
   max-width: 300px;
 }
 footer a:hover {
   color: white !important;
+}
+.go-top {
+  bottom: 20px;
+  right: 5rem;
+  font-size: 3rem;
 }
 /* ----------------------------------------------------- Resposive css 991-------------------------------------------------------- */
 
@@ -655,10 +659,6 @@ footer a:hover {
   }
   .jatiyo-page-left {
     margin-top: 0 !important;
-  }
-  .this-overflow {
-    overflow: initial !important;
-    height: initial !important;
   }
 } /* media */
 /* ----------------------------------------------------- Resposive css 767------------------------------------------------------------------ */
