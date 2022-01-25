@@ -19,7 +19,7 @@
 
                 @foreach ($sports_sec_1_item as $item)
                 <div class="image-with-datails position-relative">
-                  <a href="#">
+                  <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img src="{{asset('post/'.$item->image)}}" alt="" class="img-fluid h-auto">
                     <p class="position-absolute image-info text-white m-0">{{$item->title}}</p>
                   </a>
@@ -34,7 +34,8 @@
                 
                 @foreach ($sports_sec_2_item as $item)
                 <div class="px-3">
-                  <a class="lh-sm fw-medium" href="#">{{$item->title}}</a>
+                  <a class="lh-sm fw-medium" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                    {{$item->title}}</a>
                 </div>
                 <hr>
                 @endforeach
@@ -53,7 +54,7 @@
 
                 @foreach ($education_sec_1_item as $item)
                 <div class="saradesh-news-detail border-bottom saradesh-news mt-3 me-3 m-lg-0">
-                  <a href="#">
+                  <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                     <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                   </a>
@@ -64,7 +65,7 @@
 
                   @foreach ($education_sec_2_item as $item)
                   <div class="recent-news more-news border-bottom mt-3">
-                    <a class="d-flex justify-content-start align-items-md-start pb-lg-3 mt-3 m-lg-0" href="#">
+                    <a class="d-flex justify-content-start align-items-md-start pb-lg-3 mt-3 m-lg-0" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
                     </a>

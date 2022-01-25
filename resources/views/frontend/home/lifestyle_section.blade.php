@@ -11,7 +11,7 @@
 
               @foreach ($life_style_sec_1_item as $item)
               <div class="saradesh-news-detail boreder-bottom more-news bg-white">
-                <a href="#">
+                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                   <p class="fw-medium lh-sm">{{$item->title}}</p>
                 </a>
@@ -24,7 +24,7 @@
 
             @foreach ($life_style_sec_2_item as $item)
             <div class="recent-news more-news bg-white border-bottom">
-              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
+              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
               <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
               <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>
@@ -43,7 +43,7 @@
 
               @foreach ($information_sec_1_item as $item)
               <div class="saradesh-news-detail boreder-bottom more-news bg-white">
-                <a href="#">
+                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                   <p class="fw-medium lh-sm">{{$item->title}}</p>
                 </a>
@@ -56,7 +56,7 @@
 
             @foreach ($information_sec_2_item as $item)
             <div class="recent-news more-news border-bottom bg-white">
-              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
+              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
               <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
               <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>
@@ -75,7 +75,7 @@
 
               @foreach ($artAndLiterature_sec_1_item as $item)
               <div class="saradesh-news-detail boreder-bottom more-news bg-white">
-                <a href="#">
+                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                   <p class="fw-medium lh-sm">{{$item->title}}</p>
                 </a>
@@ -88,7 +88,7 @@
 
             @foreach ($artAndLiterature_sec_2_item as $item)
             <div class="recent-news more-news bg-white border-bottom">
-              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
+              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
               <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
               <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>
@@ -107,7 +107,7 @@
 
               @foreach ($jobs_sec_1_item as $item)
               <div class="saradesh-news-detail boreder-bottom more-news bg-white">
-                <a href="#">
+                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                   <p class="fw-medium lh-sm">{{$item->title}}</p>
                 </a>
@@ -120,7 +120,7 @@
 
             @foreach ($jobs_sec_2_item as $item)
             <div class="recent-news more-news bg-white border-bottom">
-              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
+              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
               <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
               <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>

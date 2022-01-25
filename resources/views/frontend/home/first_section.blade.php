@@ -8,7 +8,7 @@
             <div class="news py-3 border-bottom">
               <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
                 <img src="{{asset('post/'.$item->image)}}"  class="newsimg me-3">
-                <h3 class="lh-base fw-medium text-black m-0" href="#">{{$item->title}}</h3>
+                <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
               </a>
             </div><!--news end-->
             @endforeach
@@ -30,7 +30,7 @@
 
             @foreach ($frist_sec_1_item as $item)
               <div class="news-item">
-                <a href="#">
+                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img src="{{asset('post/'.$item->image)}}" alt="" width="100%">
                   <h1 class="m-0 title my-3 fw-medium">{{$item->title}}</h1></a>
                   <p class="m-0 lh-sm pt-2 pb-4 text-black fw-medium">
@@ -41,12 +41,12 @@
 
           </div>
            <div class="top-left little-news-inside-big onehundrad d-flex my-2 mb-lg-0">
-             
+
             @foreach ($frist_sec_2_item as $item)
               <div class="news py-2">
-                <a href="#" class="d-flex border-end border-3 pe-2">
+                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex border-end border-3 pe-2">
                   <img src="{{asset('post/'.$item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
-                  <h3 class="lh-base fw-medium text-black m-0" href="#">{{$item->title}}</h3>
+                  <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
                 </a>
               </div><!--news end-->
               @endforeach
@@ -61,7 +61,7 @@
 
            @foreach ($frist_sec_3_item as $item)
             <div class="news py-3 border-bottom">
-              <a href="#" class="d-flex">
+              <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
                 <img src="{{asset('post/'.$item->image)}}" alt="" class="newsimg me-3">
                 <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
               </a>

@@ -12,7 +12,7 @@
 
               @foreach ($helth_sec_1_item as $item)
               <div class="saradesh-news-detail border-bottom saradesh-news mt-3 me-3 m-lg-0">
-                <a href="#">
+                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                   <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                 </a>
@@ -23,7 +23,7 @@
 
                 @foreach ($helth_sec_2_item as $item)
                 <div class="recent-news more-news border-bottom">
-                  <a class="d-flex align-items-md-start mt-3 pb-3" href="#">
+                  <a class="d-flex align-items-md-start mt-3 pb-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>
@@ -51,7 +51,7 @@
 
               @foreach ($probas_sec_1_item as $item)
               <div class="recent-news border-bottom mt-3">
-                <a class="d-flex justify-content-start align-items-md-start pb-3" href="#">
+                <a class="d-flex justify-content-start align-items-md-start pb-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">{{$item->title}}</p>
                 </a>
@@ -65,7 +65,7 @@
 
             @foreach ($probas_sec_2_item as $item)
               <div class=" recent-news border-bottom mt-3">
-                <a class=" d-flex justify-content-start align-items-md-start pb-3  " href="#">
+                <a class=" d-flex justify-content-start align-items-md-start pb-3  " href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
                   <p class="m-0 fw-medium">{{$item->title}}</p>
                 </a>
@@ -85,7 +85,7 @@
         <div class="sikkha-content d-flex flex-column">
           @foreach ($law_sec_1_item as $item)
           <div class="saradesh-news-detail border-bottom saradesh-news mt-3 me-3 m-lg-0">
-            <a href="#">
+            <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
               <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
               <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
             </a>
@@ -96,7 +96,7 @@
 
             @foreach ($law_sec_2_item as $item)
             <div class="recent-news more-news border-bottom">
-              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="#">
+              <a class="d-flex justify-content-start align-items-md-start pb-3 mt-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
               <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
               <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>

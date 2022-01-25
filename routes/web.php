@@ -1,14 +1,17 @@
 <?php
 
+use App\Models\post;
+use App\Models\category;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdsController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\fontController;
-use App\Http\Controllers\BreakingNewsController;
+use App\Http\Controllers\PostController;
+use Illuminate\Database\Eloquent\Builder;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\deshboardController;
+use App\Http\Controllers\BreakingNewsController;
 use App\Http\Controllers\FontCategoryController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\TagController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +68,31 @@ use Illuminate\Support\Facades\Route;
    
                   //  posts Routes
    Route::get('/{category}/{id}',[fontController::class,'posts'])->name('posts');
+
+
+   
+
+
+route::get('/test2',function(){
+
+// $postdatas = post::with('categories')->orderBy('id', 'desc')->get();
+// $categorydata = $postdatas->categories->first()->slug;
+
+// dd($categorydata);
+
+});
+
+
+
+   Route::get('/test',function(){
+        
+
+
+
+
+
+  });
+
 
                 //  Admin Routes
 

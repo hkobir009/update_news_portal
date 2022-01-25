@@ -7,10 +7,10 @@
       </div>
       <div class="row">
         
-        @foreach ($exclusive_sec_1_item as $item)
+        @foreach ($columns_sec_4_item as $item)
         <div class="col-lg-3 col-sm-6">
           <div class="saradesh-news-detail saradesh-news m-md-0 mt-3 me-3">
-            <a href="#">
+            <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                 <img class="img-fluid" src="{{asset('post/'.$item->image)}}" alt="country" style="height:15rem !important ">
               <p class="p-3 fw-medium lh-sm exclusive-info">{{$item->title}}</p>
             </a>

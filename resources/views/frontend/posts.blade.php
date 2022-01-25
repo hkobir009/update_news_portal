@@ -12,38 +12,17 @@
                   <h1 class="fw-medium post-title"> {{$post->title}} </h1>
                   <div class="post-page-info d-flex mt-4">
                      <div class="post-info-logo me-2">
-                        <img src="img/favicon.webp" alt="">
+                        <img src="{{url('frontend/img/favicon.webp')}}" alt="">
                      </div>
                      <div class="post-inf-details d-flex flex-column">
-                        <span>বিশ্ববিদ্যালয় প্রতিবেদক, শাবি </span>
-                        <time>১৬ জানুয়ারি ২০২২, ০৯:১৪ পিএম</time>
+                        <span>রিপোর্টার : {{$post->user->name}}</span>
+                        <time>{{$postTime}}</time>
                      </div>
                   </div>
                </div>
                <div class="social-share">
-                  <ul class="p-0 d-flex">
-                     <a class="pe-5 border-end" href="#">
-                        <li class="p-2 bg-primary px-3 rounded text-white d-inline-block"><i
-                           class="mx-2 fab fa-facebook"></i><span class="fw-medium">Share
-                           103</span>
-                        </li>
-                     </a>
-                     <li class="ms-3 me-2 rounded d-flex align-items-center justify-content-center post-page-social-icon">
-                        <i class="fab fa-twitter"></i>
-                     </li>
-                     <li class="mx-2 rounded d-flex align-items-center justify-content-center post-page-social-icon">
-                        <i class="fab fa-whatsapp"></i>
-                     </li>
-                     <li class="mx-2 rounded d-flex align-items-center justify-content-center post-page-social-icon">
-                        <i class="far fa-clone"></i>
-                     </li>
-                     <li class="mx-2 rounded d-flex align-items-center justify-content-center post-page-social-icon">
-                        <i class="fas fa-print"></i>
-                     </li>
-                     <li class="mx-2 rounded d-flex align-items-center justify-content-center post-page-social-icon">
-                        <i class="fas fa-language"></i>
-                     </li>
-                  </ul>
+                  {{-- social Share --}}
+                  <div class="sharethis-inline-share-buttons"></div>
                </div>
             </div>
             <div class="row pb-md-4">
@@ -90,15 +69,18 @@
                <h4 class="m-0 py-2">সম্পর্কিত</h4>
             </div>
             <div class="row mt-3 mb-sm-5">
+
+               @foreach ($related_posts as $related_post)
+
                <div class="col-md-4 col-sm-12">
-                  <div class="news-col mx-2 m-lg-0">
-                     <a href="#">
-                        <img class="img-fluid w-100" src="img/newsimg4.webp" alt="country">
-                        <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
-                     </a>
-                  </div>
-                  <!--news col-->
+               <div class="news-col mx-2 m-lg-0">
+                  <a href="#">
+                     <img class="img-fluid w-100" src="{{asset('post/'.$related_post->image)}}" alt="country">
+                     <p class="py-2 fw-medium lh-sm">{{$related_post->title}}</p>
+                  </a>
                </div>
+            </div>
+            @endforeach
             </div>
             <!--------------------------------------------- somporkito section end -------------------------------------------- -->
             <div class="section-title d-flex justify-content-between align-items-center py-2">

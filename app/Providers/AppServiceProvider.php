@@ -34,6 +34,9 @@ class AppServiceProvider extends ServiceProvider
         //View::share('key', 'value');
         $bongabda = new BnDateTime('now', new DateTimeZone('Asia/Dhaka'));
         $dateandtime = $bongabda->getDateTime()->format('l , j F Y , b h:i'); 
+       
+        
+      
         //                breaking news all info
         $breskingdatas = breaking_news::all();
         //                Category all info
@@ -64,29 +67,28 @@ class AppServiceProvider extends ServiceProvider
 
         //for health section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',23)
-            ->orderBy('id', 'desc')->get();
-
+        $categoryposts =category::with('posts')->where('id',23)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }   
+        
             //for health section 1
         $collection = collect($category_wize_post);
         $helth_sec_1_item = $collection->splice(0,1);
         //for health section 2 
-        $collection = collect($category_wize_post);
-        $helth_sec_2_item = $collection->splice(1,2);
+        $collection1 = collect($category_wize_post);
+        $helth_sec_2_item = $collection1->splice(1,2);
+    
         //for health section 3 
         $collection = collect($category_wize_post);
         $helth_sec_3_item = $collection->splice(3,15);
 
                 //for probas section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',49)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',49)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }   
 
         //for probas section 1
         $collection = collect($category_wize_post);
@@ -106,11 +108,10 @@ class AppServiceProvider extends ServiceProvider
         
         //for weather section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',54)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',54)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for weather section 1
         $collection = collect($category_wize_post);
@@ -124,11 +125,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for opinions section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',69)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',69)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for opinions section 1
         $collection = collect($category_wize_post);
@@ -142,11 +142,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for columns section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',70)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',70)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for columns section 1
         $collection = collect($category_wize_post);
@@ -157,14 +156,16 @@ class AppServiceProvider extends ServiceProvider
         //for columns section 3 
         $collection = collect($category_wize_post);
         $columns_sec_3_item = $collection->splice(3,15);
+        //for columns section 4 
+        $collection = collect($category_wize_post);
+        $columns_sec_4_item = $collection->splice(0,4);
         
                         //for law section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',36)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',36)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for law section 1
         $collection = collect($category_wize_post);
@@ -178,11 +179,10 @@ class AppServiceProvider extends ServiceProvider
 
                  //for Exclusive section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',48)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',48)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for Exclusive section 1
         $collection = collect($category_wize_post);
@@ -199,11 +199,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for Entertainment section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',24)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',24)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for Entertainment section 1
         $collection = collect($category_wize_post);
@@ -229,11 +228,10 @@ class AppServiceProvider extends ServiceProvider
         
             // for bollywood section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',63)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',63)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for bollywood section 1
         $collection = collect($category_wize_post);
@@ -247,11 +245,10 @@ class AppServiceProvider extends ServiceProvider
 
             // for tollywood section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',64)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',64)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for tollywood section 1
         $collection = collect($category_wize_post);
@@ -265,11 +262,10 @@ class AppServiceProvider extends ServiceProvider
 
         // for dhaliwood section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',65)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',65)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for dhaliwood section 1
         $collection = collect($category_wize_post);
@@ -283,11 +279,10 @@ class AppServiceProvider extends ServiceProvider
 
         // for hollywood section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',62)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',62)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for hollywood section 1
         $collection = collect($category_wize_post);
@@ -301,11 +296,10 @@ class AppServiceProvider extends ServiceProvider
 
             //for lifestyle section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',44)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',44)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for lifestyle section 1
         $collection = collect($category_wize_post);
@@ -319,11 +313,10 @@ class AppServiceProvider extends ServiceProvider
 
             //for Information section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',45)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',45)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for Information section 1
         $collection = collect($category_wize_post);
@@ -337,11 +330,10 @@ class AppServiceProvider extends ServiceProvider
 
             //for Religion section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',46)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',46)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for Religion section 1
         $collection = collect($category_wize_post);
@@ -355,11 +347,10 @@ class AppServiceProvider extends ServiceProvider
 
             //for artAndLiterature section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',51)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',51)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for artAndLiterature section 1
         $collection = collect($category_wize_post);
@@ -373,11 +364,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for bookCriticism section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',59)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',59)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for bookCriticism section 1
         $collection = collect($category_wize_post);
@@ -391,11 +381,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for smallStory section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',60)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',60)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for smallStory section 1
         $collection = collect($category_wize_post);
@@ -409,11 +398,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for Poetry section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',61)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',61)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for Poetry section 1
         $collection = collect($category_wize_post);
@@ -427,11 +415,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for fromFacebookPage section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',52)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',52)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for fromFacebookPage section 1
         $collection = collect($category_wize_post);
@@ -445,11 +432,10 @@ class AppServiceProvider extends ServiceProvider
 
             //for jobs section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',20)
-            ->orderBy('id','desc')->get();
+        $categoryposts =category::with('posts')->where('id',20)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
             //for jobs section 1
         $collection = collect($category_wize_post);
@@ -463,11 +449,10 @@ class AppServiceProvider extends ServiceProvider
         
                     //for holeWorld section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',27)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',27)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for holeWorld section 1
         $collection = collect($category_wize_post);
@@ -490,11 +475,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for national section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',30)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',30)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for national section 1
         $collection = collect($category_wize_post);
@@ -514,11 +498,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for politics section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',29)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',29)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for politics section 1
         $collection = collect($category_wize_post);
@@ -535,11 +518,10 @@ class AppServiceProvider extends ServiceProvider
       
         //for international section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',26)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',26)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for international section 1
         $collection = collect($category_wize_post);
@@ -559,11 +541,10 @@ class AppServiceProvider extends ServiceProvider
 
                 //for economy section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',28)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',28)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for economy section 1
         $collection = collect($category_wize_post);
@@ -583,11 +564,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for bank section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',66)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',66)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for bank section 1
         $collection = collect($category_wize_post);
@@ -601,11 +581,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for insurance section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',67)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',67)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for insurance section 1
         $collection = collect($category_wize_post);
@@ -619,11 +598,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for stockMarket section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',68)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',68)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for stockMarket section 1
         $collection = collect($category_wize_post);
@@ -637,11 +615,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for sports section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',25)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',25)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for sports section 1
         $collection = collect($category_wize_post);
@@ -661,11 +638,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for cricket section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',55)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',55)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for cricket section 1
         $collection = collect($category_wize_post);
@@ -679,11 +655,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for football section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',56)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',56)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for football section 1
         $collection = collect($category_wize_post);
@@ -697,11 +672,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for hockey section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',57)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',57)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for hockey section 1
         $collection = collect($category_wize_post);
@@ -715,11 +689,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for otherSports section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',58)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',58)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for otherSports section 1
         $collection = collect($category_wize_post);
@@ -733,11 +706,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for education section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',21)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',21)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for education section 1
         $collection = collect($category_wize_post);
@@ -751,11 +723,10 @@ class AppServiceProvider extends ServiceProvider
 
         //for campus section
 
-        $category_wize_post = DB::table('posts')
-            ->join('category_post', 'posts.id', '=', 'category_post.post_id')
-            ->select('posts.*', 'category_post.category_id')
-            ->where('category_id',53)
-            ->orderBy('id', 'desc')->get();
+        $categoryposts =category::with('posts')->where('id',53)->get();
+        foreach($categoryposts as $categorypost){
+              $category_wize_post =$categorypost->posts;  
+          }
 
         //for campus section 1
         $collection = collect($category_wize_post);
@@ -891,6 +862,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('columns_sec_1_item',$columns_sec_1_item);
         View::share('columns_sec_2_item',$columns_sec_2_item);
         View::share('columns_sec_3_item',$columns_sec_3_item);
+        View::share('columns_sec_4_item',$columns_sec_4_item);
         View::share('bookCriticism_sec_1_item',$bookCriticism_sec_1_item);
         View::share('bookCriticism_sec_2_item',$bookCriticism_sec_2_item);
         View::share('bookCriticism_sec_3_item',$bookCriticism_sec_3_item);
@@ -903,6 +875,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('fromFacebookPage_sec_1_item',$fromFacebookPage_sec_1_item);
         View::share('fromFacebookPage_sec_2_item',$fromFacebookPage_sec_2_item);
         View::share('fromFacebookPage_sec_3_item',$fromFacebookPage_sec_3_item);
+
 
     }
 }

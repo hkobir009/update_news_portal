@@ -8,7 +8,7 @@
           @foreach ($secound_sec_item_1 as $item)
           <div class="col-md-4 col-sm-12">
             <div class="news-col mx-2 m-lg-0">
-              <a href="#">
+              <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                 <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                 <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
               </a>
@@ -32,7 +32,7 @@
                   
                   @foreach ($letest_datas as $item)
                   <div class="recent-news border-bottom">
-                    <a class=" d-flex justify-content-start align-items-md-start mt-3" href="#">
+                    <a class=" d-flex justify-content-start align-items-md-start mt-3" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
                       <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" alt="">
                       <p class="m-0">{{$item->title}}</p>
                     </a>
