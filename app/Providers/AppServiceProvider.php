@@ -50,20 +50,24 @@ class AppServiceProvider extends ServiceProvider
         // for frist section 3 item
         $collection = collect($postDatas);
         $frist_sec_3_item = $collection->splice(0,3);
-               // for frist section 1 item
+        // for frist section 1 item
         $collection = collect($postDatas);
         $frist_sec_1_item = $collection->splice(3,1);
-                // for frist section 2 item
+        // for frist section 2 item
         $collection = collect($postDatas);
         $frist_sec_2_item = $collection->splice(4,2);
-
         //for letest section
         $collection = collect($postDatas);
         $letest_datas = $collection->splice(0,10);
-
         //for secound section
         $collection = collect($postDatas);
         $secound_sec_item_1 = $collection->splice(7,12);
+        //for you section
+        $collection = collect($postDatas);
+        $for_you_datas = $collection->splice(0,5);
+        //more for you section
+        $collection = collect($postDatas);
+        $more_datas = $collection->splice(5,6);
 
         //for health section
 
@@ -872,6 +876,8 @@ class AppServiceProvider extends ServiceProvider
         View::share('Poetry_sec_1_item',$Poetry_sec_1_item);
         View::share('Poetry_sec_2_item',$Poetry_sec_2_item);
         View::share('Poetry_sec_3_item',$Poetry_sec_3_item);
+        View::share('for_you_datas',$for_you_datas);
+        View::share('more_datas',$more_datas);
         View::share('fromFacebookPage_sec_1_item',$fromFacebookPage_sec_1_item);
         View::share('fromFacebookPage_sec_2_item',$fromFacebookPage_sec_2_item);
         View::share('fromFacebookPage_sec_3_item',$fromFacebookPage_sec_3_item);

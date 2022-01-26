@@ -6,7 +6,7 @@
 
           @foreach ($frist_sec_3_item as $item)
             <div class="news py-3 border-bottom">
-              <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
+              <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
                 <img src="{{asset('post/'.$item->image)}}"  class="newsimg me-3">
                 <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
               </a>
@@ -30,7 +30,7 @@
 
             @foreach ($frist_sec_1_item as $item)
               <div class="news-item">
-                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img src="{{asset('post/'.$item->image)}}" alt="" width="100%">
                   <h1 class="m-0 title my-3 fw-medium">{{$item->title}}</h1></a>
                   <p class="m-0 lh-sm pt-2 pb-4 text-black fw-medium">
@@ -44,7 +44,7 @@
 
             @foreach ($frist_sec_2_item as $item)
               <div class="news py-2">
-                <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex border-end border-3 pe-2">
+                <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex border-end border-3 pe-2">
                   <img src="{{asset('post/'.$item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
                   <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
                 </a>
@@ -61,7 +61,7 @@
 
            @foreach ($frist_sec_3_item as $item)
             <div class="news py-3 border-bottom">
-              <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
+              <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
                 <img src="{{asset('post/'.$item->image)}}" alt="" class="newsimg me-3">
                 <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
               </a>
@@ -89,21 +89,20 @@
           </a>
         </div>
         @endforeach
-        <div class="top-right">
+        <div class="top-right onehundrad">
           <!-- ================================================ reusblae html ======================================================= -->
           <div class="section-title d-flex justify-content-between align-items-center px-3 py-4">
             <a href="{{route('fromFacebookPage')}}"><h2 class="m-0">ফেসবুক পাতা থেকে</h2></a>
             <a href="{{route('fromFacebookPage')}}">আরো পড়ুন <i class="fas fa-arrow-circle-right"></i></a>
           </div>
-          <div class="mini-testimonial p-3 d-flex border-bottom">
-            <img class="rounded-circle me-3" src="img/man.jpg" alt="ড. কুদরত-ই-হুদা" width="90" height="90">
-            <div class="info">
-              <a href="#">
-                <h3 class="m-0 fw-medium py-2">‘বেখাপ্পা’ মওলানা ভাসানী</h3>
-                <span>ড. কুদরত-ই-হুদা</span>
-              </a>
-            </div>
-          </div>
+          @foreach ($fromFacebookPage_sec_1_item as $item)
+          <div class="news pb-3 py-3 border-bottom">
+            <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
+              <img src="{{asset('post/'.$item->image)}}" alt="" class="newsimg me-3">
+              <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
+            </a>
+          </div><!--news end-->
+          @endforeach
         </div>
         <!------------------------ ads place for fast page right side-------------------------------------- -->
         @foreach ($adsData as $adsDatas)

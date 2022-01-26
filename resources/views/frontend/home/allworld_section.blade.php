@@ -14,7 +14,7 @@
                 
                 @foreach ($holeWorld_sec_1_item as $item)
                 <div class="saradesh-news-detail mb-sm-4 mb-lg-0">
-                  <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                  <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img class="img-fluid my-sm-4 my-md-0 w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                     <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                   </a>
@@ -28,7 +28,7 @@
 
                 @foreach ($holeWorld_sec_2_item as $item)
                 <div class="recent-news border-bottom mt-3 pb-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                  <a class="d-flex justify-content-start align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}"alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>
@@ -42,7 +42,7 @@
 
                 @foreach ($holeWorld_sec_3_item as $item)
                 <div class=" recent-news border-bottom mt-3 pb-3">
-                  <a class=" d-flex justify-content-start align-items-md-start  " href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                  <a class=" d-flex justify-content-start align-items-md-start  " href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}"alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>

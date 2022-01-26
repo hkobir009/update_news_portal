@@ -85,14 +85,14 @@ ul {
 }
 /* --------------------------------------------------- navbar-------------------------------------------------------------------- */
 nav {
-  background-color: var(--title-bg);
+  background-color: red;
 }
 nav a {
   color: #fff;
   border-bottom: 2px solid transparent !important;
 }
 nav li a:hover {
-  background-color: #255a75;
+  background-color: #b80808;
   border-color: #fff !important;
   color: #fff !important;
 }
@@ -544,7 +544,7 @@ nav li a:hover {
 }
 footer input {
   font-size: var(--post-title-font-size) !important;
-  padding-left: 10rem !important;
+  padding-left: 13rem !important;
   border-radius: 20px !important;
 }
 footer .footerlogo {

@@ -3,7 +3,7 @@
     <div class="footer-top">
       <div class="logo-part d-flex align-items-center flex-column flex-md-row">
         <div class="footer-logo me-0 me-md-5">
-          <a href="index.html"><img width="300" src="img/dhaka-post.webp" alt="Logo" class="footerlogo img-fluid"></a>
+          <a href="index.html"><img width="300" src="{{asset('img/dhaka-post.webp')}}" alt="Logo" class="footerlogo img-fluid"></a>
         </div>
         <div class="subscribed-field position-relative mt-md-0 mt-4 ms-auto">
           <form action="">
@@ -77,9 +77,13 @@
           <span>© 2010-2022 bartajogot24, All Rights Reserved.</span>
         </div>
         <div class="copy-right d-flex align-items-center">
-          <span class="me-3">Developed and Maintained by : <a href="https://freelancerkabir.com/"><strong>Humayun kabir</strong></a></span>
+          <span class="me-3">Developed and Maintained by : <a href="https://freelancerkabir.com/"><strong>Freelancer kabir</strong></a></span>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+  <a href="#" class="go-top position-fixed">
+    <i class="fas fa-arrow-circle-up"></i>
+  </a>

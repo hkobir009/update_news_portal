@@ -13,12 +13,11 @@
                      </h1>
                   </div>
                   <div class="dashboard-content-right d-flex">
-                     <div class="search-bar d-flex align-items-center calander position-relative me-2">
-                        <form action="">
-                           <input class=" form-control py-2 p-2 px-3 pe-5" type="text" placeholder="Search by name">
-                           <i class="fas fa-search position-absolute top-50"></i>
-                        </form>
-                     </div>
+                     <form action="">
+                         <div class="search-bar d-flex align-items-center calander position-relative me-2">
+                           <input class=" form-control p-2 px-3 pe-5" type="text" placeholder="Search by name">
+                        </div>
+                     </form>
                      <div class="reports bg-white rounded d-flex align-items-center">
                         <a href="{{route('create_post')}}" class="text-decoration-none d-flex align-items-center p-1 px-md-4 py-md-1 mx-2">
                            <i class="fas fa-plus fa-2x fw-normal"></i>
@@ -58,21 +57,21 @@
                            <td><h4 class="m-0 fw-bold">{{$postdata->created_at}}</h4></td>
                            <td>
                               <div class="two-icon d-flex justify-content-center">
+                                 
                                  <a href="{{Route('post_edit',[$postdata->id])}}">
-                                    <div class="delete mx-2 bg-primary p-3 rounded text-white fw-bold d-flex align-items-center">
-                                        <i class="fas fa-edit"></i>
+                                    <div class="delete mx-2 mt-0 p-3 rounded text-white fw-bold d-flex align-items-center">
+                                       <button class="btn btn-primary btn-lg">Edit</button>
                                      </div>
-                                </a>
-                                <a href="{{Route('post_delete',[$postdata->id])}}">
-                                    <div class="delete mx-2 bg-danger p-3 rounded text-white fw-bold d-flex align-items-center">
-                                        <i class="fas fa-trash-alt"></i>
+                                 </a>
+                                
+                                <form action="{{Route('post_delete',[$postdata->id])}}" method="post">
+                                 @csrf
+                                 @method('POST')
+                                    <div class="delete mx-2 mt-0 p-3 rounded text-white fw-bold d-flex align-items-center">
+                                       <button class="btn btn-danger btn-lg">Delete</button>
                                      </div>
-                                </a>
-                                <a href="" alt="show">
-                                 <div class="message mx-2 bg-success p-3 rounded text-white fw-bold d-flex align-items-center">
-                                    <i class="fas fa-eye"></i>
-                                  </div>
-                                </a>
+                                </form>
+                                
                               </div>
                            </td>
                         </tr><!--tr end-->
@@ -87,6 +86,3 @@
          </div>
 
 @endsection
-
-
-

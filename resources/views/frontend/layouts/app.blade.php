@@ -12,7 +12,7 @@
     <!-- all css here -->
      <link rel="stylesheet" href="{{ asset('frontend/css/SolaimanLipi.css') }}">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="{{ asset('frontend/css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/all.min.css') }}">
     <!-- font-awesome css -->
     <!-- bootstrap v5.0.2 css -->
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
@@ -35,7 +35,7 @@
 
 @include('frontend.layouts.footer')
     <!-- jquery js -->
-    <script src="{{ asset('frontend/js/jquery.slim.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
     <!-- Bootstrape js -->
   <script src="{{ asset('frontend/js/popper.min.js') }}"></script>
   <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>

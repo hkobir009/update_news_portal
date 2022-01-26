@@ -7,7 +7,6 @@ use App\Http\Controllers\AdsController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\fontController;
 use App\Http\Controllers\PostController;
-use Illuminate\Database\Eloquent\Builder;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\deshboardController;
 use App\Http\Controllers\BreakingNewsController;
@@ -67,7 +66,7 @@ use App\Http\Controllers\FontCategoryController;
    Route::get('/informationTechnology',[FontCategoryController::class,'informationTechnology'])->name('informationTechnology');
    
                   //  posts Routes
-   Route::get('/{category}/{id}',[fontController::class,'posts'])->name('posts');
+   Route::get('news/{category}/{id}',[fontController::class,'posts'])->name('posts');
 
 
    
@@ -133,7 +132,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/create_post',[PostController::class,'store'])->name('store_post');
     Route::get('post_edit/{id}',[PostController::class,'edit'])->name('post_edit');
     Route::post('post_update/{id}',[PostController::class,'update'])->name('post_update');
-    Route::get('post_delete/{id}',[PostController::class,'delete'])->name('post_delete');
+    Route::post('post_delete/{id}',[PostController::class,'delete'])->name('post_delete');
             
     
     Route::get('ads',[AdsController::class,'adsIndex'])->name('ads');

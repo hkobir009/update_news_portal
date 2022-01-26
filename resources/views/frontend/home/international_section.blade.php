@@ -14,7 +14,7 @@
                 @foreach ($international_sec_1_item as $item)
                 <div class="top-big-news">
                   <div class="saradesh-news-detail">
-                    <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                    <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                       <img class="img-fluid" src="{{asset('post/'.$item->image)}}" alt="country">
                       <p class="py-2 fw-medium lh-sm m-0">{{$item->title}}</p>
                     </a>
@@ -29,7 +29,7 @@
 
                 @foreach ($international_sec_2_item as $item)
                 <div class="recent-news border-bottom py-3">
-                  <a class="d-flex justify-content-start align-items-md-start" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                  <a class="d-flex justify-content-start align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img class="img-fluid me-3 w-100" src="{{asset('post/'.$item->image)}}" width="110" height="75" alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>
@@ -57,7 +57,7 @@
                   @foreach ($economy_sec_1_item as $item)
                   <div class="top-big-news mb-md-4">
                     <div class="saradesh-news-detail">
-                      <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                      <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                         <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                         <p class="py-2 fw-medium lh-sm m-0">{{$item->title}}</p>
                       </a>
@@ -72,7 +72,7 @@
 
                   @foreach ($economy_sec_2_item as $item)
                     <div class="recent-news border-bottom py-3">
-                      <a class="d-flex justify-content-start align-items-md-start" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                      <a class="d-flex justify-content-start align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                         <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
                         <p class="m-0 fw-medium">{{$item->title}}</p>
                       </a>

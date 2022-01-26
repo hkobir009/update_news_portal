@@ -30,9 +30,7 @@
                   <div class="big-news-top">
                      <div class="top-middle mb-3 mb-lg-0">
                         <div class="news-item">
-                           <a href="#">
                            <img class="img-fluid w-100" src="{{asset('post/'.$post->image)}}">
-                           </a>
                            <h2 class="m-0 big-post-title-bottom my-3 fw-bold lh-sm mb-lg-4">
                               {!!$post->body!!}</h2>
                         </div>
@@ -70,11 +68,10 @@
             </div>
             <div class="row mt-3 mb-sm-5">
 
-               @foreach ($related_posts as $related_post)
-
+            @foreach ($related_posts as $related_post)
                <div class="col-md-4 col-sm-12">
                <div class="news-col mx-2 m-lg-0">
-                  <a href="#">
+                  <a href="{{url('news/'.$post->categories->first()->slug.'/'.$related_post->id)}}">
                      <img class="img-fluid w-100" src="{{asset('post/'.$related_post->image)}}" alt="country">
                      <p class="py-2 fw-medium lh-sm">{{$related_post->title}}</p>
                   </a>
@@ -87,32 +84,33 @@
                <h4 class="m-0 py-2">আরো পড়ুন</h4>
             </div>
             <div class="row mt-3">
-
+               @foreach ($more_datas as $item)
                <div class="col-md-4 col-sm-12">
                   <div class="news-col mx-2 m-lg-0">
-                     <a href="#">
-                        <img class="img-fluid w-100" src="img/newsimg4.webp" alt="country">
-                        <p class="py-2 fw-medium lh-sm">তিন দেশ মিলে বাংলাদেশকে ১২ লাখ টিকা দিল</p>
+                     <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                        <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                        <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                      </a>
                   </div>
                   <!--news col-->
                </div>
+               @endforeach
 
                <!--2nd col 4-->
             </div>
             <!-- -------------------------------------- more advertisment ---------------------------------------------------- -->
             
-            <div class="row mt-3 more-advertisment">
+            {{-- <div class="row mt-3 more-advertisment">
               <div class="col-md-3 post-ads">
                  <a class="ads-link" href="#">
                  <img src="https://tpc.googlesyndication.com/simgad/16764916647907720142" alt="">
                  </a>
               </div>
               <!--2nd col 3-->
-           </div><!--row-->
+           </div><!--row--> --}}
 
 
-            <div class="row mt-3 more-advertisment ">
+            {{-- <div class="row mt-3 more-advertisment ">
                <h3 class="ads-title py-4 mt-5">You may know</h3>
                <div class="more-big-ads d-grid">
                   <div class=" big-ads">
@@ -121,7 +119,8 @@
                       </a>
                   </div>
                </div>
-            </div>
+            </div> --}}
+
          </div>
          <!--col-lg-9-->
          <div class="col-lg-3 jatiyo-page-left">
@@ -135,32 +134,34 @@
                </div>
 
                <div class="section-title d-flex justify-content-between align-items-center py-2">
-                  <h4 class="m-0 py-2">এই সপ্তাহের পাঠকপ্রিয়</h4>
+                  <h4 class="m-0 py-2">আপনার জন্য</h4>
                </div>
                <div class="post-news-left-main jatiyo-page-news-left some-rajniti recent-post-details bg-white more-news">
-
+                  
+                  @foreach ($for_you_datas as $item)
                   <div class="recent-news border-bottom py-2">
-                     <a class="d-flex align-items-md-start" href="#">
-                        <img class="img-fluid me-3" src="img/imgs2.webp" alt="">
-                        <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ</p>
+                     <a class="d-flex align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                        <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" alt="">
+                        <p class="m-0 fw-medium">{{$item->title}}</p>
                      </a>
                   </div>
+                  @endforeach
 
                </div>
                <!--jatiyo-page-news-left-->
                <!-- jatiyo থেকে আরো -->
                <div class="section-title d-flex justify-content-between align-items-center py-2">
-                  <h4 class="m-0 py-2">জাতীয় থেকে আরো</h4>
+                  <h4 class="m-0 py-2">{{$post->categories->first()->name}} থেকে আরো</h4>
                </div>
                <div class="post-news-left-main jatiyo-page-news-left some-rajniti recent-post-details bg-white more-news">
-
+                  @foreach ($related_posts_2 as $related_post)
                   <div class="recent-news border-bottom py-2">
-                     <a class="d-flex align-items-md-start" href="#">
-                        <img class="img-fluid me-3" src="img/imgs2.webp" alt="">
-                        <p class="m-0 fw-medium">বাংলাদেশ হঠাৎ</p>
+                     <a href="{{url('news/'.$post->categories->first()->slug.'/'.$related_post->id)}}" class="d-flex align-items-md-start">
+                        <img class="img-fluid me-3" src="{{asset('post/'.$related_post->image)}}" alt="">
+                        <p class="m-0 fw-medium">{{$related_post->title}}</p>
                      </a>
                   </div>
-
+                  @endforeach
                </div>
                <!--jatiyo-page-news-left-->
                </div>

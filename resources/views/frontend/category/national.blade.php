@@ -20,7 +20,7 @@
 
                   @foreach ($national_sec_3_item as $item)
                   <div class="news-item">
-                    <a href="#">
+                    <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                       <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}">
                       <h1 class="m-0 title my-3 fw-medium">{{$item->title}}</h1>
                     </a>
@@ -37,8 +37,10 @@
                 
                 @foreach ($national_sec_4_item as $item)
                 <div class="top-little-news p-0 py-3 py-sm-0 pe-sm-2 border-bottom">
+                  <a class="mt-3 d-block" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid" src="{{asset('post/'.$item->image)}}" alt="">
-                  <a class="mt-3 d-block" href="#">{{$item->title}}</a>
+                  <p>{{$item->title}}</p>
+                  </a>
                 </div>
                 @endforeach
 
@@ -52,7 +54,7 @@
             @foreach ($national_sec_5_item as $item)
             <div class="col-md-4 col-sm-12">
               <div class="news-col mx-2 m-lg-0">
-                <a href="#">
+                <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                   <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
                   <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                 </a>
@@ -81,16 +83,14 @@
             <h4 class="m-0 py-2">এই সপ্তাহের পাঠকপ্রিয়</h4>
           </div>
           <div class="jatiyo-page-news-left some-rajniti recent-post-details bg-white more-news">
-            
-
+            @foreach ($letest_datas as $item)
             <div class=" recent-news border-bottom py-2">
-              <a class=" d-flex align-items-md-start" href="#">
-                <img class="img-fluid me-3" src="img/imgs2.webp" alt="">
-                <p class="m-0 fw-medium">বাংলাদেশ</p>
+              <a class=" d-flex align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" alt="">
+                <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>
             </div>
-
-
+            @endforeach
           </div>
           <!--jatiyo-page-news-left-->
         </div>

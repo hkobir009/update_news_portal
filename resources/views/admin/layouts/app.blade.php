@@ -10,9 +10,9 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('css/all.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css')}}">
+    <link rel="stylesheet" href="{{asset('https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap-grid.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/bootstrap-select.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/SolaimanLipi.css')}}">
     <link rel="stylesheet" href="{{asset('css/admin_style.css')}}">
 </head>
@@ -34,6 +34,7 @@
     <script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap-select.min.js')}}"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="https://cdn.tiny.cloud/1/6fyqkbb1vo9y8l9kmprir1sj7xlopoe2zf7posbgshhaagww/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>

@@ -13,7 +13,7 @@
 
                 @foreach ($national_sec_1_item as $item)
                 <div class="image-with-datails position-relative">
-                  <a href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                  <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img src="{{asset('post/'.$item->image)}}" alt="" class="img-fluid h-auto">
                     <p class="position-absolute image-info text-white lh-sm">{{$item->title}}</p>
                   </a>
@@ -28,7 +28,7 @@
 
                   @foreach ($national_sec_2_item as $item)
                   <div class="px-3">
-                    <a class="lh-sm fw-medium" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                    <a class="lh-sm fw-medium" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                       {{$item->title}}
                     </a>
                   </div>
@@ -50,7 +50,7 @@
                 
                 @foreach ($politics_sec_1_item as $item)
                 <div class=" recent-news border-bottom py-2">
-                  <a class=" d-flex align-items-md-start" href="{{url('/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                  <a class=" d-flex align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
                     <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}"alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
                   </a>

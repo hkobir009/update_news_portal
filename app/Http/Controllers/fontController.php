@@ -36,15 +36,22 @@ class fontController extends Controller
          //for related posts quary
          $categories = category::with('posts')->where('slug',$category)->get();
          foreach($categories as $category){
-            $allposts =$category->posts;  
-        }   
-
-        //for related posts
+            $allposts =$category->posts;
+        }
+        //dd($allposts);
+        // $velus = json_decode(json_encode($categories));
+        // foreach($velus as $velu){
+        //       $allposts = $velu->posts;
+        //     }
+        
+        //for related posts 1
         $collection = collect($allposts);
         $related_posts = $collection->splice(0,6);
+        //for related posts 2
+        $collection = collect($allposts);
+        $related_posts_2 = $collection->splice(6,6);
         
-
-        return view('frontend.posts',compact('post','postTime','related_posts'));
+        return view('frontend.posts',compact('post','postTime','related_posts','related_posts_2'));
     
     }
     // public function test()
