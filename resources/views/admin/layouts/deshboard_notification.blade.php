@@ -1,4 +1,4 @@
-<!----------- notification box start from here--------------->
+{{-- <!----------- notification box start from here--------------->
 <div class="notification-box-start position-relative">
     <div class="message-box notification-icon mx-5 rounded-circle d-flex justify-content-center align-items-center">
         <i class="far fa-bell"></i>
@@ -113,4 +113,4 @@
             <a href="#" class="text-decoration-none">Viwe all</a>
         </div>
     </div><!--notification box-->
-</div><!-- notification box end here -->
+</div><!-- notification box end here --> --}}

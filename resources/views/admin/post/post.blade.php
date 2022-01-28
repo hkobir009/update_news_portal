@@ -38,7 +38,7 @@
             <div class="container">
                <div class="row d-flex justify-content-center bg-white">
                   <div class="recent-orders dashboard-content">
-                     <table class="table text-center">
+                     <table class="table data-table text-center">
                         <tr class="align-middle">
                            <th class="">ID</th>
                            <th class="text-capitalize">User name</th>
@@ -53,6 +53,7 @@
                            <td class="last-order-item text-uppercase">{{$postdata->id}}</td>
                            <td class="last-order-item text-uppercase">{{$postdata->user->name}}</td>
                            <td><h4 class="m-0 fw-bold">{{Str::limit($postdata->title,30)}}</h4></td>
+                           {{-- <td><h4 class="m-0 fw-bold">{{($category->name)}}</h4></td> --}}
                            <td><h4 class="m-0 fw-bold">{{$postdata->view_count}}</h4></td>
                            <td><h4 class="m-0 fw-bold">{{$postdata->created_at}}</h4></td>
                            <td>
@@ -85,4 +86,25 @@
             <!--container-->
          </div>
 
+@endsection
+@section('script')
+
+{{-- <script type="text/javascript">
+   $(function () {
+     var table = $('.data-table').DataTable({
+         processing: true,
+         serverSide: true,
+         ajax: "{{ route('blog_post') }}",
+         columns: [
+             {data: 'id', name: 'id'},
+            //  {data: 'name', name: 'name'},
+             {data: 'title', name: 'title'},
+             {data: 'view_count', name: 'view_count'},
+             {data: 'created_at', name: 'created_at'},
+             {data: 'action', name: 'action', orderable: false, searchable: false},
+         ]
+     });
+   });
+ </script> --}}
+    
 @endsection

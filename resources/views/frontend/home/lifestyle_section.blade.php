@@ -1,4 +1,4 @@
-<section class="last-section">
+<section class="last-section lifestyle-bg">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-sm-6">

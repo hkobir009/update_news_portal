@@ -2,20 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\tag;
+use App\Models\post;
+use App\Models\category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use App\Models\category;
-use App\Models\post;
-use App\Models\tag;
-use Illuminate\Support\Facades\File; 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File; 
+use Yajra\DataTables\Facades\DataTables;
+
 class PostController extends Controller
 {
     public function postIndex(Request $request){
        $postdatas = post::with('categories')->orderBy('id','desc')->get();
-       $post_category = category::with('posts')->orderBy('id','desc')->get();
+       //$post_category = category::with('posts')->orderBy('id','desc')->get();
+       foreach($postdatas as $categorys){
+           foreach($categorys->categories as $category){
+                 $category;
+         }
+        }
+        //dd($category);
+       
+//                 for datatable
+    //    if ($request->ajax()) {
+    //     $data = post::select('*');
+    //     return DataTables::of($data)
+    //             ->addIndexColumn()
+    //             ->rawColumns(['action'])
+    //             ->make(true);
+    // }
 
-        return view('admin.post.post',compact('postdatas','post_category'));
+
+        return view('admin.post.post',compact('postdatas','category'));
     }
 
     public function create(Request $request){

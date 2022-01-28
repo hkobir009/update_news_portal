@@ -84,11 +84,11 @@
 					</div>
 				</div>
 				<div class="dashboard-menu accordion-item py-3">
-					<a class="py-3 accordion-button rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center" href="#" data-bs-toggle="collapse" data-bs-target="#collapsefour">
+					<a class="py-3 accordion-button rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center" href="#" data-bs-toggle="collapse" data-bs-target="#tags">
 						<i class="fas fa-tags mx-0 pe-3"></i>
 						<span class="pe-5 text-capitalize">tag manage</span>
 					</a>
-    				<div id="collapsefour" class="accordion-collapse collapse  ms-4" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+    				<div id="tags" class="accordion-collapse collapse  ms-4" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 						<div class="accordion-body">
 							<div class="dashboard-menu">
 								<a href="{{route('create_tag')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
@@ -135,21 +135,21 @@
 			</div>
 			<!-- Ads start here -->
 			<div class="dashboard-menu py-3">
-				<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+				<a href="{{route('userInfo')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
 					<i class="fas fa-user pe-3"></i>
 					<span class="pe-5 text-capitalize">user informetion</span>
+				</a>
+			</div>
+			<div class="dashboard-menu py-3">
+				<a href="{{route('subscribe')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
+					<i class="fa fa-table pe-3"></i>
+					<span class="pe-5 text-capitalize">Subscription User</span>
 				</a>
 			</div>
 			<div class="dashboard-menu py-3">
 				<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
 					<i class="fa-solid fa-earth-europe pe-3"></i>
 					<span class="pe-5 text-capitalize"> Breaking news </span>
-				</a>
-			</div>
-			<div class="dashboard-menu py-3">
-				<a href="{{route('breaking_newses')}}" class="py-3 rounded ps-3 d-block text-white text-decoration-none d-flex align-items-center">
-					<i class="fa fa-table pe-3"></i>
-					<span class="pe-5 text-capitalize">Subscription User</span>
 				</a>
 			</div>
 			<div class="dashboard-menu py-3">

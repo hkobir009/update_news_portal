@@ -6,9 +6,10 @@
           <a href="index.html"><img width="300" src="{{asset('img/dhaka-post.webp')}}" alt="Logo" class="footerlogo img-fluid"></a>
         </div>
         <div class="subscribed-field position-relative mt-md-0 mt-4 ms-auto">
-          <form action="">
-            <input class="form-control py-2" type="email" placeholder="Enter your mail">
-            <button class="btn position-absolute top-50 bg-primary subscribe-button px-2 text-white">SUBSCRIBE</button>
+          <form action="{{Route('store_sub')}}" method="post">
+            @csrf
+            <input class="form-control py-2" name="email" type="email" placeholder="Enter your mail">
+            <button type="submit" class="btn position-absolute top-50 bg-primary subscribe-button px-2 text-white">SUBSCRIBE</button>
           </form>
         </div>
       </div>

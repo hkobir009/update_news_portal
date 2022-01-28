@@ -1,4 +1,4 @@
-<!-- -------------------------------------- messege box design start ----------------------------- -->
+{{-- <!-- -------------------------------------- messege box design start ----------------------------- -->
 <div class="message-box-start position-relative">
     <div class="message-box message-icon rounded-circle d-flex justify-content-center align-items-center">
         <i class="far fa-envelope"></i>
@@ -118,4 +118,4 @@
             <a href="#" class="text-decoration-none">Viwe all</a>
         </div>
     </div><!--messege details-->
-</div><!--messge box end here-->
+</div><!--messge box end here--> --}}

@@ -5,7 +5,7 @@
             <div class="dashbard-content-header d-flex align-items-center justify-content-between">
                 <h1 class="my-5 ms-4 text-capitalize p-0 fw-bold">Dashboard </h1>
                 <div class="dashboard-content-right d-flex">
-                    <div class="calander position-relative bg-white status px-md-4 py-md-3 p-1 mx-2 border rounded">
+                    {{-- <div class="calander position-relative bg-white status px-md-4 py-md-3 p-1 mx-2 border rounded">
                         <div class="last-thirty-days d-flex align-items-center">
                             <i class="far fa-calendar-alt"></i>
                             <h4 class="m-0 fw-bold mx-1 mx-sm-3 text-capitalize">last 30 days</h4>
@@ -24,7 +24,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="reports d-flex align-items-center bg-white p-1 px-md-4 py-md-3 mx-2 rounded">
                         <i class="fas fa-chart-line"></i>
                         <h4 class="m-0 fw-bold mx-3 text-capitalize">report</h4>
@@ -35,8 +35,8 @@
                 <div class="gradient-div">
                     <div class="py-4 rounded d-flex align-items-center justify-content-around">
                         <div class="">
-                            <h2 class="fw-medium">1,945</h2>
-                            <h3 class="fw-bolder text-capitalize">Today Orders</h3>
+                            <h2 class="fw-medium">{{$postCount->count()}}</h2>
+                            <h3 class="fw-bolder text-capitalize">total posts</h3>
                          </div>
                         <div class="curved-line">
                             <i class="fas fa-wave-square"></i>
@@ -48,8 +48,8 @@
             <div class="gradient-div">
                 <div class="py-4 rounded d-flex align-items-center justify-content-around">
                     <div class="">
-                        <h2 class="fw-medium">1,945</h2>
-                        <h3 class="fw-bolder text-capitalize">Today Orders</h3>
+                        <h2 class="fw-medium">{{$userCount->count()}}</h2>
+                        <h3 class="fw-bolder text-capitalize">total user</h3>
                      </div>
                     <div class="curved-line">
                         <i class="fas fa-wave-square"></i>
@@ -57,12 +57,13 @@
                 </div>
             </div>
          </div><!--col-lg-3-->
+
             <div class="col-lg-3 py-2">
                 <div class="gradient-div">
                     <div class="py-4 rounded d-flex align-items-center justify-content-around">
                         <div class="">
-                            <h2 class="fw-medium">1,945</h2>
-                            <h3 class="fw-bolder text-capitalize">Today Orders</h3>
+                            <h2 class="fw-medium">{{$postCount->count()}}</h2>
+                            <h3 class="fw-bolder text-capitalize">total post</h3>
                          </div>
                         <div class="curved-line">
                             <i class="fas fa-wave-square"></i>
@@ -74,8 +75,8 @@
                 <div class="gradient-div">
                     <div class="py-4 rounded d-flex align-items-center justify-content-around">
                         <div class="">
-                            <h2 class="fw-medium">1,945</h2>
-                            <h3 class="fw-bolder text-capitalize">Today Orders</h3>
+                            <h2 class="fw-medium">{{$categoryCount->count()}}</h2>
+                            <h3 class="fw-bolder text-capitalize">total category</h3>
                          </div>
                         <div class="curved-line">
                             <i class="fas fa-wave-square"></i>
@@ -91,8 +92,8 @@
                     <div class="gradient-div">
                         <div class="py-4 rounded d-flex align-items-center justify-content-around">
                             <div class="">
-                                <h2 class="fw-medium">1,945</h2>
-                                <h3 class="fw-bolder text-capitalize">Today Orders</h3>
+                                <h2 class="fw-medium">{{$tagCount->count()}}</h2>
+                                <h3 class="fw-bolder text-capitalize">total tags</h3>
                              </div>
                             <div class="curved-line">
                                 <i class="fas fa-wave-square"></i>
@@ -104,8 +105,8 @@
                      <div class="gradient-div">
                          <div class="py-4 rounded d-flex align-items-center justify-content-around">
                              <div class="">
-                                 <h2 class="fw-medium">1,945</h2>
-                                 <h3 class="fw-bolder text-capitalize">Today Orders</h3>
+                                 <h2 class="fw-medium">{{$subscribeCount->count()}}</h2>
+                                 <h3 class="fw-bolder text-capitalize">total subscribe user</h3>
                               </div>
                              <div class="curved-line">
                                  <i class="fas fa-wave-square"></i>
@@ -117,7 +118,7 @@
                       <div class="gradient-div">
                           <div class="py-4 rounded d-flex align-items-center justify-content-around">
                               <div class="">
-                                  <h2 class="fw-medium">1,945</h2>
+                                  <h2 class="fw-medium">{{$postCount->count()}}</h2>
                                   <h3 class="fw-bolder text-capitalize">Today Orders</h3>
                                </div>
                               <div class="curved-line">
@@ -130,8 +131,8 @@
                        <div class="gradient-div">
                            <div class="py-4 rounded d-flex align-items-center justify-content-around">
                                <div class="">
-                                   <h2 class="fw-medium">1,945</h2>
-                                   <h3 class="fw-bolder text-capitalize">Today Orders</h3>
+                                   <h2 class="fw-medium">{{$breakingNews->count()}}</h2>
+                                   <h3 class="fw-bolder text-capitalize">breaking news</h3>
                                 </div>
                                <div class="curved-line">
                                    <i class="fas fa-wave-square"></i>
