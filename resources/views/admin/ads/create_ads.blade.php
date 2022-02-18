@@ -28,49 +28,18 @@
     <div class="breaking-news-form" style="margin-bottom: 50px;">
         <div class="container">
             <div class="forms mb-5 pb-5">
-                <form action="{{route('store_ads')}}" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data">
                     @csrf
-                    <div class="user-name mt-5">
+                    <!-- <div class="user-name mt-5">
                         <label for="" class="text-capitalize mb-2">first section left image url</label>
-                        <input class="form-control py-2" name="first_left" type="text" placeholder="First left img url" required>
+                        <input class="form-control py-2" name="" type="text" placeholder="First left img url" required>
                     </div>
                     <div class="user-name mt-5">
                         <label for="" class="text-capitalize mb-2">first section left image target url</label>
-                        <input class="form-control py-2" name="first_left_target" type="text" placeholder="First left img target url" required>
+                        <input class="form-control py-2" name="" type="text" placeholder="First left img target url" required>
                     </div>
-                    <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">first section right image url</label>
-                        <input class="form-control py-2" name="first_right" type="text" placeholder="First right img url" required>
-                    </div>
-                    <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">first section right image target url</label>
-                        <input class="form-control py-2" name="first_right_target" type="text" placeholder="First right img target url" required>
-                    </div>
-                    <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">secound section image url</label>
-                        <input class="form-control py-2" name="secound_img" type="text" placeholder="Secound img url" required>
-                    </div>
-                    <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">secound section image target url</label>
-                        <input class="form-control py-2" name="secound_img_target" type="text" placeholder="Secound img target url" required>
-                    </div>
-                    <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">Hole world section image url</label>
-                        <input class="form-control py-2" name="hole_world_img" type="text" placeholder="Hole world img url" required>
-                    </div>
-                    <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">hole world section image target url</label>
-                        <input class="form-control py-2" name="hole_world_img_target" type="text" placeholder="Hole world img target url" required>
-                    </div>
-                     {{-- <div class="image mt-5">
-                     <label for="" class="text-capitalize mb-2">Our advertisement Image</label>
-                     <input class="form-control py-2" type="file" name="image" placeholder="image">
-                     </div> --}}
-                     <div class="user-name mt-5">
-                        <label for="" class="text-capitalize mb-2">Our advertisement target url</label>
-                        <input class="form-control py-2" name="our_advertisement_target_url" type="text" placeholder="Our advertisement target url" required>
-                    </div>
-                   <input type="submit" value="submit" class="form-control mt-5 btn-outline-info">
+                   <input type="submit" value="submit" class="form-control mt-5 btn-outline-info"> -->
+                   <h1>Comming Soon ........</h1>
             </form>
         </div>
         <!--forms-->

@@ -38,12 +38,11 @@
             <div class="container">
                <div class="row d-flex justify-content-center bg-white">
                   <div class="recent-orders dashboard-content">
-                     <table class="table data-table text-center">
+                     <table class="table text-center">
                         <tr class="align-middle">
                            <th class="">ID</th>
                            <th class="text-capitalize">User name</th>
                            <th class="text-capitalize">title</th>
-                           {{-- <th class="text-capitalize">category</th> --}}
                            <th class="text-capitalize">total view</th>
                            <th class="text-capitalize">creat date</th>
                            <th class="text-capitalize">Action</th>
@@ -53,7 +52,6 @@
                            <td class="last-order-item text-uppercase">{{$postdata->id}}</td>
                            <td class="last-order-item text-uppercase">{{$postdata->user->name}}</td>
                            <td><h4 class="m-0 fw-bold">{{Str::limit($postdata->title,30)}}</h4></td>
-                           {{-- <td><h4 class="m-0 fw-bold">{{($category->name)}}</h4></td> --}}
                            <td><h4 class="m-0 fw-bold">{{$postdata->view_count}}</h4></td>
                            <td><h4 class="m-0 fw-bold">{{$postdata->created_at}}</h4></td>
                            <td>
@@ -88,7 +86,7 @@
 
 @endsection
 @section('script')
-
+<!-- 
 {{-- <script type="text/javascript">
    $(function () {
      var table = $('.data-table').DataTable({
@@ -105,6 +103,6 @@
          ]
      });
    });
- </script> --}}
+ </script> --}} -->
     
 @endsection

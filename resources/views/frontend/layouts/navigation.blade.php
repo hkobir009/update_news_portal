@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg position-sticky fixed-top navbar-expand-lg navbar-light p-0">
   <div class="container d-flex justify-content-center position-relative">
-   <a href="#" class="navbar-brand d-none">
-    <img src="{{asset('img/dhaka-post.webp')}}" width="300" alt="">  
+   <a href="{{route('home')}}" class="navbar-brand d-none">
+    <img src="{{asset('frontend/img/sitelogo.png')}}" width="300" alt="">  
+  </a>
       <button class="navbar-toggler position-absolute" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    </a>
     <div class="collapse navbar-collapse justify-content-center" id="navbar"aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <ul class="navbar-nav d-flex">
         @foreach ($categoryinfos as $categoryinfo)

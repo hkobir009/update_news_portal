@@ -52,13 +52,13 @@
                     </div>
                      <div class="body mt-5">
                         <label for="" class="text-capitalize mb-2">body</label>
-                        <textarea class="w-100" rows="20" id="body" name="body" placeholder="Post Description" required></textarea>
+                        <textarea class="ckeditor w-100" rows="20" id="body" name="body" placeholder="Post Description" required></textarea>
                      </div>
                      <div class="image mt-5">
                      <label for="" class="text-capitalize mb-2">Image</label>
                      <input class="form-control py-2" type="file" name="image" placeholder="image">
                      </div>
-                   <input type="submit" value="submit" onclick="bodyfrom()" class="form-control mt-5 btn-outline-info">
+                   <input type="submit" value="submit" class="form-control mt-5 btn-outline-info">
             </form>
         </div>
         <!--forms-->

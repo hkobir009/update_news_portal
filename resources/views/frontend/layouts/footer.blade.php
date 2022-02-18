@@ -3,7 +3,7 @@
     <div class="footer-top">
       <div class="logo-part d-flex align-items-center flex-column flex-md-row">
         <div class="footer-logo me-0 me-md-5">
-          <a href="index.html"><img width="300" src="{{asset('img/dhaka-post.webp')}}" alt="Logo" class="footerlogo img-fluid"></a>
+          <a href="{{route('home')}}"><img width="300" src="{{asset('frontend/img/sitelogo.png')}}" alt="Logo" class="footerlogo img-fluid"></a>
         </div>
         <div class="subscribed-field position-relative mt-md-0 mt-4 ms-auto">
           <form action="{{Route('store_sub')}}" method="post">
@@ -66,8 +66,8 @@
       <div class="text-white footer-address d-flex justify-content-center flex-column align-items-center mt-5">
            <span>সম্পাদক: দিদারুল ইসলাম</span>
            <span>প্রকাশক: আজিজুর রহমান মোল্লা</span>
-          <address>মোবাইল নাম্বার: 01711121726</address>
-          <span>Email: bartajogot24@gmail.com & info@bartajogot24.com</span>
+          <address>মোবাইল নাম্বার: 019********</address>
+          <span>Email: Example@gmail.com & info@Example.com</span>
       </div>
     </div>
   </div><!--container-->
@@ -75,7 +75,7 @@
     <div class="container">
       <div class="d-flex justify-content-between text-white py-4 align-items-center">
         <div class="copy-left">
-          <span>© 2010-2022 bartajogot24, All Rights Reserved.</span>
+          <span>© 2010-2022 Example, All Rights Reserved.</span>
         </div>
         <div class="copy-right d-flex align-items-center">
           <span class="me-3">Developed and Maintained by : <a href="https://freelancerkabir.com/"><strong>Freelancer kabir</strong></a></span>

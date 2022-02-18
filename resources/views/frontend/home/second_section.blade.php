@@ -9,7 +9,7 @@
           <div class="col-md-4 col-sm-12">
             <div class="news-col mx-2 m-lg-0">
               <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                <img class="img-fluid w-100" src="{{asset($item->image)}}" alt="country">
                 <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
               </a>
             </div><!--news col-->
@@ -33,7 +33,7 @@
                   @foreach ($letest_datas as $item)
                   <div class="recent-news border-bottom">
                     <a class=" d-flex justify-content-start align-items-md-start mt-3" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                      <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" alt="">
+                      <img class="img-fluid me-3" src="{{asset($item->image)}}" alt="">
                       <p class="m-0">{{$item->title}}</p>
                     </a>
                   </div>
@@ -43,12 +43,14 @@
                 <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
                 <div class="tab-pane fade show recent-post-details bg-white p-2" style="margin-top: 4.8rem" id="Sorbadhik">
                   
+                @foreach ($max_views as $item)
                   <div class="recent-news border-bottom">
-                    <a class="d-flex justify-content-start align-items-md-start mt-3" href="#">
-                      <img class="img-fluid me-3" src="{{asset('frontend/img/img1.webp')}}" alt="">
-                      <p class="m-0">বাংলাদেশ </p>
+                    <a class=" d-flex justify-content-start align-items-md-start mt-3" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
+                      <img class="img-fluid me-3" src="{{asset($item->image)}}" alt="">
+                      <p class="m-0">{{$item->title}}</p>
                     </a>
                   </div>
+                  @endforeach
                   
 
                 </div><!--recent post details-->
@@ -61,8 +63,8 @@
          <!------------------------ ads place -------------------------------------- -->
          @foreach ($adsData as $adsDatas)
          <div class="advertisment w-100 my-3">
-          <a class="ads-link" target="_blank" href="{{$adsDatas->secound_right_img_target_url}}">
-            <img src="{{$adsDatas->secound_right_img_url}}" alt="">
+          <a class="ads-link" target="_blank" href="#">
+          <img src="{{url('frontend/img/AdsLogo.png')}}" alt="">
           </a>
         </div>
         @endforeach

@@ -12,11 +12,11 @@
                   <h1 class="fw-medium post-title"> {{$post->title}} </h1>
                   <div class="post-page-info d-flex mt-4">
                      <div class="post-info-logo me-2">
-                        <img src="{{url('frontend/img/favicon.webp')}}" alt="">
+                        <img src="{{url('frontend/img/icon.png')}}" alt="">
                      </div>
                      <div class="post-inf-details d-flex flex-column">
                         <span>রিপোর্টার : {{$post->user->name}}</span>
-                        <time>{{$postTime}}</time>
+                        <time> প্রকাশিত : {{$postTime}}</time>
                      </div>
                   </div>
                </div>
@@ -30,9 +30,10 @@
                   <div class="big-news-top">
                      <div class="top-middle mb-3 mb-lg-0">
                         <div class="news-item">
-                           <img class="img-fluid w-100" src="{{asset('post/'.$post->image)}}">
-                           <h2 class="m-0 big-post-title-bottom my-3 fw-bold lh-sm mb-lg-4">
-                              {!!$post->body!!}</h2>
+                           <img class="img-fluid w-100" src="{{asset($post->image)}}">
+                           <p class="m-0 big-post-title-bottom my-3 fw-bold lh-sm mb-lg-4">
+                              {!!$post->body!!}
+                           </p>
                         </div>
                      </div>
                   </div>
@@ -41,27 +42,7 @@
                </div>
             </div>
             <div class="post-bottom mb-5">
-               <div class="comment-sort d-flex justify-content-between">
-                  <div class="comment">
-                     <h4 class="fw-bold m-0">0 comment</h4>
-                  </div>
-                  <div class="sort">
-                     <span>sort by</span>
-                     <select>
-                        <option selected value="newest">newest</option>
-                        <option value="oldest">Oledest</option>
-                     </select>
-                  </div>
-               </div>
-               <div class="profile-and-comment d-flex py-4 border-bottom border-top mt-5">
-                  <div class="commenter-profile me-3">
-                     <img src="img/commentor.png" alt="" width="70" height="100%">
-                  </div>
-                  <div class="w-100">
-                     <textarea class="w-100 border" name="" id="" rows="5"></textarea>
-                  </div>
-               </div>
-               <span class="facebook-plugins py-2 d-block"><i class="fab fa-facebook"></i> Facebook comments plugins</span>
+              <div class="fb-comments" data-href="{{ Request::url() }}" data-width="100%" data-numposts="5"></div>
             </div>
             <div class="section-title d-flex justify-content-between align-items-center py-2">
                <h4 class="m-0 py-2">সম্পর্কিত</h4>
@@ -72,7 +53,7 @@
                <div class="col-md-4 col-sm-12">
                <div class="news-col mx-2 m-lg-0">
                   <a href="{{url('news/'.$post->categories->first()->slug.'/'.$related_post->id)}}">
-                     <img class="img-fluid w-100" src="{{asset('post/'.$related_post->image)}}" alt="country">
+                     <img class="img-fluid w-100" src="{{asset($related_post->image)}}" alt="country">
                      <p class="py-2 fw-medium lh-sm">{{$related_post->title}}</p>
                   </a>
                </div>
@@ -88,7 +69,7 @@
                <div class="col-md-4 col-sm-12">
                   <div class="news-col mx-2 m-lg-0">
                      <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                        <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                        <img class="img-fluid w-100" src="{{asset($item->image)}}" alt="country">
                         <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                      </a>
                   </div>
@@ -127,9 +108,9 @@
             <div class="post-right">   
                <!-- ---------------------------------------------------ads -------------------------------------------------------->
 
-               <div class="advertisment bg-danger text-white d-none d-lg-block post-page-advertisment">
+               <div class="advertisment text-white d-none d-lg-block post-page-advertisment">
                   <a class="ads-link" href="#">
-                      <img src="https://tpc.googlesyndication.com/simgad/16764916647907720142" alt="">
+                  <img src="{{url('frontend/img/AdsLogo.png')}}" alt="">
                   </a>
                </div>
 
@@ -141,7 +122,7 @@
                   @foreach ($for_you_datas as $item)
                   <div class="recent-news border-bottom py-2">
                      <a class="d-flex align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                        <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" alt="">
+                        <img class="img-fluid me-3" src="{{asset($item->image)}}" alt="">
                         <p class="m-0 fw-medium">{{$item->title}}</p>
                      </a>
                   </div>
@@ -157,7 +138,7 @@
                   @foreach ($related_posts_2 as $related_post)
                   <div class="recent-news border-bottom py-2">
                      <a href="{{url('news/'.$post->categories->first()->slug.'/'.$related_post->id)}}" class="d-flex align-items-md-start">
-                        <img class="img-fluid me-3" src="{{asset('post/'.$related_post->image)}}" alt="">
+                        <img class="img-fluid me-3" src="{{asset($related_post->image)}}" alt="">
                         <p class="m-0 fw-medium">{{$related_post->title}}</p>
                      </a>
                   </div>

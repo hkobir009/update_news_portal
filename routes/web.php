@@ -66,36 +66,10 @@ use App\Http\Controllers\SubscribeController;
    Route::get('/fromFacebookPage',[FontCategoryController::class,'fromFacebookPage'])->name('fromFacebookPage');
    Route::get('/informationTechnology',[FontCategoryController::class,'informationTechnology'])->name('informationTechnology');
    
-                  //  posts Routes
-   Route::get('news/{category}/{id}',[fontController::class,'posts'])->name('posts');
+                  
 
                      //  subscribe Routes
    Route::post('create_sub',[SubscribeController::class,'store'])->name('store_sub');
-
-
-
-   
-
-
-route::get('/test2',function(){
-
-// $postdatas = post::with('categories')->orderBy('id', 'desc')->get();
-// $categorydata = $postdatas->categories->first()->slug;
-
-// dd($categorydata);
-
-});
-
-
-
-   Route::get('/test',function(){
-        
-
-
-
-
-
-  });
 
 
                 //  Admin Routes
@@ -104,6 +78,9 @@ Route::group(['middleware' => 'auth'], function () {
                     
         //                           Dashboard route
     Route::get('/dashboard',[deshboardController::class,'index'])->name('dashboard');
+
+                                  //  posts Routes
+   Route::get('news/{category}/{id}',[fontController::class,'posts'])->name('posts');
     
         //                      Breaking news Routes
 

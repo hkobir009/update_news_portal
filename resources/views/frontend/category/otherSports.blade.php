@@ -21,7 +21,7 @@
                   @foreach ($otherSports_sec_1_item as $item)
                   <div class="news-item">
                     <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                      <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}">
+                      <img class="img-fluid w-100" src="{{asset($item->image)}}">
                       <h1 class="m-0 title my-3 fw-medium">{{$item->title}}</h1>
                     </a>
                   </div>
@@ -38,7 +38,7 @@
                 @foreach ($otherSports_sec_2_item as $item)
                 <div class="top-little-news p-0 py-3 py-sm-0 pe-sm-2 border-bottom">
                   <a class="mt-3 d-block" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                  <img class="img-fluid" src="{{asset('post/'.$item->image)}}" alt="">
+                  <img class="img-fluid" src="{{asset($item->image)}}" alt="">
                   <p>{{$item->title}}</p>
                   </a>
                 </div>
@@ -55,7 +55,7 @@
             <div class="col-md-4 col-sm-12">
               <div class="news-col mx-2 m-lg-0">
                 <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                  <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                  <img class="img-fluid w-100" src="{{asset($item->image)}}" alt="country">
                   <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                 </a>
               </div>
@@ -84,7 +84,7 @@
             @foreach ($letest_datas as $item)
             <div class=" recent-news border-bottom py-2">
               <a class=" d-flex align-items-md-start" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" alt="">
+                <img class="img-fluid me-3" src="{{asset($item->image)}}" alt="">
                 <p class="m-0 fw-medium">{{$item->title}}</p>
               </a>
             </div>

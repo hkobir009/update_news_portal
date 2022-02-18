@@ -34,15 +34,18 @@
 
 
 @include('frontend.layouts.footer')
+    <!-- Facebook comment js -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="N9AsS1Kd"></script>
     <!-- jquery js -->
-    <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ asset('frontend/js/jquery-3.6.0.min.js') }}"></script>
     <!-- Bootstrape js -->
   <script src="{{ asset('frontend/js/popper.min.js') }}"></script>
   <script src="{{ asset('frontend/js/bootstrap.min.js') }}"></script>
   <!-- fontawsome js -->
   <script src="{{ asset('frontend/js/all.js') }}"></script>
     <!-- custom js -->
-    <script src="{{ asset('frontend/js/custom.js') }}"></script>
+  <script src="{{ asset('frontend/js/custom.js') }}"></script>
     
 
 </body>

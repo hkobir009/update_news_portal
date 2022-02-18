@@ -58,6 +58,9 @@ class AppServiceProvider extends ServiceProvider
       //for letest section
       $collection = collect($postDatas);
       $letest_datas = $collection->splice(0,10);
+      //for letest section
+      $collection = collect($postDatas);
+      $max_views = $collection->splice(10,10);
       //for secound section
       $collection = collect($postDatas);
       $secound_sec_item_1 = $collection->splice(7,12);
@@ -782,6 +785,7 @@ class AppServiceProvider extends ServiceProvider
       View::share('entertainment_sec_3_item',$entertainment_sec_3_item); 
       View::share('entertainment_sec_4_item',$entertainment_sec_4_item); 
       View::share('letest_datas',$letest_datas); 
+      View::share('max_views',$max_views); 
       View::share('dateandtime',$dateandtime); 
       View::share('categoryinfos',$categoryinfos); 
       View::share('frist_sec_3_item',$frist_sec_3_item); 

@@ -60,12 +60,12 @@
                     </div>
                      <div class="body mt-5">
                         <label for="" class="text-capitalize mb-2">body</label>
-                        <textarea class="w-100" rows="4" id="body" name="body" placeholder="Post Description" required>{{$postshowid->body}}</textarea>
+                        <textarea class="ckeditor w-100" rows="4" id="body" name="body" placeholder="Post Description" required>{{$postshowid->body}}</textarea>
                      </div>
                      <div class="image mt-5">
                      <label for="" class="text-capitalize mb-2">Image</label>
                      <input class="form-control py-2" type="file" name="image" placeholder="image">
-                     <img src="{{asset('post/'.$postshowid->image)}}" width="150px" height="150px" alt="image">
+                     <img src="{{asset($postshowid->image)}}" width="200px" height="120px" alt="image">
                      </div>
                    <input type="submit" value="submit" class="form-control mt-5 btn-outline-info">
             </form>

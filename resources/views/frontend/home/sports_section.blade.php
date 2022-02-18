@@ -20,7 +20,7 @@
                 @foreach ($sports_sec_1_item as $item)
                 <div class="image-with-datails position-relative">
                   <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                    <img src="{{asset('post/'.$item->image)}}" alt="" class="img-fluid h-auto">
+                    <img src="{{asset($item->image)}}" alt="" class="img-fluid h-auto">
                     <p class="position-absolute image-info text-white m-0">{{$item->title}}</p>
                   </a>
                 </div>
@@ -55,7 +55,7 @@
                 @foreach ($education_sec_1_item as $item)
                 <div class="saradesh-news-detail border-bottom saradesh-news mt-3 me-3 m-lg-0">
                   <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                    <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                    <img class="img-fluid w-100" src="{{asset($item->image)}}" alt="country">
                     <p class="py-2 fw-medium lh-sm">{{$item->title}}</p>
                   </a>
                 </div><!--saradesh-news-detail-->
@@ -66,7 +66,7 @@
                   @foreach ($education_sec_2_item as $item)
                   <div class="recent-news more-news border-bottom mt-3">
                     <a class="d-flex justify-content-start align-items-md-start pb-lg-3 mt-3 m-lg-0" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                    <img class="img-fluid me-3" src="{{asset('post/'.$item->image)}}" width="100" height="75" alt="">
+                    <img class="img-fluid me-3" src="{{asset($item->image)}}" width="100" height="75" alt="">
                     <p class="m-0 fw-medium">{{$item->title}}</p>
                     </a>
                  </div>

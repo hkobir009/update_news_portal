@@ -7,7 +7,7 @@
           @foreach ($frist_sec_3_item as $item)
             <div class="news py-3 border-bottom">
               <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
-                <img src="{{asset('post/'.$item->image)}}"  class="newsimg me-3">
+                <img src="{{asset($item->image)}}"  class="newsimg me-3">
                 <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
               </a>
             </div><!--news end-->
@@ -16,8 +16,8 @@
           <!----------- ads place for Frist page left side-------------- -->
           @foreach ($adsData as $adsDatas)
           <div class="advertisment w-100 my-3">
-            <a class="ads-link" target="_blank" href="{{$adsDatas->first_left_img_target_url}}">
-              <img src="{{$adsDatas->first_left_img_url}}" alt="">
+            <a class="ads-link" target="_blank" href="#">
+            <img src="{{url('frontend/img/AdsLogo.png')}}" alt="">
             </a>
           </div>
           @endforeach
@@ -31,10 +31,10 @@
             @foreach ($frist_sec_1_item as $item)
               <div class="news-item">
                 <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                  <img src="{{asset('post/'.$item->image)}}" alt="" width="100%">
+                  <img src="{{asset($item->image)}}" alt="" width="100%">
                   <h1 class="m-0 title my-3 fw-medium">{{$item->title}}</h1></a>
                   <p class="m-0 lh-sm pt-2 pb-4 text-black fw-medium">
-                    {{Str::limit($item->body,150)}}
+                    {{Str::limit(strip_tags($item->body),150)}}
                   </p>
               </div>
               @endforeach
@@ -45,7 +45,7 @@
             @foreach ($frist_sec_2_item as $item)
               <div class="news py-2">
                 <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex border-end border-3 pe-2">
-                  <img src="{{asset('post/'.$item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
+                  <img src="{{asset($item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
                   <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
                 </a>
               </div><!--news end-->
@@ -62,7 +62,7 @@
            @foreach ($frist_sec_3_item as $item)
             <div class="news py-3 border-bottom">
               <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
-                <img src="{{asset('post/'.$item->image)}}" alt="" class="newsimg me-3">
+                <img src="{{asset($item->image)}}" alt="" class="newsimg me-3">
                 <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
               </a>
             </div><!--news end-->
@@ -72,8 +72,8 @@
           <!------------------------ ads place for mobile-------------------------------------- -->
           @foreach ($adsData as $adsDatas)
           <div class="advertisment w-100 bg-danger text-white mt-3">
-            <a class="ads-link" target="_blank" href="{{$adsDatas->first_left_img_target_url}}">
-              <img src="{{$adsDatas->first_left_img_url}}" alt="">
+            <a class="ads-link" target="_blank" href="#">
+            <img src="{{url('frontend/img/AdsLogo.png')}}" alt="">
             </a>
           </div>
           @endforeach
@@ -84,7 +84,7 @@
       <div class="col-lg-3 col-md-12">
         @foreach ($adsData as $adsDatas)
         <div class="ads" style="height: 10rem; width: 100%;">
-          <a class="ads-link" href="{{$adsDatas->our_advertisement_target_url}}">
+          <a class="ads-link" href="#">
             <img src="https://tpc.googlesyndication.com/simgad/16764916647907720142" alt="">
           </a>
         </div>
@@ -98,7 +98,7 @@
           @foreach ($fromFacebookPage_sec_1_item as $item)
           <div class="news pb-3 py-3 border-bottom">
             <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
-              <img src="{{asset('post/'.$item->image)}}" alt="" class="newsimg me-3">
+              <img src="{{asset($item->image)}}" alt="" class="newsimg me-3">
               <h3 class="lh-base fw-medium text-black m-0">{{$item->title}}</h3>
             </a>
           </div><!--news end-->
@@ -107,8 +107,8 @@
         <!------------------------ ads place for fast page right side-------------------------------------- -->
         @foreach ($adsData as $adsDatas)
         <div class="advertisment w-100 text-white my-3">
-          <a class="ads-link" href="{{$adsDatas->first_right_img_target_url}}">
-            <img src="{{$adsDatas->first_right_img_url}}" alt="">
+          <a class="ads-link" target="_blank" href="#">
+            <img src="{{url('frontend/img/AdsLogo.png')}}" alt="">
           </a>
         </div>
        @endforeach

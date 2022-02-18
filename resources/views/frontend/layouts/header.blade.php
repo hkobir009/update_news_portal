@@ -1,9 +1,11 @@
 <div class="container">
-  <a href="#"><div class="d-flex justify-content-center"><img src="	https://tpc.googlesyndication.com/simgad/12866590260390773461" alt=""></div></a>
+  <div class="d-flex justify-content-center">
+    <img src="{{url('frontend/img/adsTopLogo.png')}}" alt="">
+  </div>
   <header>
     <div class="header-top d-flex justify-content-between py-3 align-items-center">
       <div class="header-logo">
-        <a href="index.html"><img width="300" src="{{asset('img/dhaka-post.webp')}}" alt="Logo" class="logo img-fluid"></a>
+        <a href="{{route('home')}}"><img width="300" src="{{asset('frontend/img/sitelogo.png')}}" alt="Logo" class="logo img-fluid"></a>
       </div>
       <div class="header-details">
         <ul class="d-flex p-0">

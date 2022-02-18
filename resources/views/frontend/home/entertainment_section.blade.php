@@ -19,7 +19,7 @@
             @foreach ($entertainment_sec_3_item as $item)
             <div class="saradesh-news-detail border-bottom mt-sm-3 me-sm-3 m-lg-0">
               <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                <img class="img-fluid w-100" src="{{asset($item->image)}}" alt="country">
                 <p class="py-2 m-0 fw-medium lh-sm">{{$item->title}}</p>
               </a>
             </div>
@@ -32,7 +32,7 @@
                   @foreach ($entertainment_sec_4_item as $item)
               <div class="news py-3 border-bottom">
                 <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
-                  <img src="{{asset('post/'.$item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
+                  <img src="{{asset($item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
                   <h3 class="lh-base fw-medium text-black m-0" href="#">{{$item->title}}</h3>
                 </a>
               </div><!--news end-->
@@ -48,7 +48,7 @@
             @foreach ($entertainment_sec_1_item as $item)
             <div class="image-with-datails position-relative grid-item1 overflow-hidden">
               <a class="h-100" href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                <img src="{{asset('post/'.$item->image)}}" alt="" class="img-fluid h-100">
+                <img src="{{asset($item->image)}}" alt="" class="img-fluid h-100">
                 <p class="position-absolute image-info text-white m-0">{{$item->title}}</p>
               </a>
             </div>
@@ -57,7 +57,7 @@
             @foreach ($entertainment_sec_2_item as $item)
             <div class="image-with-datails position-relative overflow-hidden">
               <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                <img src="{{asset('post/'.$item->image)}}" alt="" class="img-fluid h-100">
+                <img src="{{asset($item->image)}}" alt="" class="img-fluid h-100">
                 <p class="position-absolute image-info text-white m-0">{{$item->title}}</p>
               </a>
             </div>
@@ -71,7 +71,7 @@
             @foreach ($entertainment_sec_5_item as $item)
             <div class="saradesh-news-detail border-bottom mt-sm-3 me-sm-3 m-lg-0">
               <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}">
-                <img class="img-fluid w-100" src="{{asset('post/'.$item->image)}}" alt="country">
+                <img class="img-fluid w-100" src="{{asset($item->image)}}" alt="country">
                 <p class="py-2 m-0 fw-medium lh-sm">{{$item->title}}</p>
               </a>
             </div>
@@ -82,7 +82,7 @@
               @foreach ($entertainment_sec_6_item as $item)
               <div class="news py-3 border-bottom">
                 <a href="{{url('news/'.$item->categories->first()->slug.'/'.$item->id)}}" class="d-flex">
-                  <img src="{{asset('post/'.$item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
+                  <img src="{{asset($item->image)}}" width="110" height="75px" alt="dr Murad" class="newsimg me-3">
                   <h3 class="lh-base fw-medium text-black m-0" href="#">{{$item->title}}</h3>
                 </a>
               </div><!--news end-->
