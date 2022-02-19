@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Models\Ads;
 use App\Models\breaking_news;
 use App\Models\category;
+use App\Models\category_post;
 use App\Models\post;
 use EasyBanglaDate\Types\BnDateTime;
 use DateTimeZone;
@@ -202,14 +203,51 @@ class AppServiceProvider extends ServiceProvider
       //for Exclusive section 1
       $collection = collect($category_wize_post);
       $exclusive_sec_4_item = $collection->splice(3,15);
-
+      
       //for Entertainment section
+      
+      
+//       $category_wize_post =  DB::table('categories')
+//       ->join('category_post','category_post.category_id','categories.id')
+//       ->join('posts','posts.id','category_post.post_id')
+//       ->where('category_id','=',19)
+//       ->orderBy('posts.id','DESC')
+//       ->select('posts.*','categories.slug')->get();
+
+      
+// dd($category_wize_post);
+      //       DB::table('categories')
+      // ->select('users.id','users.name','profiles.photo')
+      // ->join('profiles','profiles.id','=','users.id')
+      // ->where(['something' => 'something', 'otherThing' => 'otherThing'])
+      // ->get();
+      
+      
+     
+
+        //$categoryposts = category::find(19)->posts()->orderBy('id')->get();
+        // $categoryposts = category::with(['posts'=> function($query){
+        //   $query
+        //   }])->get();
+
+
 
       $categoryposts =category::with('posts')->where('id',19)->get();
+      // $jsondata = json_encode(json_decode($catDatas));
+      // $categoryposts = str_replace('"',' ',$jsondata);
+      
       foreach($categoryposts as $categorypost){
-            $category_wize_post =$categorypost->posts;  
+         $category_wize_post = $categorypost->posts; 
+         
+           
         }
+        //$category_wize_post = array(); 
+        // $category_wize_post = krsort($category_wize_post);
+      //   $category_wize = $category->id;
+      // }
 
+          //$category_wize_post = usort($category_wize_post);
+          //$category_wize_post = arsort($category_wize_post);
           //for Entertainment section 1
       $collection = collect($category_wize_post);
       $entertainment_sec_1_item = $collection->splice(0,1);
